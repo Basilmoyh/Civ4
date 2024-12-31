@@ -499,6 +499,9 @@ public:
 	int getMilitaryProductionModifier() const;														// Exposed to Python
 	void changeMilitaryProductionModifier(int iChange);												
 
+	int getCivilianProductionModifier() const;														// Exposed to Python
+	void changeCivilianProductionModifier(int iChange);												
+
 	int getSpaceProductionModifier() const;																// Exposed to Python
 	void changeSpaceProductionModifier(int iChange);
 
@@ -1101,6 +1104,7 @@ protected:
 	int m_iOverflowProduction;
 	int m_iFeatureProduction;
 	int m_iMilitaryProductionModifier;
+	int m_iCivilianProductionModifier;
 	int m_iSpaceProductionModifier;
 	int m_iExtraTradeRoutes;
 	int m_iTradeRouteModifier;

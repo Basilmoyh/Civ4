@@ -1415,6 +1415,11 @@ int CyCity::getMilitaryProductionModifier()
 	return m_pCity ? m_pCity->getMilitaryProductionModifier() : -1;
 }
 
+int CyCity::getCivilianProductionModifier()
+{
+	return m_pCity ? m_pCity->getCivilianProductionModifier() : -1;
+}
+
 int CyCity::getSpaceProductionModifier()								
 {
 	return m_pCity ? m_pCity->getSpaceProductionModifier() : -1;

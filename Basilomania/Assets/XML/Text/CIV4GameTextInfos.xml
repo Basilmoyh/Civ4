@@ -4548,6 +4548,14 @@
 		<Spanish>[ICON_BULLET]%D1_Mod%% a la producci&#243;n de unidades militares</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_CIVILIAN_MOD</Tag>
+		<English>[ICON_BULLET]%D1_Mod%% Civilian Unit Production</English>
+		<French>[ICON_BULLET]Production d'unit&#233;s civilian %D1_Mod%%</French>
+		<German>[ICON_BULLET]%D1_Mod%% Produktion von Civilian</German>
+		<Italian>[ICON_BULLET]%D1_Mod%% di produzione nelle unit&#224; civilian</Italian>
+		<Spanish>[ICON_BULLET]%D1_Mod%% a la producci&#243;n de unidades civilian</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_BUILDING_SPACESHIP_MOD</Tag>
 		<English>[ICON_BULLET]%D1_Mod%% Spaceship Production</English>
 		<French>[ICON_BULLET]Production de vaisseau spatial %D1_Mod%%</French>
@@ -12072,6 +12080,14 @@
 		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r Milit&#228;reinheiten</German>
 		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per le unit&#224; militari</Italian>
 		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de unidades militares</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_MISC_HELP_PROD_CIVILIAN</Tag>
+		<English>[ICON_BULLET]%D1%%[ICON_PRODUCTION] for civilian units</English>
+		<French>[ICON_BULLET]%D1%%[ICON_PRODUCTION] pour les unit&#233;s civilians</French>
+		<German>[ICON_BULLET]%D1%%[ICON_PRODUCTION] f&#252;r civilians</German>
+		<Italian>[ICON_BULLET]%D1%%[ICON_PRODUCTION] per le unit&#224; civilians</Italian>
+		<Spanish>[ICON_BULLET]%D1%% a la [ICON_PRODUCTION] de unidades civilians</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_MISC_HELP_PROD_MOD_BONUS</Tag>
