@@ -1,1 +1,1 @@
-# This Repository stores files and history related to modding Civ4 and files related to my personal civ4 mod 'Basilomania'
+# This repository stores files and history related to modding Civ4 and files and history related to my personal civ4 mod 'Basilomania'
