@@ -6506,9 +6506,10 @@ m_iMissionType(NO_MISSION),
 m_iVoteSourceType(NO_VOTESOURCE),
 m_fVisibilityPriority(0.0f),
 m_bTeamShare(false),
-m_bWater(false),								
-m_bRiver(false),									
-m_bPower(false),								
+m_bFreshWater(false),
+m_bWater(false),
+m_bRiver(false),
+m_bPower(false),
 m_bDirtyPower(false),
 m_bAreaCleanPower(false),
 m_bAreaBorderObstacle(false),
@@ -7103,6 +7104,11 @@ float CvBuildingInfo::getVisibilityPriority() const
 bool CvBuildingInfo::isTeamShare() const
 {
 	return m_bTeamShare;
+}
+
+bool CvBuildingInfo::isFreshWater() const
+{
+	return m_bFreshWater;
 }
 
 bool CvBuildingInfo::isWater() const
@@ -7758,6 +7764,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_fVisibilityPriority);
 
 	stream->Read(&m_bTeamShare);
+	stream->Read(&m_bFreshWater);
 	stream->Read(&m_bWater);
 	stream->Read(&m_bRiver);
 	stream->Read(&m_bPower);
@@ -8105,6 +8112,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_fVisibilityPriority);
 
 	stream->Write(m_bTeamShare);
+	stream->Write(m_bFreshWater);
 	stream->Write(m_bWater);
 	stream->Write(m_bRiver);
 	stream->Write(m_bPower);
@@ -8357,6 +8365,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 
 	pXML->GetChildXmlValByName(&m_iGreatPeopleRateChange, "iGreatPeopleRateChange");
 	pXML->GetChildXmlValByName(&m_bTeamShare, "bTeamShare");
+	pXML->GetChildXmlValByName(&m_bFreshWater, "bFreshWater");
 	pXML->GetChildXmlValByName(&m_bWater, "bWater");
 	pXML->GetChildXmlValByName(&m_bRiver, "bRiver");
 	pXML->GetChildXmlValByName(&m_bPower, "bPower");
@@ -11522,7 +11531,7 @@ m_bRequiresRiverSide(false),
 m_bRequiresIrrigation(false),		
 m_bCarriesIrrigation(false),			
 m_bRequiresFeature(false),
-m_bWater(false),							
+m_bWater(false),
 m_bGoody(false),							
 m_bPermanent(false),							
 m_bOutsideBorders(false),
@@ -11928,7 +11937,7 @@ void CvImprovementInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_bRequiresIrrigation);		
 	stream->Read(&m_bCarriesIrrigation);			
 	stream->Read(&m_bRequiresFeature);
-	stream->Read(&m_bWater);							
+	stream->Read(&m_bWater);
 	stream->Read(&m_bGoody);							
 	stream->Read(&m_bPermanent);							
 	stream->Read(&m_bOutsideBorders);
@@ -12039,7 +12048,7 @@ void CvImprovementInfo::write(FDataStreamBase* stream)
 	stream->Write(m_bRequiresIrrigation);		
 	stream->Write(m_bCarriesIrrigation);			
 	stream->Write(m_bRequiresFeature);
-	stream->Write(m_bWater);							
+	stream->Write(m_bWater);
 	stream->Write(m_bGoody);							
 	stream->Write(m_bPermanent);							
 	stream->Write(m_bOutsideBorders);

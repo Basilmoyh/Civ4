@@ -2634,7 +2634,7 @@
 		<English>%s1_civ_adjective chemists have developed an advanced refinement process for motor oil.</English>
 		<French>Des chimistes %s1:3_civ_adjective ont d&#233;velopp&#233; un proc&#233;d&#233; de raffinage am&#233;lior&#233; pour l'huile de moteur.</French>
 		<German>%s1:3_civ_adjective Chemiker haben ein verbessertes Raffinierungsverfahren f&#252;r Motor&#246;l entwickelt.</German>
-		<Italian>I chimici %s1_civ_adjective hanno sviluppato un processo avanzato per la raffinazione dell'olio motore.</Italian>
+		<Italian>I chimici %s1_civ_adjective chemists hanno sviluppato un processo avanzato per la raffinazione dell'olio motore.</Italian>
 		<Spanish>Los qu&#237;micos %s1:3_civ_adjective han desarrollado un proceso de refinado avanzado para el aceite de motores.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -5948,6 +5948,7 @@
 		<English>Send congratulations to the developers. Our people should enjoy this game.</English>
 		<French>Envoyez nos felicitations aux developpeurs. Notre bon peuple devrait apprecier ce jeu.</French>
 		<German>&#220;bermittelt meine Gl&#252;ckw&#252;nsche. Unser Volk soll sich an dem Spiel erfreuen.</German>
+		<German>&#220;bermittelt meine Gl&#252;ckw&#252;nsche. Unser Volk soll sich an dem Spiel erfreuen.</German>
 		<Italian>Manda le nostre congratulazioni agli sviluppatori. La nostra gente si divertir&#224; con questo gioco.</Italian>
 		<Spanish>Enviar felicitaciones a los desarrolladores. Nuestro pueblo disfrutar&#225; este juego.</Spanish>
 	</TEXT>
@@ -6540,7 +6541,7 @@
 		<English>A priest from %s2_city is doubting the supreme power of Amun-Re.</English>
 		<French>Un pretre de %s2_city a mis en doute le pouvoir supreme d'Amon-re.</French>
 		<German>Ein Hohepriester der Stadt %s2_city zweifelt an der Macht des Fruchtbarkeitsgottes.</German>
-		<Italian>Un sacerdote di %s2_city dubita del potere supremo di Amon-Ra.</Italian>
+		<Italian>Un sacerdote di %s2_city dubita del potere supremo di Amun-Re.</Italian>
 		<Spanish>Un sacerdote de %s2_city duda del poder supremo de Amun-Re.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6548,7 +6549,7 @@
 		<English>A dissident priest from %s2_city is doubting the supreme power of Amun-Re in an unprecedented outbreak of heresy.</English>
 		<French>Un pretre dissident de %s2_city, a mis en doute la puissance supreme d'Amon-Re, ouvrant la voie a une nouvelle heresie.</French>
 		<German>Ein kritischer Priester der Stadt %s2_city zweifelt in beispielloser Ketzerei an der Macht des Fruchtbarkeitsgottes.</German>
-		<Italian>Un sacerdote dissidente di %s2_city sta dubitando del potere supremo di Amon-Ra, creando una diffusione di eresie senza precedenti.</Italian>
+		<Italian>Un sacerdote dissidente di %s2_city sta dubitando del potere supremo di Amun-Re, creando una diffusione di eresie senza precedenti.</Italian>
 		<Spanish>En un brote de herejia sin precedentes, un sacerdote disidente de %s2_city duda del poder supremo de Amun-Re.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6556,7 +6557,7 @@
 		<English>That is disgusting and preposterous. The heresy must be dealt with in the name of Amun-Re, even if the locals won't support it.</English>
 		<French>C'est inadmissible et deprave. Cette heresie doit etre contrecarre au nom d'Amon-Re, meme si les autochtones ne l'approuvent pas.</French>
 		<German>Beendet im Namen des Fruchtbarkeitsgottes diese widerliche Ketzerei, notfalls mit Gewalt gegen die Bev&#246;lkerung.</German>
-		<Italian>Tutto ci&#242; &#232; disgustoso e assurdo. Dovremo occuparci di questa eresia nel nome di Amon-Ra, anche se non avremo l'appoggio delle popolazioni locali.</Italian>
+		<Italian>Tutto ci&#242; &#232; disgustoso e assurdo. Dovremo occuparci di questa eresia nel nome di Amun-Re, anche se non avremo l'appoggio delle popolazioni locali.</Italian>
 		<Spanish>Eso es lamentable y absurdo. La herejia debe ser tratada con el nombre de Amun-Re, incluso si la poblaci&#243;n local no lo apoya.</Spanish>
 	</TEXT>
 	<TEXT>
@@ -6702,14 +6703,6 @@
 		<German>Ein Amtsenthebungsverfahren w&#228;re &#252;bertrieben. Aber die Regierungsf&#252;hrung soll die Sorgen der Menschen ernster nehmen.</German>
 		<Italian>&#200; una reazione eccessiva. Il Presidente avr&#224; inteso il messaggio che la sua amministrazione deve migliorare.</Italian>
 		<Spanish>Eso es una exageraci&#243;n. El presidente debe captar el mensaje de que su administraci&#243;n debe mejorar.</Spanish>
-	</TEXT>
-	<TEXT>
-		<Tag>TXT_KEY_EVENT_EARTHDAY_HELP_2</Tag>
-		<English>[ICON_BULLET]Persuade other nations to convert to [COLOR_HIGHLIGHT_TEXT]Environmentalism[COLOR_REVERT] (at least one civilization must have the ability to do so).</English>
-		<French>[ICON_BULLET]Persuader d'autres nations de se convertir à l'[COLOR_HIGHLIGHT_TEXT]écologie[COLOR_REVERT] (au moins une civilisation doit posséder cette capacité).</French>
-		<German>[ICON_BULLET]&#220;berzeugt andere Nationen, zum [COLOR_HIGHLIGHT_TEXT]Umweltschutz[COLOR_REVERT] zu wechseln (mindestens eine Zivilisation muss dazu f&#228;hig sein).</German>
-		<Italian>[ICON_BULLET]Persuadi altre nazioni a convertirsi all'[COLOR_HIGHLIGHT_TEXT]Ambientalismo[COLOR_REVERT] (almeno una delle altre civilt&#224; deve essere in grado di farlo).</Italian>
-		<Spanish>[ICON_BULLET]Convence a otras naciones de que se conviertan al [COLOR_HIGHLIGHT_TEXT]Ecologismo[COLOR_REVERT] (al menos una civilizaci&#243;n debe poseer la capacidad de hacerlo).</Spanish>
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_EVENT_SALTPETER_DISCOVERED</Tag>
