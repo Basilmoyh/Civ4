@@ -454,6 +454,7 @@ void CvCity::reset(int iID, PlayerTypes eOwner, int iX, int iY, bool bConstructo
 	m_iOverflowProduction = 0;
 	m_iFeatureProduction = 0;
 	m_iMilitaryProductionModifier = 0;
+	m_iCivilianProductionModifier = 0;
 	m_iSpaceProductionModifier = 0;
 	m_iExtraTradeRoutes = 0;
 	m_iTradeRouteModifier = 0;
@@ -3108,6 +3109,8 @@ int CvCity::getProductionModifier(UnitTypes eUnit) const
 	if (GC.getUnitInfo(eUnit).isMilitaryProduction())
 	{
 		iMultiplier += getMilitaryProductionModifier();
+	} else {
+		iMultiplier += getCivilianProductionModifier();
 	}
 
 	for (iI = 0; iI < GC.getNumBonusInfos(); iI++)
@@ -3910,6 +3913,7 @@ void CvCity::processBuilding(BuildingTypes eBuilding, int iChange, bool bObsolet
 			changeStateReligionHappiness(((ReligionTypes)(GC.getBuildingInfo(eBuilding).getReligionType())), (GC.getBuildingInfo(eBuilding).getStateReligionHappiness() * iChange));
 		}
 		changeMilitaryProductionModifier(GC.getBuildingInfo(eBuilding).getMilitaryProductionModifier() * iChange);
+		changeCivilianProductionModifier(GC.getBuildingInfo(eBuilding).getCivilianProductionModifier() * iChange);
 		changeSpaceProductionModifier(GC.getBuildingInfo(eBuilding).getSpaceProductionModifier() * iChange);
 		changeExtraTradeRoutes(GC.getBuildingInfo(eBuilding).getTradeRoutes() * iChange);
 		changeTradeRouteModifier(GC.getBuildingInfo(eBuilding).getTradeRouteModifier() * iChange);
@@ -7965,10 +7969,21 @@ int CvCity::getMilitaryProductionModifier()	const
 	return m_iMilitaryProductionModifier;
 }
 
-
 void CvCity::changeMilitaryProductionModifier(int iChange)												
 {
 	m_iMilitaryProductionModifier = (m_iMilitaryProductionModifier + iChange);
+}
+
+
+int CvCity::getCivilianProductionModifier()	const													
+{
+	return m_iCivilianProductionModifier;
+}
+
+
+void CvCity::changeCivilianProductionModifier(int iChange)												
+{
+	m_iCivilianProductionModifier = (m_iCivilianProductionModifier + iChange);
 }
 
 
@@ -9069,6 +9084,7 @@ int CvCity::getAdditionalYieldRateModifierByBuilding(YieldTypes eIndex, Building
 		if (eIndex == YIELD_PRODUCTION)
 		{
 			iExtraModifier += kBuilding.getMilitaryProductionModifier();
+			iExtraModifier += kBuilding.getCivilianProductionModifier();
 			iExtraModifier += kBuilding.getSpaceProductionModifier();
 			iExtraModifier += kBuilding.getGlobalSpaceProductionModifier();
 
@@ -13947,6 +13963,7 @@ void CvCity::read(FDataStreamBase* pStream)
 	pStream->Read(&m_iOverflowProduction);
 	pStream->Read(&m_iFeatureProduction);
 	pStream->Read(&m_iMilitaryProductionModifier);
+	pStream->Read(&m_iCivilianProductionModifier);
 	pStream->Read(&m_iSpaceProductionModifier);
 	pStream->Read(&m_iExtraTradeRoutes);
 	pStream->Read(&m_iTradeRouteModifier);
@@ -14185,6 +14202,7 @@ void CvCity::write(FDataStreamBase* pStream)
 	pStream->Write(m_iOverflowProduction);
 	pStream->Write(m_iFeatureProduction);
 	pStream->Write(m_iMilitaryProductionModifier);
+	pStream->Write(m_iCivilianProductionModifier);
 	pStream->Write(m_iSpaceProductionModifier);
 	pStream->Write(m_iExtraTradeRoutes);
 	pStream->Write(m_iTradeRouteModifier);

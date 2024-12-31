@@ -6626,6 +6626,7 @@ m_iGlobalHappiness(0),
 m_iStateReligionHappiness(0),				
 m_iWorkerSpeedModifier(0),					
 m_iMilitaryProductionModifier(0),				
+m_iCivilianProductionModifier(0),				
 m_iSpaceProductionModifier(0),				
 m_iGlobalSpaceProductionModifier(0),	
 m_iTradeRoutes(0),									
@@ -7055,6 +7056,11 @@ int CvBuildingInfo::getWorkerSpeedModifier() const
 int CvBuildingInfo::getMilitaryProductionModifier() const		
 {
 	return m_iMilitaryProductionModifier;
+}
+
+int CvBuildingInfo::getCivilianProductionModifier() const		
+{
+	return m_iCivilianProductionModifier;
 }
 
 int CvBuildingInfo::getSpaceProductionModifier() const
@@ -7882,6 +7888,7 @@ void CvBuildingInfo::read(FDataStreamBase* stream)
 	stream->Read(&m_iStateReligionHappiness);
 	stream->Read(&m_iWorkerSpeedModifier);
 	stream->Read(&m_iMilitaryProductionModifier);
+	stream->Read(&m_iCivilianProductionModifier);
 	stream->Read(&m_iSpaceProductionModifier);
 	stream->Read(&m_iGlobalSpaceProductionModifier);
 	stream->Read(&m_iTradeRoutes);
@@ -8230,6 +8237,7 @@ void CvBuildingInfo::write(FDataStreamBase* stream)
 	stream->Write(m_iStateReligionHappiness);
 	stream->Write(m_iWorkerSpeedModifier);
 	stream->Write(m_iMilitaryProductionModifier);
+	stream->Write(m_iCivilianProductionModifier);
 	stream->Write(m_iSpaceProductionModifier);
 	stream->Write(m_iGlobalSpaceProductionModifier);
 	stream->Write(m_iTradeRoutes);
@@ -8592,6 +8600,7 @@ bool CvBuildingInfo::read(CvXMLLoadUtility* pXML)
 	pXML->GetChildXmlValByName(&m_iStateReligionHappiness, "iStateReligionHappiness");
 	pXML->GetChildXmlValByName(&m_iWorkerSpeedModifier, "iWorkerSpeedModifier");
 	pXML->GetChildXmlValByName(&m_iMilitaryProductionModifier, "iMilitaryProductionModifier");
+	pXML->GetChildXmlValByName(&m_iCivilianProductionModifier, "iCivilianProductionModifier");
 	pXML->GetChildXmlValByName(&m_iSpaceProductionModifier, "iSpaceProductionModifier");
 	pXML->GetChildXmlValByName(&m_iGlobalSpaceProductionModifier, "iGlobalSpaceProductionModifier");
 	pXML->GetChildXmlValByName(&m_iTradeRoutes, "iTradeRoutes");

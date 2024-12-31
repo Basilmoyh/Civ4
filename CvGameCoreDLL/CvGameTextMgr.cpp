@@ -10282,6 +10282,12 @@ void CvGameTextMgr::setBuildingHelpActual(CvWStringBuffer &szBuffer, BuildingTyp
 		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_MILITARY_MOD", kBuilding.getMilitaryProductionModifier()));
 	}
 
+	if (kBuilding.getCivilianProductionModifier() != 0)
+	{
+		szBuffer.append(NEWLINE);
+		szBuffer.append(gDLL->getText("TXT_KEY_BUILDING_CIVILIAN_MOD", kBuilding.getCivilianProductionModifier()));
+	}
+
 	if (kBuilding.getSpaceProductionModifier() != 0)
 	{
 		szBuffer.append(NEWLINE);
@@ -15465,6 +15471,14 @@ void CvGameTextMgr::setProductionHelp(CvWStringBuffer &szBuffer, CvCity& city)
 				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_MILITARY", iMilitaryMod));
 				szBuffer.append(NEWLINE);
 				iBaseModifier += iMilitaryMod;
+			}
+		} else {
+			int iCivilianMod = city.getCivilianProductionModifier();
+			if (0 != iCivilianMod)
+			{
+				szBuffer.append(gDLL->getText("TXT_KEY_MISC_HELP_PROD_CIVILIAN", iCivilianMod));
+				szBuffer.append(NEWLINE);
+				iBaseModifier += iCivilianMod;
 			}
 		}
 

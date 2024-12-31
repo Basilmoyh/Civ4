@@ -298,6 +298,7 @@ public:
 	int getFeatureProduction();
 	void setFeatureProduction(int iNewValue);
 	int getMilitaryProductionModifier();
+	int getCivilianProductionModifier();
 	int getSpaceProductionModifier();
 	int getExtraTradeRoutes();
 	void changeExtraTradeRoutes(int iChange);

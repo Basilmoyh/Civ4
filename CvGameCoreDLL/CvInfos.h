@@ -1628,6 +1628,7 @@ public:
 	int getStateReligionHappiness() const;				// Exposed to Python
 	int getWorkerSpeedModifier() const;				// Exposed to Python
 	int getMilitaryProductionModifier() const;				// Exposed to Python
+	int getCivilianProductionModifier() const;				// Exposed to Python
 	int getSpaceProductionModifier() const;				// Exposed to Python
 	int getGlobalSpaceProductionModifier() const;				// Exposed to Python
 	int getTradeRoutes() const;				// Exposed to Python
@@ -1837,6 +1838,7 @@ protected:
 	int m_iStateReligionHappiness;				
 	int m_iWorkerSpeedModifier;					
 	int m_iMilitaryProductionModifier;				
+	int m_iCivilianProductionModifier;				
 	int m_iSpaceProductionModifier;				
 	int m_iGlobalSpaceProductionModifier;	
 	int m_iTradeRoutes;									
