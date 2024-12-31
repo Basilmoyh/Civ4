@@ -17,8 +17,8 @@ YOURMOD=..\Basilomania
 MODFLAGS=/D_MOD_FRACTRADE /D_MOD_SENTRY /D_MOD_GOVWORKERS /D_MOD_AIAUTOPLAY /D_MOD_GWARM
 
 #### Paths ####
-TOOLKIT=D:\Development\Civ4\Civ4SDK\Microsoft Visual C++ Toolkit 2003
-PSDK=D:\Development\Civ4\Civ4SDK\WindowsSDK
+TOOLKIT=..\Civ4SDK\Microsoft Visual C++ Toolkit 2003
+PSDK=..\Civ4SDK\WindowsSDK
 
 ## Civ install path
 ## Path to the directory where boost and python is stored
@@ -32,7 +32,7 @@ LD="$(TOOLKIT)\bin\link.exe"
 RC="$(PSDK)\bin\rc.exe"
 ## Uncomment to build dependencies using fastdep
 ## Overwritten by enviroment variable FASTDEP_FULL_PATH
-FD=D:\Development\Civ4\CvGameCoreDLL\bin\fastdep.exe
+FD=.\bin\fastdep.exe
 
 #### BLACKLIST ####
 ## Uncomment to block CvTextScreen (accidentally included by Firaxis)
