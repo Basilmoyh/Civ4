@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Bart Muzzin (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Global Defines -->
+<Civ4Defines xmlns="x-schema:CIV4GlobalDefinesSchema.xml">
+	<!-- Global Warming from Nukes back to BTS default, since I'm not about to write a GW mod
+			and nuclear warfare needs to have a negative impact somehow -->
+	<Define>
+		<DefineName>GLOBAL_WARMING_NUKE_WEIGHT</DefineName>
+		<iDefineIntVal>50</iDefineIntVal>
+	</Define>
+</Civ4Defines>
