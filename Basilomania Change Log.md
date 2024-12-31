@@ -2,6 +2,9 @@
 ## General
 ### Removed Global Warming - Not because I don't believe. But it's just annoying and instead of melting the ice or turning the tundra into grassland, it turns random tiles into desert.
 ### City Placement: Plains Hill loses +1p, Riverside +1c
+### Per age tech beaker requirement increased exponentially
+### Production cost of late game units greatly increased
+### Fresh Water provides 4 health (+2 from normal), all difficulties -2 health from normal.
 
 ## New Leaders
 ### Meiji, Japan 				Fin/Imp : Production 5 / Military   2
@@ -10,7 +13,7 @@
 
 ## Changed Leader Traits
 ###  Alex (Fin/Cha) : Hannibal (Fin/Agg) : Shaka (Cha/Agg) : Ragnar (Exp/Agg): Boudica (Agg/Phi) - Reason for diversity of leaders (e.g. both Greek leaders were Philosophical)
-###  Meiji (Fin/Imp) : De Gaulle (Agg/Org) : Hammurabi (Phi/Org) : Frederick (Phi/Ind) : - Reason Imp is refactor to be the premier Naval trait and Ind/Imp freed up for Meiji
+###  Meiji (Fin/Imp) : Victoria (Cha/Imp) : Cyrus (Exp/Imp) : Joao (Org:Imp) : Julius (Org/Cha) : Napoleon (Ind/Cha) : De Gaulle (Agg/Org) : Hammurabi (Phi/Org) : Frederick (Phi/Ind) : - Reason Imp is refactor to be the premier Naval trait and Ind/Imp freed up for Meiji
 ###  Franco (Pro/Fin) : Wang (Pro/Org)
 
 ## Buildings - General
@@ -18,6 +21,8 @@
 ####  2 Scientist slots
 ###  Airport
 ####  +1p on Water Tiles
+###  Aqueduct
+#### Now provide Fresh Water to if the city is without
 ###  Colosseum 
 ####  -30% Whip Anger
 ####  +1 Happiness from Music
@@ -45,7 +50,13 @@
 ####  +2 Experience
 ###  Monastery 
 ####  No +10% Science
-####  +1 Gold
+####  Buddhism +1 Health
+####  Hinduism +1 Prophet Points
+####  Judaism +1 Gold
+####  Christianity +1 Hammer
+####  Islam  -15% war weariness
+####  Confucianism +1 science
+####  Taoism -10% maintenance
 ###  Nuclear Plant
 ####  No Nuclear Meltdown 		While Nuclear Meltdowns can happen, industrial accidents are not unique to Nuclear, only the 'Catastrophizing' is unique to Nuclear.
 ####  +6 Health 				Civic 'Environmentalism' removed, the health is applied here, though the new 'Public Works' Civic has -6 happiness for Nuclear Plants
@@ -73,12 +84,17 @@
 ####  +1 hammers on water tile
 ####  Available at Optics
 ####  40% less hammers to build
+###  Forum
+#### No longer has 25% Great person
+#### 10% Great General Emergence
+#### 10% Great Person Rate All Cities (additive the more cities that have it)
 ###  Garden 
 ####  Changed to Granary
 ####  +2 Happiness from Spices
 ###  Ikhanda
 ####  Removed -20% Maintenance
 ####  Added +10% Great General Emergence 
+####  Added +20% Civilian Production
 ###  Mall 
 ####  Renamed Oil Refinery
 ####  Uses Shale Plant art
@@ -154,20 +170,16 @@
 ####  Obsoletes with Steel
 ###  Notre Dam
 ####  Unlocks all Government Civics
-  <- Birth Rate of Parthenon
 ###  Shwedagon Paya
-####  -100% Military Production
-####  +100% Land Production
+####  -100% Civilian Production
 ###  The Colossus
 ####  Obsoletes at Economics
 ###  The Great Lighthouse
 ####  Available with Compass and Currency
 ####  Requires 3x Harbours
 ###  The Hagia Sophia 
-####  100% War Weariness
-####  Sentry Free Promotion in City
 ####  No Worker Speed
-####  Does not Obsolete
+####  +2 gold per religious building
 ###  The Hanging Garden
 ####  +50% Golden Age
 ###  The Kremlin 
@@ -186,6 +198,10 @@
 ###  The Taj Mahul
 ####  +2 Happiness in All Cities on Continent
 ###  Versailles
+####  100% War Weariness
+####  Free Jail in All Cities
+####  Does not Obsolete
+###  Spiral Mineret
 ####  Minimum Civic Switch Wait
 ####  No Anarchy
   
@@ -220,15 +236,15 @@ Watermill
 
 ##  Leader Traits
 ###  Aggressive
-####  Free Combat for Armor (Tanks)
+####  Free Combat I for Armor (Tanks)
 ###  Imperialistic
-####  Free Combat for Helicopter, Naval & Air
+####  Free Combat I for Helicopter, Naval & Air
 ###  Philosophical
 ####  +50% Production on Observatory
 ###  Protective
 ####  +50% Production on Banks, Custom Houses, Jail
-###  Industrious +build speed Colosseum
-###  Creative +build on Aqueduct, not Colosseum
+###  Industrious
+####  +50% Production on Airport
 
 ## Civics
 ###  Caste System 			+1p on Watermill
@@ -236,49 +252,52 @@ Watermill
 ###  Free Markets:			Added Hurry gold
 ###  Free Speech: 			+3sci on Specialist. Removed +2c on Town
 ###  Hereditary Rule: 		+1 Happiness per Wall/Castle
-###  Nationhood:			Zero maintenance for distance from capital. Removed Happiness on Barrack. Removed bonus Espionage.
+###  Nationhood:			-50% maintenance for distance from capital. Removed Happiness on Barrack. Removed bonus Espionage.
 ###  Police State:			+2 Happiness Barracks/Military Academy, 100% Gold. Removed Military Production
 ###  Public Works:			Replaces Envionmentalism. Available with Civil Service. High mantenance. Worker improve speed 50%. +25% Corporation expenses. +1 Health for Aqueduct, Public Transport, Hospital, Recycling Center. -6 Happiness Nuclear Plant
-###  Representation: 		+1c on Windmill, 2c on Forest Preserve, removed +3sci per Specialist
+###  Representation: 		+10% production all cities, removed +3sci per Specialist
 ###  Serfdom:				+100% Cottage growth, +1c on Farm, +3c on Workshop, -2p on Workshop, removed 100% Worker build
-###  State Property:		Removed maintenance for distance from capital
+###  State Property:		+1c on Windmill, removed maintenance for distance from capital, removed +10% production
 ###  Universal Suffrage:	+1c on Lumbermill. Removed hurry gold
 
 ## Corporations
-###  Cereal Mills
+###  Schnitzel Burger House
 ####  Available at Biology
-####  0.75 Food, +1c per Wheat, Rice, Corn, Spices, Sugar
-###  Civilised Pharma Inc
+####  0.5 Food, +0.5c per Wheat, Pig, Cow, Spices
+###  Pharma Sutra
 ####  Available at Medicine
-####  0.75 Food, +1g per Spices, Wine, Sugar, Incense
-###  Creative Constructions
-####  Available at Corporation
-####  +1p, +1 Culture per Iron, Stone, Marble, Copper, Aluminium
+####  0.5 Food, +0.5g per Spices, Wine, Sugar, Incense, Fish
+###  Surf n Turf Co.
+####  Available at Refrigration
+####  0.5 Food, +0.5g per Fish, Clam, Crap, Cow
 ###  Effical Textiles
 ####  Available at Assembly Line
-####  +1g, +1 Culture per Sheep, Silk, Dye, Cow
+####  +1g, +4 Culture per Sheep, Silk, Dye, Horse
+###  Chocker n Watch
+####  Available at Combustion
+####  +1g, +4 Culture per Gold, Silver, Gems, Horse
 ###  Mining Inc
 ####  Available at Railroad
-####  +1p, +1g per Coal, Iron, Copper, Gold, Silver
-###  Sid's Suishi Inc
-####  Available at Refrigration
-####  +0.75 Food, +1 Culture per Fish, Clam, Crap, Rice, Spices
-###  Thorium Co
+####  0.5p per Coal, Iron, Copper, Aluminium, Uranium
+###  Thorium Energy Alliance
 ####  Available at Fission
-####  Uranium is available
-####  +2p per Oil, Aluminium, Copper, Dye, Sugar
+####  Makes uranium is available
+####  0.5p per Oil, Aluminium, Copper, Iron, Stone
 
 ## Unique Units
 ###  Carrack
 ####  Upgrades to Privateer
 ###  Oromo Warrior
 ####  Changed to Rifleman
-####  TBA
+####  Free Promotion Woodsman I, Guerilla I
 ###  Musketeer
 ####  Starts with Drill I & Drill II
 ####  Removed movement bonus
 ###  Numidian Cavalry 
-####  Free withdrawal promotion
+####  Old Keshik
+###  Keshik
+#### Free Promotion Guerilla I
+#### Receives Defense Bonus
 ###  Paratrooper
 ####  Available with Flight (only)
 ###  Phalanx
@@ -301,3 +320,6 @@ Promotions
 
 ## Units
 ###  All ships have 20% withdrawal
+###  Work boats can now build Sea Forts
+###  Submarines and Attack Submarines Strength increased
+###  Destroyers receive bonus vs Submarines and Attack Submarines
