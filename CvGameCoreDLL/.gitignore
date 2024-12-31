@@ -1,0 +1,17 @@
+Release/
+Release-fast/
+Assert/
+Assert-fast/
+Debug/
+Profile/
+.vs/
+
+obj/
+temp_files/
+
+*.dll
+*.opensdf
+*.vs
+*.sdf
+*.suo
+*.user

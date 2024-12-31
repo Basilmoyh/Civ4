@@ -11,5 +11,6 @@
 ## For Standalone installing of my mod (Basilomania) get latest files, copy the the folder (including contents) "Basilomania" to the your Civ4 folder "$\...\Sid Meier's Civilization IV Beyond the Sword\Beyond the Sword\Mods"
 
 # Additional Credits
-## Better Bug AI Starting Point
+## Better Bug AI Starting Point for the mod
+## dguenms for the some of the SDK repo original files and setup
 ## Franco, Meiji and Barbarossa art were also sourced from somewhere I can't remember where

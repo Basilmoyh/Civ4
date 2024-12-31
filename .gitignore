@@ -9,7 +9,6 @@ Profile/
 obj/
 temp_files/
 
-*.dll
 *.opensdf
 *.vs
 *.sdf
