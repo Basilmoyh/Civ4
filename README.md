@@ -17,5 +17,6 @@
 
 
 # Known Issues
-## 1. Sometimes after copying the Mod, Civ4 will crash upon launching the modded game. Something about registering the DLL, CvGameCoreDLL.dll. This issue can be resolved by opening and closing CvGameCoreDLL.dll in notepad or notepad++ just once
+## 1. Sometimes after copying the Mod, Civ4 will crash upon launching the modded game. The splash screen upon loading the mod will complete without error, then there should be a half second of black screen before the Civ4 main menu loads, but instead the black screen will last 3-4 seconds and teh game closes without any prompt.
+### As workaround, you can just try try again, and after a few attempts of launching the mod, it will get into the Civ4 main menu and work hence forth without issue.
 ## 2. Enabling/Disabling the extra mods is a bit finicky with the particular makefile, both the makefile and project properties need to be edited, then you'll need to delete probably all or some combination of 'Makefile.project', 'Makefile.settings', 'CvGameCoreDLL.sdf' and/or 'CvGameCoreDLL.suo'
