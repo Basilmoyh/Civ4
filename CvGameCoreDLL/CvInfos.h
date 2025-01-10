@@ -878,7 +878,7 @@ public:
 	int getNumUnitNames() const;							// Exposed to Python
 	int getCommandType() const;								// Exposed to Python
 	void setCommandType(int iNewType);
-	
+
 // BUG - Female Great People - start
 	bool isFemale() const;				// Exposed to Python
 	int getFemaleUnitType() const;
@@ -1068,7 +1068,7 @@ protected:
 	int m_iNumUnitNames;
 	int m_iCommandType;
 	int m_iLeaderExperience;
-	
+
 // BUG - Female Great People - start
 	bool m_bFemale;
 // BUG - Female Great People - end
@@ -1383,6 +1383,18 @@ public:
 
 	int getImprovementYieldChanges(int i, int j) const;				// Exposed to Python
 
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+	bool isAnyBuildingHappinessChange() const;
+	bool isAnyBuildingHealthChange() const;
+	bool isAnyFeatureHappinessChange() const;
+	bool isAnySpecialistValid() const;
+	bool isAnyImprovementYieldChange() const;
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
+
 	void read(FDataStreamBase* stream);
 	void write(FDataStreamBase* stream);
 
@@ -1436,6 +1448,17 @@ protected:
 	bool m_bNoForeignCorporations;
 	bool m_bStateReligion;
 	bool m_bNoNonStateReligionSpread;
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+	bool m_bAnyBuildingHappinessChange;
+	bool m_bAnyBuildingHealthChange;
+	bool m_bAnyFeatureHappinessChange;
+	bool m_bAnySpecialistValid;
+	bool m_bAnyImprovementYieldChange;
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	CvWString m_szWeLoveTheKingKey;
 
@@ -1680,7 +1703,7 @@ public:
 
 	int getYieldChange(int i) const;				// Exposed to Python
 	int* getYieldChangeArray() const;
-	int getYieldModifier(int i) const;;				// Exposed to Python
+	int getYieldModifier(int i) const;				// Exposed to Python
 	int* getYieldModifierArray() const;
 	int getPowerYieldModifier(int i) const;				// Exposed to Python
 	int* getPowerYieldModifierArray() const;
@@ -3518,6 +3541,19 @@ public:
 	int getTechTradeKnownPercent() const;				// Exposed to Python
 	int getMaxGoldTradePercent() const;				// Exposed to Python
 	int getMaxGoldPerTurnTradePercent() const;				// Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      03/21/10                                jdog5000      */
+/*                                                                                              */
+/* Victory Strategy AI                                                                          */
+/************************************************************************************************/
+	int getCultureVictoryWeight() const;
+	int getSpaceVictoryWeight() const;
+	int getConquestVictoryWeight() const;
+	int getDominationVictoryWeight() const;
+	int getDiplomacyVictoryWeight() const;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	int getMaxWarRand() const;				// Exposed to Python
 	int getMaxWarNearbyPowerRatio() const;				// Exposed to Python
 	int getMaxWarDistantPowerRatio() const;				// Exposed to Python
@@ -3625,6 +3661,19 @@ protected:
 	int m_iTechTradeKnownPercent;
 	int m_iMaxGoldTradePercent;
 	int m_iMaxGoldPerTurnTradePercent;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      03/21/10                                jdog5000      */
+/*                                                                                              */
+/* Victory Strategy AI                                                                          */
+/************************************************************************************************/
+	int m_iCultureVictoryWeight;
+	int m_iSpaceVictoryWeight;
+	int m_iConquestVictoryWeight;
+	int m_iDominationVictoryWeight;
+	int m_iDiplomacyVictoryWeight;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	int m_iMaxWarRand;
 	int m_iMaxWarNearbyPowerRatio;
 	int m_iMaxWarDistantPowerRatio;
@@ -5213,6 +5262,15 @@ public:
 	int getConstructPercent() const;			//	Exposed to Python
 	int getCreatePercent() const;					//	Exposed to Python
 	int getResearchPercent() const;				//	Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Tech Diffusion                                                                               */
+/************************************************************************************************/
+	int getTechCostModifier() const;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	int getBuildPercent() const;					//	Exposed to Python
 	int getImprovementPercent() const;		//	Exposed to Python
 	int getGreatPeoplePercent() const;		//	Exposed to Python
@@ -5251,6 +5309,15 @@ protected:
 	int m_iConstructPercent;
 	int m_iCreatePercent;
 	int m_iResearchPercent;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/21/09                                jdog5000      */
+/*                                                                                              */
+/* Tech Diffusion                                                                               */
+/************************************************************************************************/
+	int m_iTechCostModifier;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	int m_iBuildPercent;
 	int m_iImprovementPercent;
 	int m_iGreatPeoplePercent;

@@ -224,7 +224,7 @@ public:
 	int getNumActiveBuilding(BuildingTypes eIndex) const;						// Exposed to Python
 	bool hasActiveWorldWonder() const;																			// Exposed to Python
 /************************************************************************************************/
-/* UNOFFICIAL_PATCH                       03/04/10                                jdog5000      */
+/* UNOFFICIAL_PATCH                       03/04/10                     Mongoose & jdog5000      */
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
@@ -263,7 +263,18 @@ public:
 	bool isConnectedToCapital(PlayerTypes ePlayer = NO_PLAYER) const;			// Exposed to Python
 	int getArea() const;
 	CvArea* area() const;																						// Exposed to Python
-	CvArea* waterArea() const;																			// Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      01/02/09                                jdog5000      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
+	CvArea* waterArea(bool bNoImpassable = false) const;																			// Exposed to Python
+	CvArea* secondWaterArea() const;
+	CvArea* sharedWaterArea(CvCity* pCity) const;
+	bool isBlockaded() const;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	CvPlot* getRallyPlot() const;																// Exposed to Python
 	void setRallyPlot(CvPlot* pPlot);
@@ -383,8 +394,8 @@ public:
 
 // BUG - Actual Effects - start
 	int getAdditionalAngryPopuplation(int iGood, int iBad) const;
-	int getAdditionalSpoiledFood(int iGood, int iBad) const;
-	int getAdditionalStarvation(int iSpoiledFood) const;
+	int getAdditionalSpoiledFood(int iGood, int iBad, int iHealthAdjust = 0) const;
+	int getAdditionalStarvation(int iSpoiledFood, int iFoodAdjust = 0) const;
 // BUG - Actual Effects - end
 
 	int getBuildingGoodHealth() const;																		// Exposed to Python
@@ -416,7 +427,17 @@ public:
 
 	int getExtraBuildingGoodHappiness() const;														// Exposed to Python
 	int getExtraBuildingBadHappiness() const;															// Exposed to Python
-	void updateExtraBuildingHappiness();
+/********************************************************************************/
+/* 	New Civic AI						19.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void updateExtraBuildingHappiness(bool bLimited = false);
+
+	int getAdditionalHappinessByCivic(CivicTypes eCivic, bool bDifferenceToCurrent = true, bool bCivicOptionVacuum = false, ReligionTypes eStateReligion = NO_RELIGION, int iExtraPop = 0, int iMilitaryHappinessUnits = -1) const;
+	int getAdditionalHealthByCivic(CivicTypes eCivic, bool bDifferenceToCurrent = true) const;
+	int getAdditionalHealthByCivic(CivicTypes eCivic, int& iGood, int& iBad, int& iBadBuilding, bool bDifferenceToCurrent = true, int iExtraPop = 0, bool bCivicOptionVacuum = false, int iIgnoreNoUnhealthyPopulationCount = 0, int iIgnoreBuildingOnlyHealthyCount = 0) const;
+	int getAdditionalHealthByPlayerNoUnhealthyPopulation(int iExtraPop = 0, int iIgnoreNoUnhealthyPopulationCount = 0) const;
+	int getAdditionalHealthByPlayerBuildingOnlyHealthy(int iIgnoreBuildingOnlyHealthyCount = 0) const;
 
 // BUG - Building Additional Happiness - start
 	int getAdditionalHappinessByBuilding(BuildingTypes eBuilding) const;									// Exposed to Python
@@ -425,7 +446,8 @@ public:
 
 	int getExtraBuildingGoodHealth() const;														// Exposed to Python
 	int getExtraBuildingBadHealth() const;															// Exposed to Python
-	void updateExtraBuildingHealth();
+//Fuyu bLimited
+	void updateExtraBuildingHealth(bool bLimited = false);
 
 // BUG - Building Additional Health - start
 	int getAdditionalHealthByBuilding(BuildingTypes eBuilding) const;										// Exposed to Python
@@ -434,7 +456,8 @@ public:
 
 	int getFeatureGoodHappiness() const;																	// Exposed to Python
 	int getFeatureBadHappiness() const;																		// Exposed to Python
-	void updateFeatureHappiness();
+//Fuyu bLimited
+	void updateFeatureHappiness(bool bLimited = false);
 
 	int getBonusGoodHappiness() const;																		// Exposed to Python  
 	int getBonusBadHappiness() const;																			// Exposed to Python  
@@ -444,7 +467,11 @@ public:
 	int getReligionGoodHappiness() const;																	// Exposed to Python
 	int getReligionBadHappiness() const;																	// Exposed to Python
 	int getReligionHappiness(ReligionTypes eReligion) const;							// Exposed to Python
-	void updateReligionHappiness();
+//Fuyu bLimited
+	void updateReligionHappiness(bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getExtraHappiness() const;																				// Exposed to Python
 	void changeExtraHappiness(int iChange);													// Exposed to Python
@@ -986,13 +1013,31 @@ public:
 	virtual int AI_specialistValue(SpecialistTypes eSpecialist, bool bAvoidGrowth, bool bRemove) = 0;
 	virtual void AI_chooseProduction() = 0;
 	virtual UnitTypes AI_bestUnit(bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, UnitAITypes* peBestUnitAI = NULL) = 0;
-	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) = 0;
+/********************************************************************************/
+/* 	City Defenders						24.07.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bIgnoreNotUnitAIs
+	virtual UnitTypes AI_bestUnitAI(UnitAITypes eUnitAI, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR, bool bIgnoreNotUnitAIs = false) = 0;
+/********************************************************************************/
+/* 	City Defenders												END 			*/
+/********************************************************************************/
 	virtual BuildingTypes AI_bestBuilding(int iFocusFlags = 0, int iMaxTurns = MAX_INT, bool bAsync = false, AdvisorTypes eIgnoreAdvisor = NO_ADVISOR) = 0;
 	virtual int AI_buildingValue(BuildingTypes eBuilding, int iFocusFlags = 0) = 0;
 	virtual int AI_projectValue(ProjectTypes eProject) = 0;
 	virtual int AI_neededSeaWorkers() = 0;
 	virtual bool AI_isDefended(int iExtra = 0) = 0;
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD							9/19/08		jdog5000		*/
+/**																				*/
+/**		Air AI																	*/
+/********************************************************************************/
+/* original BTS code
 	virtual bool AI_isAirDefended(int iExtra = 0) = 0;
+*/
+	virtual bool AI_isAirDefended(bool bCountLand = 0, int iExtra = 0) = 0;
+/********************************************************************************/
+/**		BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
 	virtual bool AI_isDanger() = 0;
 	virtual int AI_neededDefenders() = 0;
 	virtual int AI_neededAirDefenders() = 0;
@@ -1006,6 +1051,18 @@ public:
 	virtual bool AI_isEmphasize(EmphasizeTypes eIndex) = 0;											// Exposed to Python
 	virtual void AI_setEmphasize(EmphasizeTypes eIndex, bool bNewValue) = 0;
 	virtual int AI_getBestBuildValue(int iIndex) = 0;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
+/*                                                                                              */
+/* Debug                                                                                        */
+/************************************************************************************************/
+	virtual int AI_getTargetSize() = 0;
+	virtual int AI_getGoodTileCount() = 0;
+	virtual int AI_getImprovementValue( CvPlot* pPlot, ImprovementTypes eImprovement, int iFoodPriority, int iProductionPriority, int iCommercePriority, int iFoodChange, bool bOriginal = false ) = 0;
+	virtual void AI_getYieldMultipliers( int &iFoodMultiplier, int &iProductionMultiplier, int &iCommerceMultiplier, int &iDesiredFoodChange ) = 0;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	virtual int AI_totalBestBuildValue(CvArea* pArea) = 0;
 	virtual int AI_countBestBuilds(CvArea* pArea) = 0;													// Exposed to Python
 	virtual BuildTypes AI_getBestBuild(int iIndex) = 0;
@@ -1024,6 +1081,13 @@ public:
 	virtual int AI_getWorkersHave() = 0;
 	virtual int AI_getWorkersNeeded() = 0;
 	virtual void AI_changeWorkersHave(int iChange) = 0;
+/********************************************************************************/
+/* 	Worker Counting						03.08.2010				Fuyu			*/
+/********************************************************************************/
+	virtual int AI_workingCityPlotTargetMissionAIs(PlayerTypes ePlayer, MissionAITypes eMissionAI, UnitAITypes eUnitAI = NO_UNITAI, bool bSameAreaOnly = false) const = 0;
+/********************************************************************************/
+/* 	Worker Counting 											END 			*/
+/********************************************************************************/
 
 	bool hasShrine(ReligionTypes eReligion);
 	void processVoteSourceBonus(VoteSourceTypes eVoteSource, bool bActive);

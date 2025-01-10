@@ -619,6 +619,17 @@ void CyTeam::changeExtraMoves(int /*DomainTypes*/ eIndex, int iChange)
 
 bool CyTeam::isHasMet(int /*TeamTypes*/ eIndex)
 {
+	//Fuyu: Catching Civ4lerts mess-ups
+	FAssertMsg(eIndex >= 0, "eIndex is expected to be non-negative (invalid Index) (Python)");
+	FAssertMsg(eIndex < MAX_TEAMS, "eIndex is expected to be within maximum bounds (invalid Index) (Python)");
+	if (eIndex < 0 || eIndex >= MAX_TEAMS)
+	{
+#ifdef _DEBUG
+		throw new exception();
+#endif
+        return false;
+	}
+
 	return m_pTeam ? m_pTeam->isHasMet((TeamTypes)eIndex) : false;
 }
 
@@ -956,6 +967,19 @@ void CyTeam::AI_setWarPlan(int /*TeamTypes*/ eIndex, int /*WarPlanTypes*/ eNewVa
 		m_pTeam->AI_setWarPlan((TeamTypes)eIndex, (WarPlanTypes)eNewValue);
 	}
 }
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      01/12/09                                jdog5000      */
+/*                                                                                              */
+/* Player Interface                                                                             */
+/************************************************************************************************/
+int CyTeam::AI_getWarPlan(int /*TeamTypes*/ eIndex) const
+{
+	return m_pTeam ? m_pTeam->AI_getWarPlan((TeamTypes)eIndex) : -1;
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 
 int CyTeam::AI_getAtWarCounter(int /*TeamTypes*/ eTeam) const

@@ -53,6 +53,68 @@ void CvGame::updateColoredPlots()
 		return;
 	}
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      06/25/09                                jdog5000      */
+/*                                                                                              */
+/* Debug                                                                                        */
+/************************************************************************************************/
+	// City circles for debugging
+	if (isDebugMode())
+	{
+		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
+		{
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
+
+			if (pLoopPlot != NULL)
+			{
+				for( int iI = 0; iI < MAX_CIV_PLAYERS; iI++ )
+				{
+					if( GET_PLAYER((PlayerTypes)iI).isAlive() )
+					{
+						if (GET_PLAYER((PlayerTypes)iI).AI_isPlotCitySite(pLoopPlot))
+						{
+							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER((PlayerTypes)iI).getPlayerColor()).getColorTypePrimary()).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Plot improvement replacement circles for debugging
+	if (isDebugMode())
+	{
+		for (int iPlotLoop = 0; iPlotLoop < GC.getMap().numPlots(); iPlotLoop++)
+		{
+			CvPlot* pLoopPlot = GC.getMap().plotByIndex(iPlotLoop);
+
+			if (pLoopPlot != NULL)
+			{
+				CvCity* pWorkingCity = pLoopPlot->getWorkingCity();
+				ImprovementTypes eImprovement = pLoopPlot->getImprovementType();
+
+				if( pWorkingCity != NULL && eImprovement != NO_IMPROVEMENT )
+				{
+					int iPlotIndex = pWorkingCity->getCityPlotIndex(pLoopPlot);
+					int iBuildValue = pWorkingCity->AI_getBestBuildValue(iPlotIndex);
+					BuildTypes eBestBuild = pWorkingCity->AI_getBestBuild(iPlotIndex);
+
+					if (NO_BUILD != eBestBuild)
+					{
+						if( GC.getBuildInfo(eBestBuild).getImprovement() != NO_IMPROVEMENT && eImprovement != GC.getBuildInfo(eBestBuild).getImprovement() )
+						{
+							gDLL->getEngineIFace()->addColoredPlot(pLoopPlot->getX_INLINE(), pLoopPlot->getY_INLINE(), GC.getColorInfo((ColorTypes)GC.getInfoTypeForString("COLOR_RED")).getColor(), PLOT_STYLE_CIRCLE, PLOT_LANDSCAPE_LAYER_BASE);
+						}
+					}
+				}
+			}
+		}
+	}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+
 	// City circles when in Advanced Start
 	if (gDLL->getInterfaceIFace()->isInAdvancedStart())
 	{
@@ -216,6 +278,7 @@ void CvGame::updateColoredPlots()
 									BonusTypes ePlotBonus = pLoopPlot->getBonusType(eOwnerTeam);
 									FeatureTypes ePlotFeature = pLoopPlot->getFeatureType();
 									ImprovementTypes ePlotImprovement = pLoopPlot->getImprovementType();
+									RouteTypes ePlotRoute = pLoopPlot->getRouteType();
 
 									if (ePlotImprovement == GC.getDefineINT("RUINS_IMPROVEMENT"))
 									{
@@ -246,8 +309,8 @@ void CvGame::updateColoredPlots()
 												bCanBeImproved = true;
 												bCanProvideBonus = true;
 											}
-											else if (eBestRoute != NO_ROUTE && !pLoopPlot->isWater() && ePlotImprovement != NO_IMPROVEMENT 
-													&& GC.getImprovementInfo(ePlotImprovement).isImprovementBonusTrade(ePlotBonus))
+											else if ( eBestRoute != NO_ROUTE && ePlotRoute == NO_ROUTE && !pLoopPlot->isWater() && !pLoopPlot->isConnectedTo(pSelectedCity)
+												&& ePlotImprovement != NO_IMPROVEMENT && GC.getImprovementInfo(ePlotImprovement).isImprovementBonusTrade(ePlotBonus) )
 											{
 												bCanProvideBonus = true;
 											}
@@ -265,16 +328,30 @@ void CvGame::updateColoredPlots()
 												if (eBestRoute != NO_ROUTE)
 												{
 													// will the route increase yields?
-													for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+													if (ePlotRoute == NO_ROUTE)
 													{
-														if (kPlotImprovement.getRouteYieldChanges(eBestRoute, iJ) > 0)
+														for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
 														{
-															bCanBeImproved = true;
-															break;
+															if (kPlotImprovement.getRouteYieldChanges(eBestRoute, iJ) > 0)
+															{
+																bCanBeImproved = true;
+																break;
+															}
+														}
+													}
+													else
+													{
+														for (int iJ = 0; iJ < NUM_YIELD_TYPES; iJ++)
+														{
+															if (kPlotImprovement.getRouteYieldChanges(eBestRoute, iJ) > kPlotImprovement.getRouteYieldChanges(ePlotRoute, iJ))
+															{
+																bCanBeImproved = true;
+																break;
+															}
 														}
 													}
 												}
-												else
+												else if (eBestImprovement == NO_IMPROVEMENT)
 												{
 													// does the best build clear a bad feature?
 													if (bBestBuildRemovesFeature && !kPlotImprovement.isRequiresFeature() 
@@ -293,17 +370,22 @@ void CvGame::updateColoredPlots()
 											{
 												if (bBestBuildRemovesFeature)
 												{
-													if (GC.getFeatureInfo(ePlotFeature).isOnlyBad())
-													{
-														// does the best build clear a bad feature?
-														bCanBeImproved = true;
-													}
-													else if (ePlotBonus != NO_BONUS && eBestImprovement != NO_IMPROVEMENT 
-															&& GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
+													if (ePlotBonus != NO_BONUS && eBestImprovement != NO_IMPROVEMENT 
+                                                        && GC.getImprovementInfo(eBestImprovement).isImprovementBonusTrade(ePlotBonus))
 													{
 														// does the best build provide a bonus
 														bCanBeImproved = true;
 														bCanProvideBonus = true;
+													}
+													else if (GC.getFeatureInfo(ePlotFeature).isOnlyBad())
+													{
+														// does the best build clear a bad feature?
+														bCanBeImproved = true;
+													}
+													else if (eBestImprovement != NO_IMPROVEMENT)
+													{
+														//Fuyu: count chops too if an improvement is placed instead
+														bCanBeImproved = true;
 													}
 												}
 												else if (eBestRoute == NO_ROUTE)
@@ -570,6 +652,20 @@ void CvGame::updateColoredPlots()
 									CvPlot* pLoopPlot = ::plotXY(pLoopUnit->getX_INLINE(), pLoopUnit->getY_INLINE(), i, j);
 									if (NULL != pLoopPlot && pLoopPlot->isRevealed(getActiveTeam(), false))
 									{
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      12/11/08                                jdog5000      */
+/*                                                                                              */
+/* Bugfix                                                                                       */
+/************************************************************************************************/
+										if( GC.getMapINLINE().calculatePathDistance(pLoopUnit->plot(),pLoopPlot) > iBlockadeRange )
+										{
+											// No blockading on other side of an isthmus
+											continue;
+										}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 										if (pLoopPlot->isWater() && pLoopPlot->area() == pLoopUnit->area())
 										{
 											NiColorA color(GC.getColorInfo((ColorTypes)GC.getPlayerColorInfo(GET_PLAYER(getActivePlayer()).getPlayerColor()).getColorTypePrimary()).getColor());

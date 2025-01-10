@@ -16,6 +16,7 @@ class CvDiploParameters;
 class CvPopupInfo;
 class CvEventTriggerInfo;
 
+
 typedef std::list<CvTalkingHeadMessage> CvMessageQueue;
 typedef std::list<CvPopupInfo*> CvPopupQueue;
 typedef std::list<CvDiploParameters*> CvDiploQueue;
@@ -34,6 +35,34 @@ public:
 	DllExport void init(PlayerTypes eID);
 	DllExport void setupGraphical();
 	DllExport void reset(PlayerTypes eID = NO_PLAYER, bool bConstructorCall = false);
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      12/30/08                                jdog5000      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
+	void initInGame(PlayerTypes eID);
+	void resetPlotAndCityData( );
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
+/************************************************************************************************/
+/* CHANGE_PLAYER                          12/30/08                                jdog5000      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
+	void logMsg(char* format, ... );
+	void clearTraitBonuses();
+	void addTraitBonuses();
+	void changePersonalityType();
+	void resetCivTypeEffects();
+	void changeLeader( LeaderHeadTypes eNewLeader );
+	void changeCiv( CivilizationTypes eNewCiv );
+	void setIsHuman( bool bNewValue );
+/************************************************************************************************/
+/* CHANGE_PLAYER                           END                                                  */
+/************************************************************************************************/
 
 protected:
 
@@ -68,8 +97,6 @@ public:
 	CvSelectionGroup* cycleSelectionGroups(CvUnit* pUnit, bool bForward, bool bWorkers, bool* pbWrap);
 
 	bool hasTrait(TraitTypes eTrait) const;																																			// Exposed to Python						
-// BUG - AIAutoPlay - start
-#ifdef _MOD_AIAUTOPLAY
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                       07/09/08                                jdog5000      */
 /*                                                                                              */
@@ -80,8 +107,6 @@ public:
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                        END                                                  */
 /************************************************************************************************/
-#endif
-// BUG - AIAutoPlay - end
 	DllExport bool isHuman() const;																																							// Exposed to Python						
 	DllExport void updateHuman();
 	DllExport bool isBarbarian() const;																																					// Exposed to Python						
@@ -114,10 +139,18 @@ public:
 	void updateYield();
 	void updateMaintenance();
 	void updatePowerHealth();
-	void updateExtraBuildingHappiness();
-	void updateExtraBuildingHealth();
-	void updateFeatureHappiness();
-	void updateReligionHappiness();
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited START
+	void updateExtraBuildingHappiness(bool bLimited = false);
+	void updateExtraBuildingHealth(bool bLimited = false);
+	void updateFeatureHappiness(bool bLimited = false);
+	void updateReligionHappiness(bool bLimited = false);
+//Fuyu bLimited END
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 	void updateExtraSpecialistYield();
 	void updateCommerce(CommerceTypes eCommerce);
 	void updateCommerce();
@@ -136,7 +169,7 @@ public:
 	DllExport bool hasBusyUnit() const;
 
 /************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                            Emperor Fool      */
+/* UNOFFICIAL_PATCH                       12/07/09                             EmperorFool      */
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
@@ -155,8 +188,16 @@ public:
 
 	int upgradeAllPrice(UnitTypes eUpgradeUnit, UnitTypes eFromUnit);
 
-	int countReligionSpreadUnits(CvArea* pArea, ReligionTypes eReligion) const;														// Exposed to Python
-	int countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorporation) const;														// Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      11/14/09                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+	int countReligionSpreadUnits(CvArea* pArea, ReligionTypes eReligion, bool bIncludeTraining = false) const;														// Exposed to Python
+	int countCorporationSpreadUnits(CvArea* pArea, CorporationTypes eCorporation, bool bIncludeTraining = false) const;														// Exposed to Python
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	int countNumCoastalCities() const;																																		// Exposed to Python
 	int countNumCoastalCitiesByArea(CvArea* pArea) const;																									// Exposed to Python
 	int countTotalCulture() const;																																				// Exposed to Python
@@ -460,11 +501,19 @@ public:
 	void changeNumMilitaryUnits(int iChange);													
 
 	int getHappyPerMilitaryUnit() const;																																			// Exposed to Python
-	void changeHappyPerMilitaryUnit(int iChange);												
+/********************************************************************************/
+/* 	New Civic AI						19.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeHappyPerMilitaryUnit(int iChange, bool bLimited = false);
 
 	int getMilitaryFoodProductionCount() const;														
 	bool isMilitaryFoodProduction() const;																																		// Exposed to Python
-	void changeMilitaryFoodProductionCount(int iChange);
+//Fuyu bLimited
+	void changeMilitaryFoodProductionCount(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getHighestUnitLevel() const;																																					// Exposed to Python
 	void setHighestUnitLevel(int iNewValue);
@@ -482,14 +531,28 @@ public:
 
 	int getNoUnhealthyPopulationCount() const;
 	bool isNoUnhealthyPopulation() const;																																			// Exposed to Python
-	void changeNoUnhealthyPopulationCount(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeNoUnhealthyPopulationCount(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getExpInBorderModifier() const;
 	void changeExpInBorderModifier(int iChange);
 
 	int getBuildingOnlyHealthyCount() const;
 	bool isBuildingOnlyHealthy() const;																																				// Exposed to Python
-	void changeBuildingOnlyHealthyCount(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeBuildingOnlyHealthyCount(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getDistanceMaintenanceModifier() const;																																// Exposed to Python
 	void changeDistanceMaintenanceModifier(int iChange);
@@ -498,7 +561,14 @@ public:
 	void changeNumCitiesMaintenanceModifier(int iChange);
 
 	int getCorporationMaintenanceModifier() const;																															// Exposed to Python
-	void changeCorporationMaintenanceModifier(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						19.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeCorporationMaintenanceModifier(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getTotalMaintenance() const;																																					// Exposed to Python
 	void changeTotalMaintenance(int iChange);
@@ -510,7 +580,14 @@ public:
 	void changeLevelExperienceModifier(int iChange);
 
 	DllExport int getExtraHealth() const;																																			// Exposed to Python
-	void changeExtraHealth(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeExtraHealth(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getBuildingGoodHealth() const;																																				// Exposed to Python
 	void changeBuildingGoodHealth(int iChange);
@@ -525,29 +602,46 @@ public:
 	void changeBuildingHappiness(int iChange);
 
 	int getLargestCityHappiness() const;																																			// Exposed to Python
-	void changeLargestCityHappiness(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeLargestCityHappiness(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getWarWearinessPercentAnger() const;																																	// Exposed to Python 
 	void updateWarWearinessPercentAnger();
 	int getModifiedWarWearinessPercentAnger(int iWarWearinessPercentAnger) const;
 
 	int getWarWearinessModifier() const;																																			// Exposed to Python
-	void changeWarWearinessModifier(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						19.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeWarWearinessModifier(int iChange, bool bLimited = false);
 
 	int getFreeSpecialist() const;																																						// Exposed to Python
 	void changeFreeSpecialist(int iChange);
 
 	int getNoForeignTradeCount() const;
 	bool isNoForeignTrade() const;																																						// Exposed to Python
-	void changeNoForeignTradeCount(int iChange);
+//Fuyu bLimited
+	void changeNoForeignTradeCount(int iChange, bool bLimited = false);
 
 	int getNoCorporationsCount() const;
 	bool isNoCorporations() const;																																						// Exposed to Python
-	void changeNoCorporationsCount(int iChange);
+//Fuyu bLimited
+	void changeNoCorporationsCount(int iChange, bool bLimited = false);
 
 	int getNoForeignCorporationsCount() const;
 	bool isNoForeignCorporations() const;																																						// Exposed to Python
-	void changeNoForeignCorporationsCount(int iChange);
+//Fuyu bLimited
+	void changeNoForeignCorporationsCount(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getCoastalTradeRoutes() const;																																				// Exposed to Python
 	void changeCoastalTradeRoutes(int iChange);																													// Exposed to Python
@@ -565,17 +659,26 @@ public:
 
 	int getStateReligionCount() const;
 	bool isStateReligion() const;																																							// Exposed to Python
-	void changeStateReligionCount(int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeStateReligionCount(int iChange, bool bLimited = false);
 
 	int getNoNonStateReligionSpreadCount() const;
 	DllExport bool isNoNonStateReligionSpread() const;																												// Exposed to Python
 	void changeNoNonStateReligionSpreadCount(int iChange);
 
 	DllExport int getStateReligionHappiness() const;																													// Exposed to Python
-	void changeStateReligionHappiness(int iChange);
+//Fuyu bLimited
+	void changeStateReligionHappiness(int iChange, bool bLimited = false);
 
 	int getNonStateReligionHappiness() const;																																	// Exposed to Python
-	void changeNonStateReligionHappiness(int iChange);
+//Fuyu bLimited
+	void changeNonStateReligionHappiness(int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getStateReligionUnitProductionModifier() const;																												// Exposed to Python 
 	void changeStateReligionUnitProductionModifier(int iChange);
@@ -755,12 +858,33 @@ public:
 	void changeFreeBuildingCount(BuildingTypes eIndex, int iChange);
 
 	int getExtraBuildingHappiness(BuildingTypes eIndex) const;																				// Exposed to Python
-	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeExtraBuildingHappiness(BuildingTypes eIndex, int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 	int getExtraBuildingHealth(BuildingTypes eIndex) const;																				// Exposed to Python
-	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeExtraBuildingHealth(BuildingTypes eIndex, int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getFeatureHappiness(FeatureTypes eIndex) const;																								// Exposed to Python
-	void changeFeatureHappiness(FeatureTypes eIndex, int iChange);
+/********************************************************************************/
+/* 	New Civic AI						02.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeFeatureHappiness(FeatureTypes eIndex, int iChange, bool bLimited = false);
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 
 	int getUnitClassCount(UnitClassTypes eIndex) const;																								// Exposed to Python
 	bool isUnitClassMaxedOut(UnitClassTypes eIndex, int iExtra = 0) const;														// Exposed to Python
@@ -808,7 +932,14 @@ public:
 
 	int getSpecialistValidCount(SpecialistTypes eIndex) const;
 	DllExport bool isSpecialistValid(SpecialistTypes eIndex) const;																		// Exposed to Python					
-	void changeSpecialistValidCount(SpecialistTypes eIndex, int iChange);												
+/********************************************************************************/
+/* 	New Civic AI						19.08.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bLimited
+	void changeSpecialistValidCount(SpecialistTypes eIndex, int iChange, bool bLimited = false);												
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 																																															
 	DllExport bool isResearchingTech(TechTypes eIndex) const;																					// Exposed to Python					
 	void setResearchingTech(TechTypes eIndex, bool bNewValue);																	
@@ -1027,6 +1158,15 @@ public:
 	virtual void AI_assignWorkingPlots() = 0;
 	virtual void AI_updateAssignWork() = 0;
 	virtual void AI_makeProductionDirty() = 0;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      05/08/09                                jdog5000      */
+/*                                                                                              */
+/* City AI                                                                                      */
+/************************************************************************************************/
+	//virtual void AI_doCentralizedProduction() = 0;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	virtual void AI_conquerCity(CvCity* pCity) = 0;
 	virtual int AI_foundValue(int iX, int iY, int iMinUnitRange = -1, bool bStartingLoc = false) const = 0; // Exposed to Python
 	virtual bool AI_isCommercePlot(CvPlot* pPlot) const = 0;
@@ -1051,13 +1191,26 @@ public:
 	virtual DenialTypes AI_stopTradingTrade(TeamTypes eTradeTeam, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_civicTrade(CivicTypes eCivic, PlayerTypes ePlayer) const = 0;
 	virtual DenialTypes AI_religionTrade(ReligionTypes eReligion, PlayerTypes ePlayer) const = 0;
-	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea) const = 0;						// Exposed to Python
+/********************************************************************************/
+/* 	City Defenders						24.07.2010				Fuyu			*/
+/********************************************************************************/
+//Fuyu bIgnoreNotUnitAIs
+	virtual int AI_unitValue(UnitTypes eUnit, UnitAITypes eUnitAI, CvArea* pArea, bool bIgnoreNotUnitAIs = false) const = 0;						// Exposed to Python
+/********************************************************************************/
+/* 	City Defenders												END 			*/
+/********************************************************************************/
 	virtual int AI_totalUnitAIs(UnitAITypes eUnitAI) const = 0;																					// Exposed to Python
 	virtual int AI_totalAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const = 0;											// Exposed to Python
 	virtual int AI_totalWaterAreaUnitAIs(CvArea* pArea, UnitAITypes eUnitAI) const = 0;									// Exposed to Python
 	virtual int AI_plotTargetMissionAIs(CvPlot* pPlot, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL, int iRange = 0) const = 0;
 	virtual int AI_unitTargetMissionAIs(CvUnit* pUnit, MissionAITypes eMissionAI, CvSelectionGroup* pSkipSelectionGroup = NULL) const = 0;
-	virtual int AI_civicValue(CivicTypes eCivic) const = 0;   // Exposed to Python
+/********************************************************************************/
+/* 	New Civic AI						19.08.2010				Fuyu			*/
+/********************************************************************************/												
+	virtual int AI_civicValue(CivicTypes eCivic, bool bCivicOptionVacuum = false, bool bCompleteVacuum = false, CivicTypes* paeSelectedCivics = NULL) const = 0;   // Exposed to Python
+/********************************************************************************/
+/* 	New Civic AI												END 			*/
+/********************************************************************************/
 	virtual int AI_getNumAIUnits(UnitAITypes eIndex) const = 0;																					// Exposed to Python
 	virtual void AI_changePeacetimeTradeValue(PlayerTypes eIndex, int iChange) = 0;
 	virtual void AI_changePeacetimeGrantValue(PlayerTypes eIndex, int iChange) = 0;
@@ -1188,8 +1341,7 @@ protected:
 	bool m_bFoundedFirstCity;
 	bool m_bStrike;
 	bool m_bHuman;
-// BUG - AIAutoPlay - start
-#ifdef _MOD_AIAUTOPLAY
+
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                        09/01/07                            MRGENIE          */
 /*                                                                                              */
@@ -1199,11 +1351,9 @@ protected:
 /************************************************************************************************/
 /* AI_AUTO_PLAY_MOD                        END                                                  */
 /************************************************************************************************/
-#endif
-// BUG - AIAutoPlay - end
 
 /************************************************************************************************/
-/* UNOFFICIAL_PATCH                       12/07/09                            Emperor Fool      */
+/* UNOFFICIAL_PATCH                       12/07/09                             EmperorFool      */
 /*                                                                                              */
 /* Bugfix                                                                                       */
 /************************************************************************************************/
@@ -1324,7 +1474,7 @@ protected:
 
 	void verifyGoldCommercePercent();
 
-	void processCivics(CivicTypes eCivic, int iChange);
+	void processCivics(CivicTypes eCivic, int iChange, bool bLimited = false);
 
 	// for serialization
 	virtual void read(FDataStreamBase* pStream);

@@ -25,6 +25,31 @@ CyPlayer::CyPlayer(CvPlayer* pPlayer) : m_pPlayer(pPlayer)
 {
 }
 
+/************************************************************************************************/
+/* CHANGE_PLAYER                         08/27/08                                 jdog5000      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
+void CyPlayer::changeLeader( int /*LeaderHeadTypes*/ eNewLeader )
+{
+	if( m_pPlayer )
+		m_pPlayer->changeLeader( (LeaderHeadTypes)eNewLeader );
+}
+
+void CyPlayer::changeCiv( int /*CivilizationTypes*/ eNewCiv )
+{
+	if( m_pPlayer )
+		m_pPlayer->changeCiv( (CivilizationTypes)eNewCiv );
+}
+void CyPlayer::setIsHuman( bool bNewValue )
+{
+	if( m_pPlayer )
+		m_pPlayer->setIsHuman( bNewValue );
+}
+/************************************************************************************************/
+/* CHANGE_PLAYER                          END                                                   */
+/************************************************************************************************/
+
 int CyPlayer::startingPlotRange()
 {
 	return m_pPlayer ? m_pPlayer->startingPlotRange() : -1;
@@ -2046,6 +2071,20 @@ bool CyPlayer::AI_demandRebukedWar(int /*PlayerTypes*/ ePlayer)
 
 AttitudeTypes CyPlayer::AI_getAttitude(int /*PlayerTypes*/ ePlayer)
 {
+	//Fuyu catching AIAutoplay weirdness
+	if (m_pPlayer)
+	{
+		FAssertMsg(m_pPlayer->getID() != (PlayerTypes)ePlayer, "shouldn't call this function on ourselves (Python)");
+		if (m_pPlayer->getID() == (PlayerTypes)ePlayer)
+		{
+#ifdef _DEBUG
+			throw new exception();
+#endif
+		   return NO_ATTITUDE;
+		}
+	}
+	//Fuyu end
+
 	return m_pPlayer ? m_pPlayer->AI_getAttitude((PlayerTypes)ePlayer) : NO_ATTITUDE;
 }
 

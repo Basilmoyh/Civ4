@@ -139,37 +139,45 @@ void CvPlotGroup::recalculatePlots()
 		}
 	}
 
-	oldPlotGroup.clear();
-
-	pPlotNode = headPlotsNode();
-
-	while (pPlotNode != NULL)
 	{
-		pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+		PROFILE("CvPlotGroup::recalculatePlots update");
 
-		FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+		oldPlotGroup.clear();
 
-		xy.iX = pPlot->getX_INLINE();
-		xy.iY = pPlot->getY_INLINE();
+		pPlotNode = headPlotsNode();
 
-		oldPlotGroup.insertAtEnd(xy);
+		while (pPlotNode != NULL)
+		{
+			PROFILE("CvPlotGroup::recalculatePlots update 1");
 
-		pPlot->setPlotGroup(eOwner, NULL);
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
 
-		pPlotNode = deletePlotsNode(pPlotNode); // will delete this PlotGroup...
-	}
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
 
-	pPlotNode = oldPlotGroup.head();
+			xy.iX = pPlot->getX_INLINE();
+			xy.iY = pPlot->getY_INLINE();
 
-	while (pPlotNode != NULL)
-	{
-		pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+			oldPlotGroup.insertAtEnd(xy);
 
-		FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+			pPlot->setPlotGroup(eOwner, NULL);
 
-		pPlot->updatePlotGroup(eOwner, true);
+			pPlotNode = deletePlotsNode(pPlotNode); // will delete this PlotGroup...
+		}
 
-		pPlotNode = oldPlotGroup.deleteNode(pPlotNode);
+		pPlotNode = oldPlotGroup.head();
+
+		while (pPlotNode != NULL)
+		{
+			PROFILE("CvPlotGroup::recalculatePlots update 2");
+
+			pPlot = GC.getMapINLINE().plotSorenINLINE(pPlotNode->m_data.iX, pPlotNode->m_data.iY);
+
+			FAssertMsg(pPlot != NULL, "Plot is not assigned a valid value");
+
+			pPlot->updatePlotGroup(eOwner, true);
+
+			pPlotNode = oldPlotGroup.deleteNode(pPlotNode);
+		}
 	}
 }
 

@@ -228,6 +228,51 @@ m_iUSE_ON_UNIT_CREATED_CALLBACK(0),
 m_iUSE_ON_UNIT_LOST_CALLBACK(0),
 m_paHints(NULL),
 m_paMainMenus(NULL)
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency, Options                                                                          */
+/************************************************************************************************/
+// BBAI Options
+,m_bBBAI_AIR_COMBAT(false)
+,m_bBBAI_HUMAN_VASSAL_WAR_BUILD(false)
+,m_iBBAI_DEFENSIVE_PACT_BEHAVIOR(0)
+,m_bBBAI_HUMAN_AS_VASSAL_OPTION(false)
+
+// BBAI AI Variables
+,m_iWAR_SUCCESS_CITY_CAPTURING(25)
+,m_iBBAI_ATTACK_CITY_STACK_RATIO(110)
+,m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS(12)
+,m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO(300)
+,m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO(140)
+
+// Tech Diffusion
+,m_bTECH_DIFFUSION_ENABLE(false)
+,m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER(30)
+,m_iTECH_DIFFUSION_WELFARE_THRESHOLD(88)
+,m_iTECH_DIFFUSION_WELFARE_MODIFIER(30)
+,m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER(20)
+,m_iTECH_COST_KNOWN_PREREQ_MODIFIER(20)
+,m_iTECH_COST_MODIFIER(0)
+
+// From Lead From Behind by UncutDragon
+// Lead from Behind flags
+,m_bLFBEnable(false)
+,m_iLFBBasedOnGeneral(1)
+,m_iLFBBasedOnExperience(1)
+,m_iLFBBasedOnLimited(1)
+,m_iLFBBasedOnHealer(1)
+,m_iLFBBasedOnAverage(1)
+,m_bLFBUseSlidingScale(true)
+,m_iLFBAdjustNumerator(1)
+,m_iLFBAdjustDenominator(3)
+,m_bLFBUseCombatOdds(true)
+,m_iCOMBAT_DIE_SIDES(-1)
+,m_iCOMBAT_DAMAGE(-1)
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 {
 }
 
@@ -2669,7 +2714,73 @@ void CvGlobals::cacheGlobals()
 	m_iUSE_ON_UPDATE_CALLBACK = getDefineINT("USE_ON_UPDATE_CALLBACK");
 	m_iUSE_ON_UNIT_CREATED_CALLBACK = getDefineINT("USE_ON_UNIT_CREATED_CALLBACK");
 	m_iUSE_ON_UNIT_LOST_CALLBACK = getDefineINT("USE_ON_UNIT_LOST_CALLBACK");
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency, Options                                                                          */
+/************************************************************************************************/
+// BBAI Options
+	m_bBBAI_AIR_COMBAT = !(getDefineINT("BBAI_AIR_COMBAT") == 0);
+	m_bBBAI_HUMAN_VASSAL_WAR_BUILD = !(getDefineINT("BBAI_HUMAN_VASSAL_WAR_BUILD") == 0);
+	m_iBBAI_DEFENSIVE_PACT_BEHAVIOR = getDefineINT("BBAI_DEFENSIVE_PACT_BEHAVIOR");
+	m_bBBAI_HUMAN_AS_VASSAL_OPTION = !(getDefineINT("BBAI_HUMAN_AS_VASSAL_OPTION") == 0);
+
+// BBAI AI Variables
+	m_iWAR_SUCCESS_CITY_CAPTURING = getDefineINT("WAR_SUCCESS_CITY_CAPTURING", m_iWAR_SUCCESS_CITY_CAPTURING);
+	m_iBBAI_ATTACK_CITY_STACK_RATIO = getDefineINT("BBAI_ATTACK_CITY_STACK_RATIO", m_iBBAI_ATTACK_CITY_STACK_RATIO);
+	m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS = getDefineINT("BBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS", m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS);
+	m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO = getDefineINT("BBAI_SKIP_BOMBARD_BASE_STACK_RATIO", m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO);
+	m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO = getDefineINT("BBAI_SKIP_BOMBARD_MIN_STACK_RATIO", m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO);
+
+// Tech Diffusion
+	m_bTECH_DIFFUSION_ENABLE = !(getDefineINT("TECH_DIFFUSION_ENABLE") == 0);
+	m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER = getDefineINT("TECH_DIFFUSION_KNOWN_TEAM_MODIFIER", m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER);
+	m_iTECH_DIFFUSION_WELFARE_THRESHOLD = getDefineINT("TECH_DIFFUSION_WELFARE_THRESHOLD", m_iTECH_DIFFUSION_WELFARE_THRESHOLD);
+	m_iTECH_DIFFUSION_WELFARE_MODIFIER = getDefineINT("TECH_DIFFUSION_WELFARE_MODIFIER", m_iTECH_DIFFUSION_WELFARE_MODIFIER);
+	m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER = getDefineINT("TECH_COST_FIRST_KNOWN_PREREQ_MODIFIER", m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER);
+	m_iTECH_COST_KNOWN_PREREQ_MODIFIER = getDefineINT("TECH_COST_KNOWN_PREREQ_MODIFIER", m_iTECH_COST_KNOWN_PREREQ_MODIFIER);
+	m_iTECH_COST_MODIFIER = getDefineINT("TECH_COST_MODIFIER", m_iTECH_COST_MODIFIER);
+	
+// From Lead From Behind by UncutDragon
+// Lead from Behind flags
+	m_bLFBEnable = !(getDefineINT("LFB_ENABLE") == 0);
+	m_iLFBBasedOnGeneral = getDefineINT("LFB_BASEDONGENERAL");
+	m_iLFBBasedOnExperience = getDefineINT("LFB_BASEDONEXPERIENCE");
+	m_iLFBBasedOnLimited = getDefineINT("LFB_BASEDONLIMITED");
+	m_iLFBBasedOnHealer = getDefineINT("LFB_BASEDONHEALER");
+	m_iLFBBasedOnAverage = std::max(1, (m_iLFBBasedOnGeneral+m_iLFBBasedOnLimited+m_iLFBBasedOnHealer+(5*m_iLFBBasedOnExperience)+3)/4);
+	m_bLFBUseSlidingScale = !(getDefineINT("LFB_USESLIDINGSCALE") == 0);
+	m_iLFBAdjustNumerator = getDefineINT("LFB_ADJUSTNUMERATOR");
+	m_iLFBAdjustDenominator = getDefineINT("LFB_ADJUSTDENOMINATOR");
+	m_bLFBUseCombatOdds = !(getDefineINT("LFB_USECOMBATODDS") == 0);
+	m_iCOMBAT_DIE_SIDES = getDefineINT("COMBAT_DIE_SIDES");
+	m_iCOMBAT_DAMAGE = getDefineINT("COMBAT_DAMAGE");
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 }
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/*                                                                                              */
+/************************************************************************************************/
+int CvGlobals::getDefineINT( const char * szName, const int iDefault ) const
+{
+	int iReturn = 0;
+
+	if( GC.getDefinesVarSystem()->GetValue( szName, iReturn ) )
+	{
+		return iReturn;
+	}
+
+	return iDefault;
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 
 int CvGlobals::getDefineINT( const char * szName ) const
 {
@@ -3615,3 +3726,158 @@ const wchar* CvGlobals::getBuffyName() const { return BUFFY_DLL_NAME; }
 const wchar* CvGlobals::getBuffyVersion() const { return BUFFY_DLL_VERSION; }
 #endif
 // BUFFY - DLL Info - end
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency, Options                                                                          */
+/************************************************************************************************/
+// BBAI Options
+bool CvGlobals::getBBAI_AIR_COMBAT()
+{
+	return m_bBBAI_AIR_COMBAT;
+}
+
+bool CvGlobals::getBBAI_HUMAN_VASSAL_WAR_BUILD()
+{
+	return m_bBBAI_HUMAN_VASSAL_WAR_BUILD;
+}
+
+int CvGlobals::getBBAI_DEFENSIVE_PACT_BEHAVIOR()
+{
+	return m_iBBAI_DEFENSIVE_PACT_BEHAVIOR;
+}
+
+bool CvGlobals::getBBAI_HUMAN_AS_VASSAL_OPTION()
+{
+	return m_bBBAI_HUMAN_AS_VASSAL_OPTION;
+}
+
+	
+// BBAI AI Variables
+int CvGlobals::getWAR_SUCCESS_CITY_CAPTURING()
+{
+	return m_iWAR_SUCCESS_CITY_CAPTURING;
+}
+
+int CvGlobals::getBBAI_ATTACK_CITY_STACK_RATIO()
+{
+	return m_iBBAI_ATTACK_CITY_STACK_RATIO;
+}
+
+int CvGlobals::getBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS()
+{
+	return m_iBBAI_SKIP_BOMBARD_BEST_ATTACK_ODDS;
+}
+
+int CvGlobals::getBBAI_SKIP_BOMBARD_BASE_STACK_RATIO()
+{
+	return m_iBBAI_SKIP_BOMBARD_BASE_STACK_RATIO;
+}
+
+int CvGlobals::getBBAI_SKIP_BOMBARD_MIN_STACK_RATIO()
+{
+	return m_iBBAI_SKIP_BOMBARD_MIN_STACK_RATIO;
+}
+
+// Tech Diffusion
+bool CvGlobals::getTECH_DIFFUSION_ENABLE()
+{
+	return m_bTECH_DIFFUSION_ENABLE;
+}
+
+int CvGlobals::getTECH_DIFFUSION_KNOWN_TEAM_MODIFIER()
+{
+	return m_iTECH_DIFFUSION_KNOWN_TEAM_MODIFIER;
+}
+
+int CvGlobals::getTECH_DIFFUSION_WELFARE_THRESHOLD()
+{
+	return m_iTECH_DIFFUSION_WELFARE_THRESHOLD;
+}
+
+int CvGlobals::getTECH_DIFFUSION_WELFARE_MODIFIER()
+{
+	return m_iTECH_DIFFUSION_WELFARE_MODIFIER;
+}
+
+int CvGlobals::getTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER()
+{
+	return m_iTECH_COST_FIRST_KNOWN_PREREQ_MODIFIER;
+}
+
+int CvGlobals::getTECH_COST_KNOWN_PREREQ_MODIFIER()
+{
+	return m_iTECH_COST_KNOWN_PREREQ_MODIFIER;
+}
+
+int CvGlobals::getTECH_COST_MODIFIER()
+{
+	return m_iTECH_COST_MODIFIER;
+}
+
+
+// From Lead From Behind by UncutDragon
+// Lead from Behind flags
+bool CvGlobals::getLFBEnable()
+{
+	return m_bLFBEnable;
+}
+
+int CvGlobals::getLFBBasedOnGeneral()
+{
+	return m_iLFBBasedOnGeneral;
+}
+
+int CvGlobals::getLFBBasedOnExperience()
+{
+	return m_iLFBBasedOnExperience;
+}
+
+int CvGlobals::getLFBBasedOnLimited()
+{
+	return m_iLFBBasedOnLimited;
+}
+
+int CvGlobals::getLFBBasedOnHealer()
+{
+	return m_iLFBBasedOnHealer;
+}
+
+int CvGlobals::getLFBBasedOnAverage()
+{
+	return m_iLFBBasedOnAverage;
+}
+
+bool CvGlobals::getLFBUseSlidingScale()
+{
+	return m_bLFBUseSlidingScale;
+}
+
+int CvGlobals::getLFBAdjustNumerator()
+{
+	return m_iLFBAdjustNumerator;
+}
+
+int CvGlobals::getLFBAdjustDenominator()
+{
+	return m_iLFBAdjustDenominator;
+}
+
+bool CvGlobals::getLFBUseCombatOdds()
+{
+	return m_bLFBUseCombatOdds;
+}
+
+int CvGlobals::getCOMBAT_DIE_SIDES()
+{
+	return m_iCOMBAT_DIE_SIDES;
+}
+
+int CvGlobals::getCOMBAT_DAMAGE()
+{
+	return m_iCOMBAT_DAMAGE;
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/

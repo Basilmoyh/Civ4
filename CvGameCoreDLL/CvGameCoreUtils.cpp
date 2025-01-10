@@ -230,111 +230,111 @@ bool isBeforeUnitCycle(const CvUnit* pFirstUnit, const CvUnit* pSecondUnit)
 /*************************************************************************************************/
 bool isPromotionValid(PromotionTypes ePromotion, UnitTypes eUnit, bool bLeader)
 {
-    CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
-    CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
+	CvUnitInfo& kUnit = GC.getUnitInfo(eUnit);
+	CvPromotionInfo& kPromotion = GC.getPromotionInfo(ePromotion);
 
-    if (kUnit.getFreePromotions(ePromotion))
-    {
-        return true;
-    }
+	if (kUnit.getFreePromotions(ePromotion))
+	{
+		return true;
+	}
 
-    if (kUnit.getUnitCombatType() == NO_UNITCOMBAT)
-    {
-        return false;
-    }
+	if (kUnit.getUnitCombatType() == NO_UNITCOMBAT)
+	{
+		return false;
+	}
 
-    if (!bLeader && kPromotion.isLeader())
-    {
-        return false;
-    }
+	if (!bLeader && kPromotion.isLeader())
+	{
+		return false;
+	}
 
-    if (!(kPromotion.getUnitCombat(kUnit.getUnitCombatType())))
-    {
-        return false;
-    }
+	if (!(kPromotion.getUnitCombat(kUnit.getUnitCombatType())))
+	{
+		return false;
+	}
 
-    if (kUnit.isOnlyDefensive())
-    {
-        if ((kPromotion.getCityAttackPercent() != 0) ||
-                (kPromotion.getWithdrawalChange() != 0) ||
-                (kPromotion.getCollateralDamageChange() != 0) ||
-                (kPromotion.isBlitz()) ||
-                (kPromotion.isAmphib()) ||
-                (kPromotion.isRiver()) ||
-                (kPromotion.getHillsAttackPercent() != 0))
-        {
-            return false;
-        }
-    }
+	if (kUnit.isOnlyDefensive())
+	{
+		if ((kPromotion.getCityAttackPercent() != 0) ||
+			  (kPromotion.getWithdrawalChange() != 0) ||
+			  (kPromotion.getCollateralDamageChange() != 0) ||
+			  (kPromotion.isBlitz()) ||
+			  (kPromotion.isAmphib()) ||
+			  (kPromotion.isRiver()) ||
+			  (kPromotion.getHillsAttackPercent() != 0))
+		{
+			return false;
+		}
+	}
 
-    if (kUnit.isIgnoreTerrainCost())
-    {
-        if (kPromotion.getMoveDiscountChange() != 0)
-        {
-            return false;
-        }
-    }
+	if (kUnit.isIgnoreTerrainCost())
+	{
+		if (kPromotion.getMoveDiscountChange() != 0)
+		{
+			return false;
+		}
+	}
 
-    if (kUnit.getMoves() == 1)
-    {
-        if (kPromotion.isBlitz())
-        {
-            return false;
-        }
-    }
+	if (kUnit.getMoves() == 1)
+	{
+		if (kPromotion.isBlitz())
+		{
+			return false;
+		}
+	}
 
-    if ((kUnit.getCollateralDamage() == 0) || (kUnit.getCollateralDamageLimit() == 0) || (kUnit.getCollateralDamageMaxUnits() == 0))
-    {
-        if (kPromotion.getCollateralDamageChange() != 0)
-        {
-            return false;
-        }
-    }
+	if ((kUnit.getCollateralDamage() == 0) || (kUnit.getCollateralDamageLimit() == 0) || (kUnit.getCollateralDamageMaxUnits() == 0))
+	{
+		if (kPromotion.getCollateralDamageChange() != 0)
+		{
+			return false;
+		}
+	}
 
-    if (kUnit.getInterceptionProbability() == 0)
-    {
-        if (kPromotion.getInterceptChange() != 0)
-        {
-            return false;
-        }
-    }
+	if (kUnit.getInterceptionProbability() == 0)
+	{
+		if (kPromotion.getInterceptChange() != 0)
+		{
+			return false;
+		}
+	}
 
-    if (NO_PROMOTION != kPromotion.getPrereqPromotion())
-    {
-        if (!isPromotionValid((PromotionTypes)kPromotion.getPrereqPromotion(), eUnit, bLeader))
-        {
-            return false;
-        }
-    }
+	if (NO_PROMOTION != kPromotion.getPrereqPromotion())
+	{
+		if (!isPromotionValid((PromotionTypes)kPromotion.getPrereqPromotion(), eUnit, bLeader))
+		{
+			return false;
+		}
+	}
 
-    PromotionTypes ePrereq1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
-    PromotionTypes ePrereq2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
-    if (NO_PROMOTION != ePrereq1 || NO_PROMOTION != ePrereq2)
-    {
-        bool bValid = false;
-        if (!bValid)
-        {
-            if (NO_PROMOTION != ePrereq1 && isPromotionValid(ePrereq1, eUnit, bLeader))
-            {
-                bValid = true;
-            }
-        }
+	PromotionTypes ePrereq1 = (PromotionTypes)kPromotion.getPrereqOrPromotion1();
+	PromotionTypes ePrereq2 = (PromotionTypes)kPromotion.getPrereqOrPromotion2();
+	if (NO_PROMOTION != ePrereq1 || NO_PROMOTION != ePrereq2)
+	{
+		bool bValid = false;
+		if (!bValid)
+		{
+			if (NO_PROMOTION != ePrereq1 && isPromotionValid(ePrereq1, eUnit, bLeader))
+			{
+				bValid = true;
+			}
+		}
 
-        if (!bValid)
-        {
-            if (NO_PROMOTION != ePrereq2 && isPromotionValid(ePrereq2, eUnit, bLeader))
-            {
-                bValid = true;
-            }
-        }
+		if (!bValid)
+		{
+			if (NO_PROMOTION != ePrereq2 && isPromotionValid(ePrereq2, eUnit, bLeader))
+			{
+				bValid = true;
+			}
+		}
 
-        if (!bValid)
-        {
-            return false;
-        }
-    }
+		if (!bValid)
+		{
+			return false;
+		}
+	}
 
-    return true;
+	return true;
 }
 /*************************************************************************************************/
 /** ADVANCED COMBAT ODDS                      11/7/09                           PieceOfMind      */
@@ -654,12 +654,30 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 	FAssert((iAttackerStrength + iDefenderStrength) > 0);
 	FAssert((iAttackerFirepower + iDefenderFirepower) > 0);
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency, Lead From Behind                                                                 */
+/************************************************************************************************/
+	// From Lead From Behind by UncutDragon
+/* original code
 	iDefenderOdds = ((GC.getDefineINT("COMBAT_DIE_SIDES") * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
+*/	// modified
+	iDefenderOdds = ((GC.getCOMBAT_DIE_SIDES() * iDefenderStrength) / (iAttackerStrength + iDefenderStrength));
+	// /UncutDragon
+
 	if (iDefenderOdds == 0)
 	{
 		return 1000;
 	}
+
+	// UncutDragon
+/* original code
 	iAttackerOdds = GC.getDefineINT("COMBAT_DIE_SIDES") - iDefenderOdds;	
+*/	// modified
+	iAttackerOdds = GC.getCOMBAT_DIE_SIDES() - iDefenderOdds;	
+	// /UncutDragon
+
 	if (iAttackerOdds == 0)
 	{
 		return 0;
@@ -670,8 +688,14 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 	// calculate damage done in one round
 	//////
 
+	// UncutDragon
+/* original code
 	iDamageToAttacker = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)));
 	iDamageToDefender = std::max(1,((GC.getDefineINT("COMBAT_DAMAGE") * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)));
+*/	// modified
+	iDamageToAttacker = std::max(1,((GC.getCOMBAT_DAMAGE() * (iDefenderFirepower + iStrengthFactor)) / (iAttackerFirepower + iStrengthFactor)));
+	iDamageToDefender = std::max(1,((GC.getCOMBAT_DAMAGE() * (iAttackerFirepower + iStrengthFactor)) / (iDefenderFirepower + iStrengthFactor)));
+	// /UncutDragon
 
 	// calculate needed rounds.
 	// Needed rounds = round_up(health/damage)
@@ -693,6 +717,11 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 
 	iDefenderLowFS = (pAttacker->immuneToFirstStrikes()) ? 0 : pDefender->firstStrikes();
 	iDefenderHighFS = (pAttacker->immuneToFirstStrikes()) ? 0 : (pDefender->firstStrikes() + pDefender->chanceFirstStrikes());
+
+	// UncutDragon
+	if (GC.getLFBEnable())
+		return LFBgetCombatOdds(iAttackerLowFS, iAttackerHighFS, iDefenderLowFS, iDefenderHighFS, iNeededRoundsAttacker, iNeededRoundsDefender, iAttackerOdds);
+	// /UncutDragon
 
 	// For every possible first strike event, calculate the odds of combat.
 	// Then, add these to the total, weighted to the chance of that first 
@@ -727,7 +756,12 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 					// this needs to be in floating point math
 					//////
 
+					// UncutDragon
+/* original code
 					fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI3) * pow((1.0f - (((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), (iFirstStrikes - iI3));
+*/					// modified
+					fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI3) * pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - iI3));
+					// /UncutDragon
 
 					// calculate chance assuming iI3 first strike hits: fOddsAfterEvent
 					//////
@@ -752,7 +786,12 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 							// this needs to be in floating point math
 							//////
 
+							// UncutDragon
+/* original code
 							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), ((iMaxRounds - iI3) - iI4));
+*/							// modified
+							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), ((iMaxRounds - iI3) - iI4));
+							// /UncutDragon
 						}
 					}
 
@@ -791,7 +830,12 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 						// this needs to be in floating point math
 						//////
 
+						// UncutDragon
+/* original code
 						fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iDefenderOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI3) * pow((1.0f - (((float)iDefenderOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), (iFirstStrikes - iI3));
+*/						// modified
+						fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * pow((((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES()), iI3) * pow((1.0f - (((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - iI3));
+						// /UncutDragon
 
 						// calculate chance assuming iI3 first strike hits: fOddsAfterEvent
 						//////
@@ -811,7 +855,12 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 							// this needs to be in floating point math
 							//////
 
+							// UncutDragon
+/* original code
 							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES")), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getDefineINT("COMBAT_DIE_SIDES"))), ((iMaxRounds - iI3) - iI4));
+*/							// modified
+							fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI4) * pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), ((iMaxRounds - iI3) - iI4));
+							// /UncutDragon
 						}
 
 						// Multiply these together, round them properly, and add 
@@ -824,6 +873,9 @@ int getCombatOdds(CvUnit* pAttacker, CvUnit* pDefender)
 			}
 		}
 	}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	// Weigh the total to the number of possible combinations of first strikes events
 	// note: the integer math breaks down when #FS > 656 (with a die size of 1000)
@@ -1429,10 +1481,46 @@ bool PUF_isNoMission(const CvUnit* pUnit, int iData1, int iData2)
 	return (pUnit->getGroup()->getActivityType() != ACTIVITY_MISSION);
 }
 
+/********************************************************************************/
+/* 	Worker Counting						03.08.2010				Fuyu			*/
+/********************************************************************************/
+bool PUF_isNoMissionAI(const CvUnit* pUnit, int iData1, int iData2)
+{
+	return (pUnit->getGroup()->AI_getMissionAIType() == NO_MISSIONAI);
+}
+/********************************************************************************/
+/* 	Worker Counting												END 			*/
+/********************************************************************************/
+
 bool PUF_isFiniteRange(const CvUnit* pUnit, int iData1, int iData2)
 {
 	return ((pUnit->getDomainType() != DOMAIN_AIR) || (pUnit->getUnitInfo().getAirRange() > 0));
 }
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      01/15/09                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+bool PUF_isAvailableUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2)
+{
+	return ((PUF_isUnitAITypeGroupie(pUnit,iData1,iData2)) && !(pUnit->isCargo()));
+}
+
+bool PUF_isUnitAITypeGroupie(const CvUnit* pUnit, int iData1, int iData2)
+{
+	CvUnit* pGroupHead = pUnit->getGroup()->getHeadUnit();
+	return (PUF_isUnitAIType(pGroupHead,iData1,iData2));
+}
+
+bool PUF_isFiniteRangeAndNotJustProduced(const CvUnit* pUnit, int iData1, int iData2)
+{
+	return (PUF_isFiniteRange(pUnit,iData1,iData2) && ((GC.getGameINLINE().getGameTurn() - pUnit->getGameTurnCreated()) > 1));
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 
 int potentialIrrigation(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
@@ -1469,7 +1557,6 @@ int changeIrrigated(FAStarNode* parent, FAStarNode* node, int data, const void* 
 	return 1;
 }
 
-
 int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 {
 	PROFILE_FUNC();
@@ -1502,28 +1589,41 @@ int pathDestValid(int iToX, int iToY, const void* pointer, FAStar* finder)
 
 	if (bAIControl)
 	{
-		if (!(gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_IGNORE_DANGER))
-		{
-			if (!(pSelectionGroup->canFight()) && !(pSelectionGroup->alwaysInvisible()))
-			{
-				if (GET_PLAYER(pSelectionGroup->getHeadOwner()).AI_getPlotDanger(pToPlot) > 0)
-				{
-					return FALSE;
-				}
-			}
-		}
-
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      11/04/09                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+		// BBAI efficiency: switch order, getPlotDanger is more expensive
 		if (pSelectionGroup->getDomainType() == DOMAIN_LAND)
 		{
 			int iGroupAreaID = pSelectionGroup->getArea();
 			if (pToPlot->getArea() != iGroupAreaID)
 			{
-				if (!(pToPlot->isAdjacentToArea(iGroupAreaID)))
+				if( !(pSelectionGroup->canMoveAllTerrain()) )
+				{
+					if (!(pToPlot->isAdjacentToArea(iGroupAreaID)))
+					{
+						return FALSE;
+					}
+				}
+			}
+		}	
+
+		if (!(gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_IGNORE_DANGER))
+		{
+			if (!(pSelectionGroup->canFight()) && !(pSelectionGroup->alwaysInvisible()))
+			{
+				//if (GET_PLAYER(pSelectionGroup->getHeadOwner()).AI_getPlotDanger(pToPlot) > 0)
+				if (GET_PLAYER(pSelectionGroup->getHeadOwner()).AI_getAnyPlotDanger(pToPlot))
 				{
 					return FALSE;
 				}
 			}
 		}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 	}
 
 	if (bAIControl || pToPlot->isRevealed(pSelectionGroup->getHeadTeam(), false))
@@ -1591,6 +1691,8 @@ int pathHeuristic(int iFromX, int iFromY, int iToX, int iToY)
 
 int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
+	PROFILE_FUNC();
+
 	CLLNode<IDInfo>* pUnitNode;
 	CvSelectionGroup* pSelectionGroup;
 	CvUnit* pLoopUnit;
@@ -1661,10 +1763,129 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 							iCost += (PATH_MOVEMENT_WEIGHT * pToPlot->getExtraMovePathCost());
 						}
 					}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+					// Add additional cost for ending turn in or adjacent to enemy territory based on flags
+					if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_3)
+					{
+						if (pToPlot->isOwned() && ((GET_TEAM(pSelectionGroup->getHeadTeam()).AI_getWarPlan(pToPlot->getTeam()) != NO_WARPLAN) || (pToPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pToPlot))))
+						{
+							iCost *= 3;
+						}
+						else
+						{
+							CvPlot* pAdjacentPlot;
+							int iI;
+							for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+							{
+								pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
+
+								if( pAdjacentPlot != NULL )
+								{
+									if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), pSelectionGroup->getHeadTeam()) || (pAdjacentPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pAdjacentPlot))))
+									{
+										iCost *= 3;
+										iCost /= 2;
+									}
+								}
+							}
+						}
+					}
+					else if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_2)
+					{
+						if (pToPlot->isOwned() && ((GET_TEAM(pSelectionGroup->getHeadTeam()).AI_getWarPlan(pToPlot->getTeam()) != NO_WARPLAN) || (pToPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pToPlot))))
+						{
+							iCost *= 2;
+						}
+						else
+						{
+							CvPlot* pAdjacentPlot;
+							int iI;
+							for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+							{
+								pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
+								
+								if( pAdjacentPlot != NULL )
+								{
+									if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), pSelectionGroup->getHeadTeam()) || (pAdjacentPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pAdjacentPlot))))
+									{
+										iCost *= 4;
+										iCost /= 3;
+									}
+								}
+							}
+						}
+					}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 				}
 				else
 				{
 					iCost = (PATH_MOVEMENT_WEIGHT * iCost);
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      04/03/09                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+/*					// Add additional cost for movement in or adjacent to enemy territory based on flags
+					if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_3)
+					{
+						if (pToPlot->isOwned() && ((GET_TEAM(pSelectionGroup->getHeadTeam()).AI_getWarPlan(pToPlot->getTeam()) != NO_WARPLAN) || (pToPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pToPlot))))
+						{
+							iCost *= 2;
+						}
+						else
+						{
+							CvPlot* pAdjacentPlot;
+							int iI;
+							for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+							{
+								pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
+
+								if( pAdjacentPlot != NULL )
+								{
+									if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), pSelectionGroup->getHeadTeam()) || (pAdjacentPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pAdjacentPlot))))
+									{
+										iCost *= 4;
+										iCost /= 3;
+									}
+								}
+							}
+						}
+					}
+					else if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_AVOID_ENEMY_WEIGHT_2)
+					{
+						if (pToPlot->isOwned() && ((GET_TEAM(pSelectionGroup->getHeadTeam()).AI_getWarPlan(pToPlot->getTeam()) != NO_WARPLAN) || (pToPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pToPlot))))
+						{
+							iCost *= 3;
+							iCost /= 2;
+						}
+						else
+						{
+							CvPlot* pAdjacentPlot;
+							int iI;
+							for (iI = 0; iI < NUM_DIRECTION_TYPES; iI++)
+							{
+								pAdjacentPlot = plotDirection(pToPlot->getX_INLINE(), pToPlot->getY_INLINE(), ((DirectionTypes)iI));
+								
+								if( pAdjacentPlot != NULL )
+								{
+									if (pAdjacentPlot->isOwned() && (atWar(pAdjacentPlot->getTeam(), pSelectionGroup->getHeadTeam()) || (pAdjacentPlot->getTeam() != pLoopUnit->getTeam() && pLoopUnit->isAlwaysHostile(pAdjacentPlot))))
+									{
+										iCost *= 6;
+										iCost /= 5;
+									}
+								}
+							}
+						}
+					}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 				}
 
 				if (pLoopUnit->canFight())
@@ -1730,6 +1951,8 @@ int pathCost(FAStarNode* parent, FAStarNode* node, int data, const void* pointer
 
 int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
+	PROFILE_FUNC();
+
 	CvSelectionGroup* pSelectionGroup;
 	CvPlot* pFromPlot;
 	CvPlot* pToPlot;
@@ -1746,15 +1969,24 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 	FAssert(pToPlot != NULL);
 
 	pSelectionGroup = ((CvSelectionGroup *)pointer);
-
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      03/03/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
 	// XXX might want to take this out...
 	if (pSelectionGroup->getDomainType() == DOMAIN_SEA)
 	{
+		PROFILE("pathValid domain sea");
+
 		if (pFromPlot->isWater() && pToPlot->isWater())
 		{
 			if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
 			{
-				return FALSE;
+				if( !(pSelectionGroup->canMoveAllTerrain()) )
+				{
+					return FALSE;
+				}
 			}
 		}
 	}
@@ -1766,10 +1998,7 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 
 	if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_SAFE_TERRITORY)
 	{
-		if (!(pFromPlot->isRevealed(pSelectionGroup->getHeadTeam(), false)))
-		{
-			return FALSE;
-		}
+		PROFILE("pathValid move save");
 
 		if (pFromPlot->isOwned())
 		{
@@ -1778,10 +2007,17 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 				return FALSE;
 			}
 		}
+
+		if (!(pFromPlot->isRevealed(pSelectionGroup->getHeadTeam(), false)))
+		{
+			return FALSE;
+		}
 	}
 
 	if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_NO_ENEMY_TERRITORY)
 	{
+		PROFILE("pathValid no enemy");
+
 		if (pFromPlot->isOwned())
 		{
 			if (atWar(pFromPlot->getTeam(), pSelectionGroup->getHeadTeam()))
@@ -1795,13 +2031,23 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 
 	if (bAIControl)
 	{
+		PROFILE("pathValid danger & invisible");
 		if ((parent->m_iData2 > 1) || (parent->m_iData1 == 0))
 		{
 			if (!(gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_IGNORE_DANGER))
 			{
 				if (!(pSelectionGroup->canFight()) && !(pSelectionGroup->alwaysInvisible()))
 				{
-					if (GET_PLAYER(pSelectionGroup->getHeadOwner()).AI_getPlotDanger(pFromPlot) > 0)
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      08/20/09                                jdog5000      */
+/*                                                                                              */
+/* Unit AI, Efficiency                                                                          */
+/************************************************************************************************/
+					//if (GET_PLAYER(pSelectionGroup->getHeadOwner()).AI_getPlotDanger(pFromPlot) > 0)
+					if (GET_PLAYER(pSelectionGroup->getHeadOwner()).AI_getAnyPlotDanger(pFromPlot))
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 					{
 						return FALSE;
 					}
@@ -1812,6 +2058,8 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 
 	if (bAIControl || pFromPlot->isRevealed(pSelectionGroup->getHeadTeam(), false))
 	{
+		PROFILE("pathValid move through");
+
 		if (gDLL->getFAStarIFace()->GetInfo(finder) & MOVE_THROUGH_ENEMY)
 		{
 			if (!(pSelectionGroup->canMoveOrAttackInto(pFromPlot)))
@@ -1827,6 +2075,9 @@ int pathValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 			}
 		}
 	}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 	return TRUE;
 }
@@ -1947,14 +2198,113 @@ int stepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		return FALSE;
 	}
 
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD					12/12/08				jdog5000	*/
+/* 																			*/
+/* 	Bugfix																	*/
+/********************************************************************************/
+/* original BTS code
 	if (GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->area() != pNewPlot->area())
 	{
 		return FALSE;
 	}
+*/
+	CvPlot* pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	if (pFromPlot->area() != pNewPlot->area())
+	{
+		return FALSE;
+	}
+
+	// Don't count diagonal hops across land isthmus
+	if (pFromPlot->isWater() && pNewPlot->isWater())
+	{
+		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
+		{
+			return FALSE;
+		}
+	}
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
 
 	return TRUE;
 }
 
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD					02/02/09				jdog5000	*/
+/* 																			*/
+/* 																			*/
+/********************************************************************************/
+// Find paths that a team's units could follow without declaring war
+int teamStepValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
+{
+	CvPlot* pNewPlot;
+
+	if (parent == NULL)
+	{
+		return TRUE;
+	}
+
+	pNewPlot = GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY);
+
+	if (pNewPlot->isImpassable())
+	{
+		return FALSE;
+	}
+
+	CvPlot* pFromPlot = GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY);
+	if (pFromPlot->area() != pNewPlot->area())
+	{
+		return FALSE;
+	}
+
+	// Don't count diagonal hops across land isthmus
+	if (pFromPlot->isWater() && pNewPlot->isWater())
+	{
+		if (!(GC.getMapINLINE().plotINLINE(parent->m_iX, node->m_iY)->isWater()) && !(GC.getMapINLINE().plotINLINE(node->m_iX, parent->m_iY)->isWater()))
+		{
+			return FALSE;
+		}
+	}
+
+	TeamTypes ePlotTeam = pNewPlot->getTeam();
+	std::vector<TeamTypes> teamVec = *((std::vector<TeamTypes> *)pointer);
+	TeamTypes eTeam = teamVec[0];
+	TeamTypes eTargetTeam = teamVec[1];
+	CvTeamAI& kTeam = GET_TEAM(eTeam);
+
+	if (ePlotTeam == NO_TEAM)
+	{
+		return TRUE;
+	}
+
+	if (ePlotTeam == eTargetTeam)
+	{
+		return TRUE;
+	}
+
+	if (kTeam.isFriendlyTerritory(ePlotTeam))
+	{
+		return TRUE;
+	}
+
+	if (kTeam.AI_getWarPlan(ePlotTeam) != NO_WARPLAN)
+	{
+		return TRUE;
+	}
+
+	if (kTeam.isOpenBorders(ePlotTeam))
+	{
+		return TRUE;
+	}
+
+
+
+	return FALSE;
+}
+/********************************************************************************/
+/* 	BETTER_BTS_AI_MOD						END								*/
+/********************************************************************************/
 
 int stepAdd(FAStarNode* parent, FAStarNode* node, int data, const void* pointer, FAStar* finder)
 {
@@ -2029,7 +2379,34 @@ int areaValid(FAStarNode* parent, FAStarNode* node, int data, const void* pointe
 		return TRUE;
 	}
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      10/02/09                                jdog5000      */
+/*                                                                                              */
+/* General AI                                                                                   */
+/************************************************************************************************/
+// original BTS code
 	return ((GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() == GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isWater()) ? TRUE : FALSE);
+
+	// BBAI TODO: Why doesn't this work to break water and ice into separate area?
+/*
+	if( GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() != GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
+	{
+		return FALSE;
+	}
+
+	// Ice blocks become their own area
+	if( GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isWater() && GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isWater() )
+	{
+		if( GC.getMapINLINE().plotSorenINLINE(parent->m_iX, parent->m_iY)->isImpassable() != GC.getMapINLINE().plotSorenINLINE(node->m_iX, node->m_iY)->isImpassable() )
+		{
+			return FALSE;
+		}
+	}
+
+	return TRUE;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 }
 
 
@@ -2421,6 +2798,329 @@ void getUnitAIString(CvWString& szString, UnitAITypes eUnitAI)
 	default: szString = CvWString::format(L"unknown(%d)", eUnitAI); break;
 	}
 }
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Efficiency                                                                                   */
+/************************************************************************************************/
+// From Lead From Behind by UncutDragon
+typedef std::vector<int> LFBoddsAttOdds;
+typedef std::vector<LFBoddsAttOdds> LFBoddsDefRounds;
+typedef std::vector<LFBoddsDefRounds> LFBoddsAttRounds;
+typedef std::vector<LFBoddsAttRounds> LFBoddsFirstStrike;
+int LFBlookupCombatOdds(int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds);
+int LFBlookupCombatOdds(LFBoddsFirstStrike* pOdds, int iFSIndex, int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds);
+int LFBlookupCombatOdds(LFBoddsAttOdds* pOdds, int iOddsIndex, int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds);
+int LFBcalculateCombatOdds(int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds);
+
+const int LFB_ODDS_INTERVAL_SIZE = 16;
+const int LFB_ODDS_EXTRA_ACCURACY = 32;
+LFBoddsFirstStrike pOddsCacheFSPos;
+LFBoddsFirstStrike pOddsCacheFSNeg;
+
+// gets the combat odds using precomputed attacker/defender values instead of unit pointers
+int LFBgetCombatOdds(int iAttackerLowFS,	int iAttackerHighFS, int iDefenderLowFS, int iDefenderHighFS, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds)
+{
+	int iDefenderOdds;
+	bool bFlip = false;
+	int iFirstStrikes;
+	int iI;
+	int iJ;
+	int iOdds = 0;
+
+	// Essentially, this means we're attacking with a seige engine and the defender is already at or below the max combat limit
+	// We're not allowed to attack regardless, since we can't do any damage - just return 100%
+	if (iNeededRoundsAttacker == 0)
+		return 1000;
+	// Because the best defender code calls us from the defender's perspective, we also need to check 'defender' rounds zero
+	if (iNeededRoundsDefender == 0)
+		return 0;
+
+	// If attacker has better than even chance to hit, we just flip it and calculate defender's chance to win
+	// This reduces how much we cache considerably (by half just from the fact we're only dealing with half the odds
+	// - but additionally, iNeededRounds'Defender' is guaranteed to stay low - at most 5 with standard settings).
+	iDefenderOdds = GC.getCOMBAT_DIE_SIDES() - iAttackerOdds;	
+	if (iAttackerOdds > iDefenderOdds)
+		bFlip = true;
+
+	// This is basically the two outside loops at the end of the standard getCombatOdds
+	// We just call our cache lookup in the middle (flipped if necessary) instead of the actual computation
+	for (iI = iAttackerLowFS; iI < iAttackerHighFS + 1; iI++)
+	{
+		for (iJ = iDefenderLowFS; iJ < iDefenderHighFS + 1; iJ++)
+		{
+			iFirstStrikes = iI - iJ;
+			if (bFlip)
+				iOdds += LFBlookupCombatOdds(-iFirstStrikes, iNeededRoundsDefender, iNeededRoundsAttacker, iDefenderOdds);
+			else
+				iOdds += LFBlookupCombatOdds(iFirstStrikes, iNeededRoundsAttacker, iNeededRoundsDefender, iAttackerOdds);
+		}
+	}
+
+	// Odds are a straight average of all the FS combinations (since all are equally possible)
+	iOdds /= ((iAttackerHighFS - iAttackerLowFS + 1) * (iDefenderHighFS - iDefenderLowFS + 1));
+
+	// Now that we have the final odds, we can remove the extra accuracy, rounding off
+	iOdds = (iOdds + (LFB_ODDS_EXTRA_ACCURACY/2)) / LFB_ODDS_EXTRA_ACCURACY;
+
+	// If we flipped the perspective in the computation/lookup, need to flip it back now
+	if (bFlip)
+		iOdds = 1000 - iOdds;
+
+	return iOdds;
+}
+
+// lookup the combat odds in the cache for a specific sub-result
+int LFBlookupCombatOdds(int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds)
+{
+	int iOdds = 0;
+
+	// We actually maintain two caches - one for positive first strikes (plus zero), and one for negative
+	// This just makes the indices (and growing the array as needed) easy
+	if (iFirstStrikes < 0)
+		iOdds = LFBlookupCombatOdds(&pOddsCacheFSNeg, (-iFirstStrikes)-1, iFirstStrikes, iNeededRoundsAttacker, iNeededRoundsDefender, iAttackerOdds);
+	else
+		iOdds = LFBlookupCombatOdds(&pOddsCacheFSPos, iFirstStrikes, iFirstStrikes, iNeededRoundsAttacker, iNeededRoundsDefender, iAttackerOdds);
+
+	return iOdds;
+}
+
+int LFBlookupCombatOdds(LFBoddsFirstStrike* pOdds, int iFSIndex, int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds)
+{
+	// Grow the arrays as needed
+	// First dimension is the first strikes
+	int iInsert = iFSIndex - (int)(*pOdds).size() + 1;
+	if (iInsert > 0)
+	{
+		LFBoddsAttRounds pAdd;
+		(*pOdds).insert((*pOdds).end(), iInsert, pAdd);
+	}
+
+	// Second dimension is the attacker rounds (starting at 1)
+	LFBoddsAttRounds* pAttRounds = &((*pOdds)[iFSIndex]);
+	iInsert = iNeededRoundsAttacker - (int)(*pAttRounds).size();
+	if (iInsert > 0)
+	{
+		LFBoddsDefRounds pAdd;
+		(*pAttRounds).insert((*pAttRounds).end(), iInsert, pAdd);
+	}
+
+	// Third dimension is the defender rounds (starting at 1)
+	LFBoddsDefRounds* pDefRounds = &((*pAttRounds)[iNeededRoundsAttacker-1]);
+	iInsert = iNeededRoundsDefender - (int)(*pDefRounds).size();
+	if (iInsert > 0)
+	{
+		LFBoddsAttOdds pAdd;
+		(*pDefRounds).insert((*pDefRounds).end(), iInsert, pAdd);
+	}
+
+	// Fourth (last) dimension is the odds index (odds/16)
+	LFBoddsAttOdds* pAttOdds = &((*pDefRounds)[iNeededRoundsDefender-1]);
+
+	// Round down to the nearest interval
+	int iMinOddsIndex = iAttackerOdds / LFB_ODDS_INTERVAL_SIZE;
+	int iMinOddsValue = iMinOddsIndex * LFB_ODDS_INTERVAL_SIZE;
+
+	// Lookup the odds for the rounded down value
+	int iOdds = LFBlookupCombatOdds(pAttOdds, iMinOddsIndex, iFirstStrikes, iNeededRoundsAttacker, iNeededRoundsDefender, iMinOddsValue);
+
+	// If we happened to hit an interval exactly, we're done
+	if (iMinOddsValue < iAttackerOdds)
+	{
+		// 'Round up' to the nearest interval - we don't actually need to compute it, we know
+		// it's one more than the rounded down interval
+		int iMaxOddsIndex = iMinOddsIndex+1;
+		int iMaxOddsValue = iMinOddsValue+LFB_ODDS_INTERVAL_SIZE;
+
+		// Lookup the odds for the rounded up value
+		int iMaxOdds = LFBlookupCombatOdds(pAttOdds, iMaxOddsIndex, iFirstStrikes, iNeededRoundsAttacker, iNeededRoundsDefender, iMaxOddsValue);
+		
+		// Do a simple weighted average on the two odds
+		iOdds += (((iAttackerOdds - iMinOddsValue) * (iMaxOdds - iOdds)) / LFB_ODDS_INTERVAL_SIZE);
+	}
+
+	return iOdds;
+}
+
+int LFBlookupCombatOdds(LFBoddsAttOdds* pOdds, int iOddsIndex, int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds)
+{
+	int iNotComputed = -1;
+
+	// Index 0 -> AttackerOdds 0 -> no chance to win
+	if (iOddsIndex == 0)
+		return 0;
+
+	// We don't store all possible indices, just what we need/use
+	// So use position 0 to keep track of what index we start with
+	int iFirstIndex = iOddsIndex;
+	if ((*pOdds).size() == 0)
+		(*pOdds).push_back(iFirstIndex);
+	else
+		iFirstIndex = (*pOdds)[0];
+
+	int iRealIndex = iOddsIndex - iFirstIndex + 1;
+
+	// Index is before the start of our array
+	int iInsert = -iRealIndex+1;
+	if (iInsert > 0)
+	{
+		(*pOdds).insert((*pOdds).begin()+1, iInsert, iNotComputed);
+		iFirstIndex -= iInsert;
+		iRealIndex = 1;
+		(*pOdds)[0] = iFirstIndex;
+	}
+
+	// Index is past the end of our array
+	iInsert = iRealIndex - (int)(*pOdds).size() + 1;
+	if (iInsert > 0)
+		(*pOdds).insert((*pOdds).end(), iInsert, iNotComputed);
+
+	// Retrieve the odds from the array
+	int iOdds = (*pOdds)[iRealIndex];
+
+	// Odds aren't cached yet - need to actually calculate them
+	if (iOdds == iNotComputed)
+	{
+		iOdds = LFBcalculateCombatOdds(iFirstStrikes, iNeededRoundsAttacker, iNeededRoundsDefender, iAttackerOdds);
+		(*pOdds)[iRealIndex] = iOdds;
+	}
+
+	return iOdds;
+}
+
+// Perform the actual odds calculation (basically identical to the default algorithm, except that we retain a little more accuracy)
+int LFBcalculateCombatOdds(int iFirstStrikes, int iNeededRoundsAttacker, int iNeededRoundsDefender, int iAttackerOdds)
+{
+	float fOddsEvent;
+	float fOddsAfterEvent;
+	int iMaxRounds = iNeededRoundsAttacker + iNeededRoundsDefender - 1;
+	int iOdds = 0;
+	int iI3;
+	int iI4;
+
+	// This part is basically the inside of the outer two loops at the end of the standard getCombatOdds
+	if (iFirstStrikes > 0)
+	{
+		// Attacker gets more or equal first strikes than defender
+
+		// For every possible first strike getting hit, calculate both
+		// the chance of that event happening, as well as the rest of 
+		// the chance assuming the event has happened. Multiply these 
+		// together to get the total chance (Bayes rule). 
+		// iI3 counts the number of successful first strikes
+		//////
+
+		for (iI3 = 0; iI3 < (iFirstStrikes + 1); iI3++)
+		{
+			// event: iI3 first strikes hit the defender
+
+			// calculate chance of iI3 first strikes hitting: fOddsEvent
+			// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k)) 
+			// this needs to be in floating point math
+			//////
+
+			fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * std::pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI3) * std::pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - iI3));
+
+			// calculate chance assuming iI3 first strike hits: fOddsAfterEvent
+			//////
+
+			if (iI3 >= iNeededRoundsAttacker)
+			{
+				fOddsAfterEvent = 1;
+			}
+			else
+			{
+				fOddsAfterEvent = 0;
+
+				// odds for _at_least_ (iNeededRoundsAttacker - iI3) (the remaining hits 
+				// the attacker needs to make) out of (iMaxRounds - iI3) (the left over 
+				// rounds) is the sum of each _exact_ draw
+				//////
+
+				for (iI4 = (iNeededRoundsAttacker - iI3); iI4 < (iMaxRounds - iI3 + 1); iI4++)
+				{
+					// odds of exactly iI4 out of (iMaxRounds - iI3) draws.
+					// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k)) 
+					// this needs to be in floating point math
+					//////
+
+					fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * std::pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI4) * std::pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), ((iMaxRounds - iI3) - iI4));
+				}
+			}
+
+			// Multiply these together, round them properly, and add 
+			// the result to the total iOdds
+			//////
+
+			iOdds += ((int)((1000.0 * fOddsEvent * fOddsAfterEvent * (float)LFB_ODDS_EXTRA_ACCURACY) + 0.5));
+		}
+	}
+	else // (iI < iJ)
+	{
+		// Attacker gets less first strikes than defender
+		int iDefenderOdds = GC.getCOMBAT_DIE_SIDES() - iAttackerOdds;
+		iFirstStrikes *= -1;
+
+		// For every possible first strike getting hit, calculate both
+		// the chance of that event happening, as well as the rest of 
+		// the chance assuming the event has happened. Multiply these 
+		// together to get the total chance (Bayes rule). 
+		// iI3 counts the number of successful first strikes
+		//////
+
+		for (iI3 = 0; iI3 < (iFirstStrikes + 1); iI3++)
+		{
+			// event: iI3 first strikes hit the defender
+
+			// First of all, check if the attacker is still alive.
+			// Otherwise, no further calculations need to occur 
+			/////
+
+			if (iI3 < iNeededRoundsDefender)
+			{
+				// calculate chance of iI3 first strikes hitting: fOddsEvent
+				// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k)) 
+				// this needs to be in floating point math
+				//////
+
+				fOddsEvent = ((float)getBinomialCoefficient(iFirstStrikes, iI3)) * std::pow((((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES()), iI3) * std::pow((1.0f - (((float)iDefenderOdds) / GC.getCOMBAT_DIE_SIDES())), (iFirstStrikes - iI3));
+
+				// calculate chance assuming iI3 first strike hits: fOddsAfterEvent
+				//////
+
+				fOddsAfterEvent = 0;
+
+				// odds for _at_least_ iNeededRoundsAttacker (the remaining hits 
+				// the attacker needs to make) out of (iMaxRounds - iI3) (the left over 
+				// rounds) is the sum of each _exact_ draw
+				//////
+
+				for (iI4 = iNeededRoundsAttacker; iI4 < (iMaxRounds - iI3 + 1); iI4++)
+				{
+
+					// odds of exactly iI4 out of (iMaxRounds - iI3) draws.
+					// f(k;n,p)=C(n,k)*(p^k)*((1-p)^(n-k)) 
+					// this needs to be in floating point math
+					//////
+
+					fOddsAfterEvent += ((float)getBinomialCoefficient((iMaxRounds - iI3), iI4)) * std::pow((((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES()), iI4) * std::pow((1.0f - (((float)iAttackerOdds) / GC.getCOMBAT_DIE_SIDES())), ((iMaxRounds - iI3) - iI4));
+				}
+
+				// Multiply these together, round them properly, and add 
+				// the result to the total iOdds
+				//////
+
+				iOdds += ((int)((1000.0 * fOddsEvent * fOddsAfterEvent * (float)LFB_ODDS_EXTRA_ACCURACY)+0.5));
+			}
+		}				
+	}
+
+	return iOdds;
+}
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 
 // BUG - Unit Experience - start
 #include "CyArgsList.h"

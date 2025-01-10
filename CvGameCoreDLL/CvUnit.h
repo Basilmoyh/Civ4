@@ -296,7 +296,7 @@ public:
 	bool canBuildRoute() const;																						// Exposed to Python
 	DllExport BuildTypes getBuildType() const;														// Exposed to Python
 	int workRate(bool bMax) const;															// Exposed to Python
-	
+
 // BUG - Female Great People - start
 	bool isFemale() const;																	// Exposed to Python
 // BUG - Female Great People - end
@@ -776,6 +776,16 @@ public:
 	virtual void AI_setUnitAIType(UnitAITypes eNewValue) = 0;
     virtual int AI_sacrificeValue(const CvPlot* pPlot) const = 0;
 
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      04/05/10                                jdog5000      */
+/*                                                                                              */
+/* Unit AI                                                                                      */
+/************************************************************************************************/
+	virtual bool AI_load(UnitAITypes eUnitAI, MissionAITypes eMissionAI, UnitAITypes eTransportedUnitAI = NO_UNITAI, int iMinCargo = -1, int iMinCargoSpace = -1, int iMaxCargoSpace = -1, int iMaxCargoOurUnitAI = -1, int iFlags = 0, int iMaxPath = MAX_INT, int iMaxTransportPath = MAX_INT) = 0;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
+
 protected:
 
 	int m_iID;
@@ -891,6 +901,27 @@ protected:
 	void resolveCombat(CvUnit* pDefender, CvPlot* pPlot, CvBattleDefinition& kBattle);
 	void resolveAirCombat(CvUnit* pInterceptor, CvPlot* pPlot, CvAirMissionDefinition& kBattle);
 	void checkRemoveSelectionAfterAttack();
+
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                      02/21/10                                jdog5000      */
+/*                                                                                              */
+/* Lead From Behind                                                                             */
+/************************************************************************************************/
+// From Lead From Behind by UncutDragon
+public:
+	bool isBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
+	virtual void LFBgetBetterAttacker(CvUnit** ppAttacker, const CvPlot* pPlot, bool bPotentialEnemy, int& iAIAttackOdds, int& iAttackerValue) const = 0;
+	int LFBgetAttackerRank(const CvUnit* pDefender, int& iUnadjustedRank) const;
+	int LFBgetDefenderRank(const CvUnit* pAttacker) const;
+protected:
+	int LFBgetDefenderOdds(const CvUnit* pAttacker) const;
+	int LFBgetValueAdjustedOdds(int iOdds) const;
+	int LFBgetRelativeValueRating() const;
+	bool LFBisBetterDefenderThan(const CvUnit* pDefender, const CvUnit* pAttacker, int* pBestDefenderRank) const;
+	int LFBgetDefenderCombatOdds(const CvUnit* pAttacker) const;
+/************************************************************************************************/
+/* BETTER_BTS_AI_MOD                       END                                                  */
+/************************************************************************************************/
 };
 
 #endif
