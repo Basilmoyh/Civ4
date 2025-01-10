@@ -340,7 +340,7 @@ nmake fastdep /NOLOGO
 nmake dll /NOLOGO</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>set TARGET=Release
 nmake clean /NOLOGO</NMakeCleanCommandLine>
-    <AdditionalOptions>/DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /_MOD_FRACTRADE /_MOD_SENTRY /_MOD_GOVWORKERS /_MOD_AIAUTOPLAY /_MOD_GWARM</AdditionalOptions>
+    <AdditionalOptions>/DWIN32 /D_WINDOWS /D_USRDLL /DCVGAMECOREDLL_EXPORTS /DNDEBUG /DFINAL_RELEASE /LOG_AI /_MOD_FRACTRADE /_MOD_SENTRY /_MOD_GOVWORKERS /_MOD_AIAUTOPLAY</AdditionalOptions>
     <NMakeIncludeSearchPath>..\sourceMOD</NMakeIncludeSearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Assert|Win32'">

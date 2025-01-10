@@ -15,6 +15,7 @@ YOURMOD=..\Basilomania
 #   _MOD_GWARM				has extra assets; effectively eliminates global warming
 #   _MOD_SHAM_SPOILER		enables AG modifiers in mod
 MODFLAGS=/D_MOD_FRACTRADE /D_MOD_SENTRY /D_MOD_GOVWORKERS /D_MOD_AIAUTOPLAY /D_MOD_GWARM
+MODFLAGS=/DLOG_AI /D_MOD_FRACTRADE /D_MOD_SENTRY /D_MOD_GOVWORKERS /D_MOD_AIAUTOPLAY
 
 #### Paths ####
 TOOLKIT=..\Civ4SDK\Microsoft Visual C++ Toolkit 2003
@@ -165,7 +166,7 @@ BOOST_LIB_PATH=$(CIV4_LIB_INSTALL_PATH)/
 !ENDIF
 !ENDIF
 
-PROJECT_INCS=/I"$(BOOST_LIB_PATH)Boost-1.32.0/include" /I"$(BOOST_LIB_PATH)Python24/include"
+PROJECT_INCS=/I"$(BOOST_LIB_PATH)Boost-1.32.0/include" /I"./include" /I"$(BOOST_LIB_PATH)Python24/include"
 PROJECT_LIBS=/LIBPATH:"$(BOOST_LIB_PATH)Python24/libs" /LIBPATH:"$(BOOST_LIB_PATH)boost-1.32.0/libs/" boost_python-vc71-mt-1_32.lib lib/gdi32.lib lib/Ole32.lib
 
 INCS = $(PROJECT_INCS) $(GLOBAL_INCS)
