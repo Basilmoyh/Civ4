@@ -1091,6 +1091,7 @@ protected:
 	bool m_bCounterSpy;
 	bool m_bFound;
 	bool m_bGoldenAge;
+	bool m_bFreshWater;
 	bool m_bInvisible;
 	bool m_bFirstStrikeImmune;
 	bool m_bNoDefensiveBonus;
@@ -1671,6 +1672,7 @@ public:
 	float getVisibilityPriority() const;
 
 	bool isTeamShare() const;				// Exposed to Python
+	bool isFreshWater() const;				// Exposed to Python
 	bool isWater() const;				// Exposed to Python
 	bool isRiver() const;				// Exposed to Python
 	bool isPower() const;				// Exposed to Python
@@ -1888,6 +1890,7 @@ protected:
 	bool m_bCapital;
 	bool m_bGovernmentCenter;
 	bool m_bGoldenAge;
+	bool m_bFreshWater;
 	bool m_bMapCentering;
 	bool m_bNoUnhappiness;
 	bool m_bNoUnhealthyPopulation;
@@ -6212,6 +6215,7 @@ private:
 	bool m_bOtherPlayerCityEffect;
 	bool m_bGoldToPlayer;
 	bool m_bGoldenAge;
+	bool m_bFreshWater;
 	bool m_bDeclareWar;
 	bool m_bDisbandUnit;
 

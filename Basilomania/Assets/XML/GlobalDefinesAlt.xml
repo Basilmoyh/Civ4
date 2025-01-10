@@ -9,6 +9,10 @@
 			and nuclear warfare needs to have a negative impact somehow -->
 	<Define>
 		<DefineName>GLOBAL_WARMING_NUKE_WEIGHT</DefineName>
-		<iDefineIntVal>50</iDefineIntVal>
+		<iDefineIntVal>0</iDefineIntVal>
+	</Define>
+	<Define>
+		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
+		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
 </Civ4Defines>

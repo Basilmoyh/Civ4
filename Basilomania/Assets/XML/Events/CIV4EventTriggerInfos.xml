@@ -27,9 +27,8 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ForestFire.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
-			<iPercentGamesActive>70</iPercentGamesActive>
+			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
@@ -136,7 +135,6 @@
 					<Era>ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CityRuins.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>1000</iWeight>
@@ -235,7 +233,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HappyHunting.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -327,7 +324,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Motherlode.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -420,7 +416,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WashedOut.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -505,7 +500,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AtTheSword.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -593,9 +587,8 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Jed.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
-			<iPercentGamesActive>75</iPercentGamesActive>
+			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>5000</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
@@ -680,7 +673,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/InspiredMission.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -767,7 +759,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HymnsAndSculptures.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -864,9 +855,8 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CarelessApprentice.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
-			<iPercentGamesActive>75</iPercentGamesActive>
+			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>200</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
@@ -962,7 +952,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Famine.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -1053,7 +1042,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SlaveRevolt.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -1145,7 +1133,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SlaveRevoltAgain.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -1228,7 +1215,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BlessedSea.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>300</iWeight>
@@ -1315,7 +1301,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BlessedSeaDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -1402,7 +1387,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AirlinerCrash.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>300</iWeight>
@@ -1493,7 +1477,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FarmBandits.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -1589,7 +1572,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FarmBanditsAgain.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -1681,7 +1663,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HolyMountain.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -1768,7 +1749,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HolyMountainDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -1851,7 +1831,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HolyMountainRevealed.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -1944,7 +1923,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Horticulture.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -2035,7 +2013,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Fugitive.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -2128,9 +2105,8 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Pestilence.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
-			<iPercentGamesActive>55</iPercentGamesActive>
+			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>100</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
@@ -2219,7 +2195,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Pestilence2.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -2302,7 +2277,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Marathon.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>800</iWeight>
@@ -2383,7 +2357,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FauxPas.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -2488,7 +2461,6 @@
 					<Era>ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/JoyousWedding.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -2595,7 +2567,6 @@
 					<Era>ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WeddingFeud.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -2702,7 +2673,6 @@
 					<Era>ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/LeftAtTheAltar.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -2783,10 +2753,9 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Spicy.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
-			<iPercentGamesActive>50</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>200</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
 			<Civic>NONE</Civic>
@@ -2898,7 +2867,6 @@
 					<Era>ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Tornado.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -3005,7 +2973,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BabyBoom.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -3087,7 +3054,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BardsTale.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -3196,7 +3162,6 @@
 					<Era>ERA_FUTURE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Looters.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -3279,7 +3244,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BrothersInNeed.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>1000</iWeight>
@@ -3366,7 +3330,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Hurricane.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -3453,7 +3416,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Cyclone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -3540,7 +3502,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Tsunami.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>0</iWeight>
@@ -3627,7 +3588,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Monsoon.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -3719,7 +3679,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Blizzard.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -3831,10 +3790,9 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Volcano.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
-			<iPercentGamesActive>70</iPercentGamesActive>
-			<iWeight>100</iWeight>
+			<iPercentGamesActive>100</iPercentGamesActive>
+			<iWeight>200</iWeight>
 			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
 			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
 			<Civic>NONE</Civic>
@@ -3917,7 +3875,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Dustbowl.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -4005,7 +3962,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Dustbowl.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -4089,7 +4045,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Parrots.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4174,7 +4129,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Jade.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4262,7 +4216,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BlackPearls.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4347,7 +4300,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Saltpeter.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>20</iWeight>
@@ -4432,7 +4384,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ClunkerCoal.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4520,7 +4471,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SourCrude.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4606,7 +4556,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Truffles.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>20</iWeight>
@@ -4691,7 +4640,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SeaTurtles.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>20</iWeight>
@@ -4778,7 +4726,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Tin.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4865,7 +4812,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/PrairieDogs.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -4952,7 +4898,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/IceSculpture.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -5040,7 +4985,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AppleSeed.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -5137,7 +5081,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MiningAccident.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -5228,7 +5171,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Breakthrough.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -5310,7 +5252,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Setback.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>65</iPercentGamesActive>
 			<iWeight>30</iWeight>
@@ -5391,7 +5332,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/RunningBulls.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -5484,7 +5424,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GreatDepression.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>40</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -5565,7 +5504,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BermudaTriangle.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>50</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -5664,7 +5602,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/PatronOfKnowledge.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -5748,7 +5685,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MasterSmith.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -5832,7 +5768,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/RuralFarmers.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -5916,7 +5851,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MoneyChangers.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -5999,7 +5933,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Bowyer.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -6088,7 +6021,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Horseshoe.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>30</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -6181,7 +6113,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Champion.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>30</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -6268,7 +6199,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MotorOil.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -6355,7 +6285,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FederalReserve.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -6439,7 +6368,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ElectricCompany.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -6522,7 +6450,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Hindenberg.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -6608,7 +6535,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CometFragment.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -6699,7 +6625,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Subway.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>400</iWeight>
@@ -6787,7 +6712,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Goldrush.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -6871,7 +6795,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Influenza.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>45</iPercentGamesActive>
 			<iWeight>400</iWeight>
@@ -6953,7 +6876,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SoloFlight.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -7036,7 +6958,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Antelope.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>55</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -7126,7 +7047,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WhaleOfAThing.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>50</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -7213,7 +7133,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HiYoSilver.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -7303,7 +7222,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WiningMonks.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>65</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -7404,7 +7322,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/IndependentFilms.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -7487,7 +7404,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AncientOlympics.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>400</iWeight>
@@ -7578,7 +7494,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ModernOlympics.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -7663,7 +7578,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Interstate.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -7737,91 +7651,6 @@
 			<PythonCallback/>
 		</EventTriggerInfo>
 		<EventTriggerInfo>
-			<Type>EVENTTRIGGER_EARTHDAY</Type>
-			<WorldNewsTexts>
-				<Text>TXT_KEY_EVENTTRIGGER_EARTHDAY</Text>
-			</WorldNewsTexts>
-			<TriggerTexts>
-				<TriggerText>
-					<Text>TXT_KEY_EVENT_TRIGGER_EARTHDAY_1</Text>
-					<Era>NONE</Era>
-				</TriggerText>
-			</TriggerTexts>
-			<EventArt>Art/EventImages/EarthDay.dds</EventArt>
-			<bSinglePlayer>1</bSinglePlayer>
-			<iPercentGamesActive>95</iPercentGamesActive>
-			<iWeight>100</iWeight>
-			<bProbabilityUnitMultiply>0</bProbabilityUnitMultiply>
-			<bProbabilityBuildingMultiply>0</bProbabilityBuildingMultiply>
-			<Civic>CIVIC_ENVIRONMENTALISM</Civic>
-			<iMinTreasury>0</iMinTreasury>
-			<iMinPopulation>0</iMinPopulation>
-			<iMaxPopulation>0</iMaxPopulation>
-			<iMinMapLandmass>0</iMinMapLandmass>
-			<iMinOurLandmass>0</iMinOurLandmass>
-			<iMaxOurLandmass>-1</iMaxOurLandmass>
-			<MinDifficulty>NONE</MinDifficulty>
-			<iAngry>0</iAngry>
-			<iUnhealthy>0</iUnhealthy>
-			<UnitsRequired/>
-			<iNumUnits>0</iNumUnits>
-			<iNumUnitsGlobal>0</iNumUnitsGlobal>
-			<iUnitDamagedWeight>0</iUnitDamagedWeight>
-			<iUnitDistanceWeight>0</iUnitDistanceWeight>
-			<iUnitExperienceWeight>0</iUnitExperienceWeight>
-			<bUnitsOnPlot>0</bUnitsOnPlot>
-			<BuildingsRequired/>
-			<iNumBuildings>0</iNumBuildings>
-			<iNumBuildingsGlobal>0</iNumBuildingsGlobal>
-			<iNumPlotsRequired>0</iNumPlotsRequired>
-			<bOwnPlot>0</bOwnPlot>
-			<iPlotType>-1</iPlotType>
-			<FeaturesRequired/>
-			<TerrainsRequired/>
-			<ImprovementsRequired/>
-			<BonusesRequired/>
-			<RoutesRequired/>
-			<ReligionsRequired/>
-			<iNumReligions>0</iNumReligions>
-			<CorporationsRequired/>
-			<iNumCorporations>0</iNumCorporations>
-			<bPickReligion>0</bPickReligion>
-			<bStateReligion>0</bStateReligion>
-			<bHolyCity>0</bHolyCity>
-			<bPickCorporation>0</bPickCorporation>
-			<bHeadquarters>0</bHeadquarters>
-			<Events>
-				<Event>EVENT_EARTHDAY_1</Event>
-				<Event>EVENT_EARTHDAY_2</Event>
-			</Events>
-			<PrereqEvents/>
-			<bPrereqEventPlot>0</bPrereqEventPlot>
-			<OrPreReqs>
-				<PrereqTech>TECH_INDUSTRIALISM</PrereqTech>
-				<PrereqTech>TECH_RADIO</PrereqTech>
-			</OrPreReqs>
-			<AndPreReqs/>
-			<ObsoleteTechs/>
-			<bRecurring>0</bRecurring>
-			<bTeam>0</bTeam>
-			<bGlobal>1</bGlobal>
-			<bPickPlayer>0</bPickPlayer>
-			<bOtherPlayerWar>0</bOtherPlayerWar>
-			<bOtherPlayerHasReligion>0</bOtherPlayerHasReligion>
-			<bOtherPlayerHasOtherReligion>0</bOtherPlayerHasOtherReligion>
-			<bOtherPlayerAI>0</bOtherPlayerAI>
-			<iOtherPlayerShareBorders>0</iOtherPlayerShareBorders>
-			<OtherPlayerHasTech>NONE</OtherPlayerHasTech>
-			<bPickCity>0</bPickCity>
-			<bPickOtherPlayerCity>0</bPickOtherPlayerCity>
-			<bShowPlot>0</bShowPlot>
-			<iCityFoodWeight>0</iCityFoodWeight>
-			<PythonCanDo/>
-			<PythonCanDoCity/>
-			<PythonCanDoUnit/>
-			<PythonCallback/>
-		</EventTriggerInfo>
-		<EventTriggerInfo>
 			<Type>EVENTTRIGGER_FREEDOMCONCERT</Type>
 			<WorldNewsTexts>
 				<Text>TXT_KEY_EVENTTRIGGER_FREEDOMCONCERT</Text>
@@ -7832,7 +7661,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FreedomConcert.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>95</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -7917,7 +7745,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Axehaft.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8006,7 +7833,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Towershield.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8096,7 +7922,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SmokelessPowder.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>40</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8183,7 +8008,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/StrongerFittings.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8272,7 +8096,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FiringPins.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8359,7 +8182,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/RifledCannon.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8450,7 +8272,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MetalDecks.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8536,7 +8357,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/LongRangeFighter.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8621,7 +8441,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Halberd.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8709,7 +8528,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ReinforcedHull.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8802,7 +8620,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CigaretteSmoker.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -8887,7 +8704,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HeroicGesture.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>350</iWeight>
@@ -8967,7 +8783,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GreatMediator.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9049,7 +8864,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FortyThieves.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9144,7 +8958,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AncientTexts.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9241,7 +9054,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WatersOfLife.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>95</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9324,7 +9136,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ImpactCrater.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9423,7 +9234,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/TheHuns.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9510,7 +9320,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/TheVandals.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9597,7 +9406,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/TheGoths.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9684,7 +9492,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ThePhilistines.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9771,7 +9578,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/TheVedicAryans.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9858,7 +9664,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HolyRitual.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -9960,7 +9765,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SecurityTax.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -10056,7 +9860,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Literacy.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>30</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10143,7 +9946,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FarmPlow.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10233,7 +10035,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/StainedGlass.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10322,7 +10123,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MarbleStatues.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10412,7 +10212,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CrabCakes.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10499,7 +10298,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Boilers.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10584,7 +10382,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/PersonalComputers.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10669,7 +10466,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FuelAdditives.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10754,7 +10550,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HamburgerJoint.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10844,7 +10639,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Tea.dds</EventArt>
 			<bSinglePlayer>1</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -10929,7 +10723,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Fashion.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -11021,7 +10814,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Thoroughbred.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -11111,7 +10903,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GirlsBestFriend.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -11201,7 +10992,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BananaSplit.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -11289,7 +11079,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HorseWhispering.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -11380,7 +11169,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HorseWhisperingDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -11471,7 +11259,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Harbormaster.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -11559,7 +11346,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HarbormasterDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -11649,7 +11435,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ClassicLiterature.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>20</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -11738,7 +11523,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ClassicLiteratureDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -11829,7 +11613,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MasterBlacksmith.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -11918,7 +11701,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/MasterBlacksmithDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -12009,7 +11791,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BestDefense.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>30</iPercentGamesActive>
 			<iWeight>400</iWeight>
@@ -12096,7 +11877,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BestDefenseDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -12183,7 +11963,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SportsLeague.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>500</iWeight>
@@ -12273,7 +12052,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SportsLeagueDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -12363,7 +12141,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Crusade.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>50</iPercentGamesActive>
 			<iWeight>1000</iWeight>
@@ -12444,7 +12221,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CrusadeDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -12529,7 +12305,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Miracle.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -12615,7 +12390,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/EsteemedPlaywright.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -12699,7 +12473,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FavoriteSon.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -12788,7 +12561,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SecretKnowledge.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -12884,7 +12656,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HighWarlord.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -12976,7 +12747,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SpoiledGrain.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13060,7 +12830,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AngelOfMercy.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13144,7 +12913,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ChillyFlight.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13227,7 +12995,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/IndustrialFire.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13311,7 +13078,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Laboratory.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13394,7 +13160,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ExperiencedCaptain.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>95</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13495,7 +13260,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Heresy.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>85</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -13578,7 +13342,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Partisans.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-2</iWeight>
@@ -13660,7 +13423,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/NewDynasty.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>45</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -13752,7 +13514,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CrisisInTheSenate.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>55</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -13841,7 +13602,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/TooCloseToCall.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>60</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -13929,7 +13689,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Charismatic.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>65</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -14019,7 +13778,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/FriendlyLocals.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>50</iWeight>
@@ -14100,7 +13858,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Greed.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>40</iPercentGamesActive>
 			<iWeight>300</iWeight>
@@ -14183,7 +13940,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GreedDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -14264,7 +14020,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WarChariots.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -14357,7 +14112,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WarChariotsDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -14449,7 +14203,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/EliteSwords.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>25</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -14539,7 +14292,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/EliteSwordsDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -14628,7 +14380,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Warships.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -14718,7 +14469,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/WarshipsDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -14806,7 +14556,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GunsButter.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>30</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -14892,7 +14641,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GunsButterDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -14978,7 +14726,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/NobleKnights.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>15</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -15066,7 +14813,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/NobleKnightsDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -15152,7 +14898,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Overwhelm.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>35</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -15238,7 +14983,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/OverwhelmDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -15321,7 +15065,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CorporateExpansion.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -15402,7 +15145,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CorporateExpansionDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -15483,7 +15225,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HostileTakeover.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -15564,7 +15305,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HostileTakeoverDone.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>100</iPercentGamesActive>
 			<iWeight>-1</iWeight>
@@ -15647,7 +15387,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/CivGame.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -15730,7 +15469,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SlaveRevoltWarning.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>0</iWeight>
@@ -15811,7 +15549,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Immigrants.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>200</iWeight>
@@ -15894,7 +15631,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/HealingPlant.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>70</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -15981,7 +15717,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GreatBeast.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -16071,7 +15806,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/ControversialPhilosopher.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>1000</iWeight>
@@ -16158,7 +15892,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/DefectingAgent.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -16242,7 +15975,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Jail.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -16326,7 +16058,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/SpyDiscovered.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>60</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -16342,12 +16073,8 @@
 			<MinDifficulty>NONE</MinDifficulty>
 			<iAngry>0</iAngry>
 			<iUnhealthy>0</iUnhealthy>
-			<!-- Unofficial Patch begin - force event to trigger only when espionage is enabled -->
-			<UnitsRequired>
-				<UnitClass>UNITCLASS_SPY</UnitClass>
-			</UnitsRequired>
-			<iNumUnits>1</iNumUnits>
-			<!-- Unofficial Patch end -->
+			<UnitsRequired/>
+			<iNumUnits>0</iNumUnits>
 			<iNumUnitsGlobal>0</iNumUnitsGlobal>
 			<iUnitDamagedWeight>0</iUnitDamagedWeight>
 			<iUnitDistanceWeight>0</iUnitDistanceWeight>
@@ -16417,7 +16144,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/NuclearProtest.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>120</iWeight>
@@ -16500,7 +16226,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BetterCoal.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -16586,7 +16311,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/BrokenDam.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>75</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -16671,7 +16395,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Rabbi.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>0</iWeight>
@@ -16762,7 +16485,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/GoldenBuddha.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>0</iWeight>
@@ -16857,7 +16579,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/PreachingResearcher.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>0</iPercentGamesActive>
 			<iWeight>0</iWeight>
@@ -16943,7 +16664,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Toxcatl.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -17029,7 +16749,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/DissidentPriest.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -17114,7 +16833,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/PastureBuilt.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>80</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -17208,7 +16926,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/RogueStation.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -17295,7 +17012,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/AntiMonarchists.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>
@@ -17377,7 +17093,6 @@
 					<Era>NONE</Era>
 				</TriggerText>
 			</TriggerTexts>
-			<EventArt>Art/EventImages/Impeachment.dds</EventArt>
 			<bSinglePlayer>0</bSinglePlayer>
 			<iPercentGamesActive>90</iPercentGamesActive>
 			<iWeight>100</iWeight>

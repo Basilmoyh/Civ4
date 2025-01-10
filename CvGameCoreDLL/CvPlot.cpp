@@ -1317,6 +1317,7 @@ bool CvPlot::isLake() const
 // XXX precalculate this???
 bool CvPlot::isFreshWater() const
 {
+	CvCity* pCity;
 	CvPlot* pLoopPlot;
 	int iDX, iDY;
 
@@ -1353,6 +1354,23 @@ bool CvPlot::isFreshWater() const
 					if (GC.getFeatureInfo(pLoopPlot->getFeatureType()).isAddsFreshWater())
 					{
 						return true;
+					}
+				}
+
+				pCity = getPlotCity();
+
+				if (pCity != NULL)
+				{
+					for (int iBuilding = 0; iBuilding < GC.getNumBuildingInfos(); iBuilding++)
+					{
+						CvBuildingInfo& building = GC.getBuildingInfo((BuildingTypes)iBuilding);
+						if (building.isFreshWater())
+						{
+							if (pCity->getNumActiveBuilding((BuildingTypes)iBuilding) > 0)
+							{
+								return true;
+							}
+						}
 					}
 				}
 			}

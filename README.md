@@ -14,3 +14,8 @@
 ## Better Bug AI Starting Point for the mod
 ## dguenms for the some of the SDK repo original files and setup
 ## Franco, Meiji and Barbarossa art were also sourced from somewhere I can't remember where
+
+
+# Known Issues
+## 1. Sometimes after copying the Mod, Civ4 will crash upon launching the modded game. Something about registering the DLL, CvGameCoreDLL.dll. This issue can be resolved by opening and closing CvGameCoreDLL.dll in notepad or notepad++ just once
+## 2. Enabling/Disabling the extra mods is a bit finicky with the particular makefile, both the makefile and project properties need to be edited, then you'll need to delete probably all or some combination of 'Makefile.project', 'Makefile.settings', 'CvGameCoreDLL.sdf' and/or 'CvGameCoreDLL.suo'

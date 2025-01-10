@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by XMLSPY 2004 Professional Ed. Release 2, Installed Multi + SMP for 3 users (Firaxis Games) -->
+<!-- Sid Meier's Civilization 4 -->
+<!-- Copyright Firaxis Games 2005 -->
+<!-- -->
+<!-- Game Text - New -->
+<Civ4GameText xmlns="http://www.firaxis.com">
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DANZIG</Tag>
+		<English>Danzig</English>
+		<French>Danzig</French>
+		<German>Danzig</German>
+		<Italian>Danzig</Italian>
+		<Spanish>Danzig</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KONIGSBERG</Tag>
+		<English>Königsberg</English>
+		<French>Königsberg</French>
+		<German>Königsberg</German>
+		<Italian>Königsberg</Italian>
+		<Spanish>Königsberg</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_KATTOWITZ</Tag>
+		<English>Kattowitz</English>
+		<French>Kattowitz</French>
+		<German>Kattowitz</German>
+		<Italian>Kattowitz</Italian>
+		<Spanish>Kattowitz</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TOKUSHIMA</Tag>
+		<English>Tokushima</English>
+		<French>Tokushima</French>
+		<German>Tokushima</German>
+		<Italian>Tokushima</Italian>
+		<Spanish>Tokushima</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_TAURINORUM</Tag>
+		<English>Augusta Taurinorum</English>
+		<French>Augusta Taurinorum</French>
+		<German>Augusta Taurinorum</German>
+		<Italian>Augusta Taurinorum</Italian>
+		<Spanish>Augusta Taurinorum</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_FLORENTIA</Tag>
+		<English>Florentia</English>
+		<French>Florentia</French>
+		<German>Florentia</German>
+		<Italian>Florentia</Italian>
+		<Spanish>Florentia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BONONIA</Tag>
+		<English>Bononia</English>
+		<French>Bononia</French>
+		<German>Bononia</German>
+		<Italian>Bononia</Italian>
+		<Spanish>Bononia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_GENUA</Tag>
+		<English>Genua</English>
+		<French>Genua</French>
+		<German>Genua</German>
+		<Italian>Genua</Italian>
+		<Spanish>Genua</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VENETIA</Tag>
+		<English>Venetia</English>
+		<French>Venetia</French>
+		<German>Venetia</German>
+		<Italian>Venetia</Italian>
+		<Spanish>Venetia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PALERMO</Tag>
+		<English>Panormus</English>
+		<French>Panormus</French>
+		<German>Panormus</German>
+		<Italian>Panormus</Italian>
+		<Spanish>Panormus</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PATAVIUM</Tag>
+		<English>Patavium</English>
+		<French>Patavium</French>
+		<German>Patavium</German>
+		<Italian>Patavium</Italian>
+		<Spanish>Patavium</Spanish>
+	</TEXT>
+</Civ4GameText>
