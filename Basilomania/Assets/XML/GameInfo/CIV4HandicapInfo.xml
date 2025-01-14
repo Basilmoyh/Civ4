@@ -757,21 +757,21 @@
 			<iStartingLocPercent>90</iStartingLocPercent>
 			<iAdvancedStartPointsMod>75</iAdvancedStartPointsMod>
 			<iGold>0</iGold>
-			<iFreeUnits>1</iFreeUnits>
-			<iUnitCostPercent>100</iUnitCostPercent>
-			<iResearchPercent>130</iResearchPercent>
+			<iFreeUnits>2</iFreeUnits>
+			<iUnitCostPercent>90</iUnitCostPercent>
+			<iResearchPercent>125</iResearchPercent>
 			<iDistanceMaintenancePercent>100</iDistanceMaintenancePercent>
-			<iNumCitiesMaintenancePercent>100</iNumCitiesMaintenancePercent>
-			<iMaxNumCitiesMaintenance>8</iMaxNumCitiesMaintenance>
-			<iColonyMaintenancePercent>150</iColonyMaintenancePercent>
+			<iNumCitiesMaintenancePercent>95</iNumCitiesMaintenancePercent>
+			<iMaxNumCitiesMaintenance>7</iMaxNumCitiesMaintenance>
+			<iColonyMaintenancePercent>140</iColonyMaintenancePercent>
 			<iMaxColonyMaintenance>200</iMaxColonyMaintenance>
-			<iCorporationMaintenancePercent>150</iCorporationMaintenancePercent>
+			<iCorporationMaintenancePercent>140</iCorporationMaintenancePercent>
 			<iCivicUpkeepPercent>100</iCivicUpkeepPercent>
 			<iInflationPercent>100</iInflationPercent>
 			<iHealthBonus>0</iHealthBonus>
 			<iHappyBonus>4</iHappyBonus>
 			<iAttitudeChange>-1</iAttitudeChange>
-			<iNoTechTradeModifier>20</iNoTechTradeModifier>
+			<iNoTechTradeModifier>30</iNoTechTradeModifier>
 			<iTechTradeKnownModifier>0</iTechTradeKnownModifier>
 			<iUnownedTilesPerGameAnimal>20</iUnownedTilesPerGameAnimal>
 			<iUnownedTilesPerBarbarianUnit>25</iUnownedTilesPerBarbarianUnit>
