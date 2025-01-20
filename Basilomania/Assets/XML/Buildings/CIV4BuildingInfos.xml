@@ -19956,7 +19956,7 @@
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>0</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
-			<iGlobalPopulationChange>1</iGlobalPopulationChange>
+			<iGlobalPopulationChange>0</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
 			<iDefense>0</iDefense>
 			<iBombardDefense>0</iBombardDefense>
@@ -20001,7 +20001,16 @@
 			<BuildingHappinessChanges/>
 			<PrereqBuildingClasses/>
 			<BuildingClassNeededs/>
-			<SpecialistYieldChanges/>
+			<SpecialistYieldChanges>
+				<SpecialistYieldChange>
+					<SpecialistType>SPECIALIST_ARTIST</SpecialistType>
+					<YieldChanges>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+						<iYield>0</iYield>
+					</YieldChanges>
+				</SpecialistYieldChange>
+			</SpecialistYieldChanges>
 			<BonusYieldModifiers/>
 			<ImprovementFreeSpecialists/>
 			<Flavors>
@@ -20926,7 +20935,7 @@
 			<iGlobalTradeRoutes>0</iGlobalTradeRoutes>
 			<iTradeRouteModifier>0</iTradeRouteModifier>
 			<iForeignTradeRouteModifier>0</iForeignTradeRouteModifier>
-			<iGlobalPopulationChange>0</iGlobalPopulationChange>
+			<iGlobalPopulationChange>1</iGlobalPopulationChange>
 			<iFreeTechs>0</iFreeTechs>
 			<iDefense>0</iDefense>
 			<iBombardDefense>0</iBombardDefense>
