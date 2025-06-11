@@ -1961,7 +1961,7 @@
 			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
 			<Traits>
 				<Trait>
-					<TraitType>TRAIT_EXPANSIVE</TraitType>
+					<TraitType>TRAIT_INDUSTRIOUS</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 				<Trait>
@@ -19789,7 +19789,7 @@
 			<FavoriteReligion>RELIGION_CHRISTIANITY</FavoriteReligion>
 			<Traits>
 				<Trait>
-					<TraitType>TRAIT_INDUSTRIOUS</TraitType>
+					<TraitType>TRAIT_EXPANSIVE</TraitType>
 					<bTrait>1</bTrait>
 				</Trait>
 				<Trait>

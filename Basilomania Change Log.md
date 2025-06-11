@@ -284,7 +284,7 @@ Watermill
 ####  Makes uranium is available
 ####  0.5p per Oil, Aluminium, Copper, Iron, Stone
 
-## Unique Units
+## Units
 ###  Carrack
 ####  Upgrades to Privateer
 ###  Oromo Warrior
@@ -314,6 +314,16 @@ Watermill
 ####  9 Strength (was 6) 
 ####  +25% vs Mounted (was +50%)
 ####  No movement bonus
+### Landsneck
+#### Free Combat I, Flanking I
+### Redcoat
+#### Given a ton of first strikes and additional combat vs mounted - this is intended for redcoats to protect their stack from collateral or flanking damage
+### Camel archers
+#### Free Flanking
+### Conquistadors
+#### Removed 50% vs melee, added free Flanking I
+###  Archer
+#### -50% city attack - to prevent the AI random wandering archers taking barb cities undeserved
 
 Promotions
 ###  Guerilla and Woodsman now have the II rank with 10% of their III rank

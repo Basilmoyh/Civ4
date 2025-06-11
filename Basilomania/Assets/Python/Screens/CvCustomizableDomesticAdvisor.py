@@ -2988,6 +2988,19 @@ class CvCustomizableDomesticAdvisor:
 							("PRODUCING", 90, "text"),
 							("PRODUCING_TURNS", 33, "int"),
 						]
+					},
+					{
+						"name" : "Academies",
+						"showSpecControls" : False,
+						"showCultureLegend" : False,
+						"showGPLegend" : False,
+						"columns" : [
+							("NAME", 95, "text"),
+							("BASE_COMMERCE", 30, "int"),
+							(self.getBuildingKey(43), 70, "text"),
+							("BASE_PRODUCTION", 60, "int"),
+							(self.getBuildingKey(142), 70, "text"),
+						]
 					}
 					]
 			else:

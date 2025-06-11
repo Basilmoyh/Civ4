@@ -15,12 +15,4 @@
 		<DefineName>FRESH_WATER_HEALTH_CHANGE</DefineName>
 		<iDefineIntVal>4</iDefineIntVal>
 	</Define>
-	<Define>
-		<DefineName>GLOBAL_WARMING_TERRAIN</DefineName>
-		<DefineTextVal>TERRAIN_PLAINS</DefineTextVal>
-	</Define>
-	<Define>
-		<DefineName>GLOBAL_WARMING_PROB</DefineName>
-		<iDefineIntVal>0</iDefineIntVal>
-	</Define>
 </Civ4Defines>
