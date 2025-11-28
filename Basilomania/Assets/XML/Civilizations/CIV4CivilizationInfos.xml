@@ -2028,7 +2028,7 @@
 			</Cities>
 			<Buildings>
 				<Building>
-					<BuildingClassType>BUILDINGCLASS_CUSTOM_HOUSE</BuildingClassType>
+					<BuildingClassType>BUILDINGCLASS_GROCER</BuildingClassType>
 					<BuildingType>BUILDING_JAPANESE_SHALE_PLANT</BuildingType>
 				</Building>
 			</Buildings>

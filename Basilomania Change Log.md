@@ -135,18 +135,23 @@
 ####  +50% Gold (down from 65%)
 ###  Shale Plant
 ####  Renamed Fish Market
-####  Uses Supermarket art
-####  Changed to Customs House
+####  Uses Forbidden Palace Art
+####  Changed to Gorcer
 ####  +1 Free Specialist per Fishing Boats
 ####  No foreign trade bonus
 ###  Trading Post
 ####  +2 Free Specialist per Whaling Boats
+### Warehouse
+#### New building with Robotics
+#### Free Specialists
+#### Uses Supermarket Art
 
 ## National Wonders
 ###  Hermitage
-####  +1 Population all Cities
-###  Forbidden Palace
+####  Reduces City Maintence
 ####  +4 Spy Slots
+###  Forbidden Palace
+#### Removed (Replace with Hermitage) and Hermitage old effect removed
 ###  Ironworks 
 ####  +2p per Engineer all Cities
 ####  +1p per Merchant, Scientist all Cities
@@ -156,6 +161,8 @@
 ####  +1p per Scientist all Cities
 ###  Wall Street
 ####  +1p per Merchant all Cities
+### Palace
+#### +1 free hammer
 
 ## Wonders
 ###  Chichen Itza

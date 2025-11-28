@@ -2758,6 +2758,14 @@
 		<Spanish>Un [COLOR_BUILDING_TEXT]Pol&#237;gono industrial[COLOR_REVERT] permite a&#241;adir dos ingenieros especialistas a la ciudad, con un ingeniero adicional gratis por si las moscas. Esto se consigue a costa de una importante merma de la salud de la ciudad.</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_BUILDING_WAREHOUSE_STRATEGY</Tag>
+		<English>Warehouse where robots and AI create stuff.</English>
+		<French>La [COLOR_BUILDING_TEXT]zone industrielle[COLOR_REVERT] permet d'ajouter trois ing&#233;nieurs &#224; votre ville. La pr&#233;sence d'une zone industrielle a d'importantes r&#233;percussions sur la sant&#233; de votre ville.</French>
+		<German>Ein [COLOR_BUILDING_TEXT]Industriegebiet[COLOR_REVERT] erm&#246;glicht zwei zus&#228;tzliche Ingenieur-Spezialisten in einer Stadt sowie einen extra Ingenieur als Zugabe. Es wirkt sich allerdings negativ auf die Gesundheit der Stadt aus.</German>
+		<Italian>Un [COLOR_BUILDING_TEXT]Centro industriale[COLOR_REVERT] permette di aggiungere due specialisti Ingegneri alla tua citt&#224;, con un ulteriore Ingegnere in omaggio. Tutto ci&#242; ha per&#242; un costo rilevante per la salute della tua citt&#224;.</Italian>
+		<Spanish>Un [COLOR_BUILDING_TEXT]Pol&#237;gono industrial[COLOR_REVERT] permite a&#241;adir dos ingenieros especialistas a la ciudad, con un ingeniero adicional gratis por si las moscas. Esto se consigue a costa de una importante merma de la salud de la ciudad.</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_UNIT_GUIDED_MISSILE_STRATEGY</Tag>
 		<English>Reach out and crush someone with the [COLOR_UNIT_TEXT]Guided Missile[COLOR_REVERT], which provides a high-powered punch to any single tile within its range.</English>
 		<French>Ecrasez vos adversaires avec le [COLOR_UNIT_TEXT]missile guid&#233;[COLOR_REVERT], qui inflige de terribles d&#233;g&#226;ts &#224; toute unit&#233; pr&#233;sente dans son rayon d'action.</French>

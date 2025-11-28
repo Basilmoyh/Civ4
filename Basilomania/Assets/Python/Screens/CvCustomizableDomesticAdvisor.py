@@ -2997,9 +2997,9 @@ class CvCustomizableDomesticAdvisor:
 						"columns" : [
 							("NAME", 95, "text"),
 							("BASE_COMMERCE", 30, "int"),
-							(self.getBuildingKey(43), 70, "text"),
+							(self.getBuildingKey(42), 70, "text"),
 							("BASE_PRODUCTION", 60, "int"),
-							(self.getBuildingKey(142), 70, "text"),
+							(self.getBuildingKey(5), 70, "text"),
 						]
 					}
 					]
