@@ -8287,25 +8287,25 @@
 		</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ENVIRONMENTALISM</Tag>
-		<English>Public Works</English>
+		<Tag>TXT_KEY_CIVIC_PATERNALISM</Tag>
+		<English>Paternalism</English>
 		<French>
-			<Text>Public Works</Text>
+			<Text>Paternalism</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</French>
 		<German>
-			<Text>Public Works</Text>
+			<Text>Paternalism</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</German>
 		<Italian>
-			<Text>Public Works</Text>
+			<Text>Paternalism</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Italian>
 		<Spanish>
-			<Text>Public Works</Text>
+			<Text>Paternalism</Text>
 			<Gender>Male</Gender>
 			<Plural>0</Plural>
 		</Spanish>

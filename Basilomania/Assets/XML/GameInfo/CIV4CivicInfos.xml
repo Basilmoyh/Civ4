@@ -930,6 +930,14 @@
 						<iYield>3</iYield>
 					</ImprovementYields>
 				</ImprovementYieldChange>
+				<ImprovementYieldChange>
+					<ImprovementType>IMPROVEMENT_PASTURE</ImprovementType>
+					<ImprovementYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</ImprovementYields>
+				</ImprovementYieldChange>
 			</ImprovementYieldChanges>
 			<WeLoveTheKing/>
 		</CivicInfo>
@@ -1152,12 +1160,12 @@
 		</CivicInfo>
 		<CivicInfo>
 			<CivicOptionType>CIVICOPTION_ECONOMY</CivicOptionType>
-			<Type>CIVIC_ENVIRONMENTALISM</Type>
-			<Description>TXT_KEY_CIVIC_ENVIRONMENTALISM</Description>
-			<Civilopedia>TXT_KEY_CIVIC_ENVIRONMENTALISM_PEDIA</Civilopedia>
-			<Strategy>TXT_KEY_CIVIC_ENVIRONMENTALISM_STRATEGY</Strategy>
+			<Type>CIVIC_PATERNALISM</Type>
+			<Description>TXT_KEY_CIVIC_PATERNALISM</Description>
+			<Civilopedia>TXT_KEY_CIVIC_PATERNALISM_PEDIA</Civilopedia>
+			<Strategy>TXT_KEY_CIVIC_PATERNALISM_STRATEGY</Strategy>
 			<Button>,Art/Interface/Buttons/Civics/Environmentalism.dds,Art/Interface/Buttons/Civics_Civilizations_Religions_Atlas.dds,7,1</Button>
-			<TechPrereq>TECH_CIVIL_SERVICE</TechPrereq>
+			<TechPrereq>TECH_DIVINE_RIGHT</TechPrereq>
 			<iAnarchyLength>1</iAnarchyLength>
 			<Upkeep>UPKEEP_HIGH</Upkeep>
 			<iAIWeight>0</iAIWeight>
@@ -1274,8 +1282,8 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>1</iFreeSpecialist>
-			<iTradeRoutes>0</iTradeRoutes>
+			<iFreeSpecialist>0</iFreeSpecialist>
+			<iTradeRoutes>1</iTradeRoutes>
 			<bNoForeignTrade>1</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>1</bNoForeignCorporations>
@@ -1293,7 +1301,12 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
-			<Hurrys/>
+			<Hurrys>
+				<Hurry>
+					<HurryType>HURRY_GOLD</HurryType>
+					<bHurry>1</bHurry>
+				</Hurry>
+			</Hurrys>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
 			<BuildingHappinessChanges/>
@@ -1339,8 +1352,8 @@
 			<bBuildingOnlyHealthy>0</bBuildingOnlyHealthy>
 			<iLargestCityHappiness>0</iLargestCityHappiness>
 			<iWarWearinessModifier>0</iWarWearinessModifier>
-			<iFreeSpecialist>0</iFreeSpecialist>
-			<iTradeRoutes>1</iTradeRoutes>
+			<iFreeSpecialist>1</iFreeSpecialist>
+			<iTradeRoutes>0</iTradeRoutes>
 			<bNoForeignTrade>0</bNoForeignTrade>
 			<bNoCorporations>0</bNoCorporations>
 			<bNoForeignCorporations>0</bNoForeignCorporations>
@@ -1358,12 +1371,7 @@
 			<CommerceModifiers/>
 			<CapitalCommerceModifiers/>
 			<SpecialistExtraCommerces/>
-			<Hurrys>
-				<Hurry>
-					<HurryType>HURRY_GOLD</HurryType>
-					<bHurry>1</bHurry>
-				</Hurry>
-			</Hurrys>
+			<Hurrys/>
 			<SpecialBuildingNotRequireds/>
 			<SpecialistValids/>
 			<BuildingHappinessChanges/>

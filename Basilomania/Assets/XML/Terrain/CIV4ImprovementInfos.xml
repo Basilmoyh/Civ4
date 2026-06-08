@@ -950,16 +950,32 @@
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 					<TechYields>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_GUILDS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>
@@ -1128,16 +1144,24 @@
 				<TechYieldChange>
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 					<TechYields>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
 					</TechYields>
 				</TechYieldChange>
 				<TechYieldChange>
 					<PrereqTech>TECH_GENETICS</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
+						<iYield>0</iYield>
 						<iYield>2</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_RAILROAD</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
@@ -1369,7 +1393,15 @@
 					<PrereqTech>TECH_BIOLOGY</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_REPLACEABLE_PARTS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
 					</TechYields>
 				</TechYieldChange>
@@ -1377,8 +1409,16 @@
 					<PrereqTech>TECH_REFRIGERATION</PrereqTech>
 					<TechYields>
 						<iYield>0</iYield>
+						<iYield>1</iYield>
 						<iYield>0</iYield>
-						<iYield>2</iYield>
+					</TechYields>
+				</TechYieldChange>
+				<TechYieldChange>
+					<PrereqTech>TECH_OPTICS</PrereqTech>
+					<TechYields>
+						<iYield>0</iYield>
+						<iYield>0</iYield>
+						<iYield>1</iYield>
 					</TechYields>
 				</TechYieldChange>
 			</TechYieldChanges>

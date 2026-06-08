@@ -149,7 +149,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_AZTEC_JAGUAR_STRATEGY</Tag>
-		<English>This powerful melee combat unit (the Aztec replacement for the [COLOR_UNIT_TEXT]Swordsman[COLOR_REVERT]) is special because it requires no special reource and gets a bonus in [COLOR_UNIT_TEXT]Jungles[COLOR_REVERT].</English>
+		<English>This powerful melee combat unit (the Aztec replacement for the [COLOR_UNIT_TEXT]Axeman[COLOR_REVERT]) is special because it requires no special reource and gets a bonus in [COLOR_UNIT_TEXT]Jungles[COLOR_REVERT].</English>
 		<French>Puissante unit&#233; de combat rapproch&#233; (l'unit&#233; azt&#232;que qui vient remplacer le [COLOR_UNIT_TEXT]spadassin[COLOR_REVERT]) dont la production ne co&#251;te aucune ressource. Elle b&#233;n&#233;ficie d'un fort bonus dans la [COLOR_UNIT_TEXT]jungle[COLOR_REVERT].</French>
 		<German>Diese effektive Nahkampfeinheit (die aztekische Variante des [COLOR_UNIT_TEXT]Schwertk&#228;mpfers[COLOR_REVERT]) ben&#246;tigt keine besonderen Ressourcen und hat im [COLOR_UNIT_TEXT]Dschungel[COLOR_REVERT] einen Bonus.</German>
 		<Italian>Questa potente unit&#224; da combattimento corpo a corpo (l'equivalente Azteco dello [COLOR_UNIT_TEXT]spadaccino[COLOR_REVERT]) &#232; speciale, poich&#233; non richiede risorse e ottiene un bonus nella [COLOR_UNIT_TEXT]giungla[COLOR_REVERT].</Italian>
@@ -197,7 +197,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_GREEK_PHALANX_STRATEGY</Tag>
-		<English>This powerful melee combat unit (the Greek replacement for the [COLOR_UNIT_TEXT]Spearman[COLOR_REVERT]) gets a bonus against mounted units and is adept at hill defense..</English>
+		<English>This powerful melee combat unit (the Greek replacement for the [COLOR_UNIT_TEXT]Spearman[COLOR_REVERT]) hybridizes the strengths of Spearmen and Archers balance around the cost of an Archer.</English>
 		<French>Cette puissante unit&#233; de combat rapproch&#233; (l'unit&#233; grecque qui vient remplacer les [COLOR_UNIT_TEXT]unit&#233;s &#233;quip&#233;es de lances[COLOR_REVERT]) b&#233;n&#233;ficie d'un bonus d'attaque contre les unit&#233;s mont&#233;es et de d&#233;fense dans les collines.</French>
 		<German>Diese effektive Nahkampfeinheit (die griechische Version des [COLOR_UNIT_TEXT]Lanzenk&#228;mpfers[COLOR_REVERT]) hat im Kampf gegen berittene Einheiten einen Bonus und ist auf die Verteidigung von Anh&#246;hen spezialisiert.</German>
 		<Italian>Questa potente unit&#224; da combattimento corpo a corpo (l'equivalente Greco del [COLOR_UNIT_TEXT]lanciere[COLOR_REVERT]) &#232; speciale, poich&#233; ottiene un bonus contro le unit&#224; montate ed &#232; esperta nel difendere le colline.</Italian>
@@ -237,7 +237,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_ENGLISH_REDCOAT_STRATEGY</Tag>
-		<English>This powerful gunpowder combat unit (the English replacement for the [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT]) gets a bonus against mounted units and other gunpowder units..</English>
+		<English>This powerful gunpowder combat unit (the English replacement for the [COLOR_UNIT_TEXT]Rifleman[COLOR_REVERT]) gets a bonus designed to protect their stack and cannons without making their city raiding stronger.</English>
 		<French>Cette puissante unit&#233; &#233;quip&#233;e d'une arme &#224; feu (l'unit&#233; anglaise qui vient remplacer le [COLOR_UNIT_TEXT]fusilier[COLOR_REVERT]) b&#233;n&#233;ficie d'un bonus contre les unit&#233;s mont&#233;es ou &#233;quip&#233;es d'armes &#224; feu.</French>
 		<German>Diese m&#228;chtige Schie&#223;pulver-Einheit (die englische Version des [COLOR_UNIT_TEXT]Sch&#252;tzen[COLOR_REVERT]) hat im Kampf gegen berittene Einheiten und andere Schie&#223;pulver-Einheiten einen Bonus.</German>
 		<Italian>Questa potente unit&#224; con armi da fuoco (l'equivalente Inglese del [COLOR_UNIT_TEXT]fuciliere[COLOR_REVERT]) ottiene un bonus contro le unit&#224; montate e le altre unit&#224; con armi da fuoco.</Italian>
@@ -365,7 +365,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_UNIT_MONGOL_KESHIK_STRATEGY</Tag>
-		<English>This powerful mounted combat unit (the Mongol replacement for the [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT]) is extremely fast because it ignores terrain movement costs.  It is an excellent counter to enemy catapults.</English>
+		<English>This powerful mounted combat unit (the Mongol replacement for the [COLOR_UNIT_TEXT]Horse Archer[COLOR_REVERT]) gains Guerilla promotion and terrain defensive. Can get high withdrawal.  It is an excellent counter to enemy catapults.</English>
 		<French>Cette unit&#233; mont&#233;e (l'unit&#233; mongole qui vient remplacer l'[COLOR_UNIT_TEXT]archer mont&#233;[COLOR_REVERT]) est extr&#234;mement rapide car elle ignore les co&#251;ts de d&#233;placement li&#233;s au terrain. Un excellent choix pour contrer des catapultes ennemies.</French>
 		<German>Diese m&#228;chtige berittene Kampfeinheit (die mongolische Version des [COLOR_UNIT_TEXT]Berittenen Bogensch&#252;tzen[COLOR_REVERT]) ist extrem schnell und eignet sich hervorragend f&#252;r Angriffe auf Katapulte.</German>
 		<Italian>Questa potente unit&#224; montata (l'equivalente Mongolo dell'[COLOR_UNIT_TEXT]arciere a cavallo[COLOR_REVERT]) &#232; estremamente veloce, poich&#233; ignora i costi di movimento del terreno. &#200; ottima per contrastare le catapulte nemiche.</Italian>
@@ -1349,7 +1349,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_HEREDITARY_RULE_STRATEGY</Tag>
-		<English>Military units in cities increase happiness</English>
+		<English>Military units, walls and castles in cities increase happiness</English>
 		<French>Les unit&#233;s militaires stationn&#233;es dans les villes augmentent le bonheur.</French>
 		<German>Milit&#228;reinheiten in St&#228;dten steigern die Zufriedenheit.</German>
 		<Italian>Le unit&#224; militari nelle citt&#224; aumentano la felicit&#224;</Italian>
@@ -1357,7 +1357,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_REPRESENTATION_STRATEGY</Tag>
-		<English>Extra happiness in largest cities; extra research from city specialists</English>
+		<English>Extra happiness in largest cities; extra production in cities</English>
 		<French>Am&#233;liore le bonheur dans les grandes villes ainsi que les recherches men&#233;es par les sp&#233;cialistes dans les villes.</French>
 		<German>Gr&#246;&#223;ere Zufriedenheit in Gro&#223;st&#228;dten und zus&#228;tzliche Forschungsarbeit durch Spezialisten.</German>
 		<Italian>Felicit&#224; extra nelle grandi citt&#224;; ricerca extra dagli specialisti cittadini</Italian>
@@ -1365,7 +1365,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_POLICE_STATE_STRATEGY</Tag>
-		<English>Faster military unit production; less war anger</English>
+		<English>Great General emergence increased; less war anger; gold increased; happiness from barracks and military academies</English>
 		<French>Acc&#233;l&#232;re la production des unit&#233;s militaires. R&#233;duit le m&#233;contentement d&#251; &#224; la guerre.</French>
 		<German>Beschleunigte Produktion von Milit&#228;reinheiten, geringere Kriegsm&#252;digkeit.</German>
 		<Italian>Produzione delle unit&#224; militari pi&#249; veloce; nessuna stanchezza della guerra</Italian>
@@ -1373,7 +1373,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_UNIVERSAL_SUFFRAGE_STRATEGY</Tag>
-		<English>Can spend gold to finish production; extra production from towns</English>
+		<English>Extra production from towns; extra commerce on lumbermills</English>
 		<French>Permet de d&#233;penser de l'or pour achever une construction, production accrue dans les petites villes.</French>
 		<German>Produktionsbeschleunigung durch Gold, zus&#228;tzliche Produktion in Gemeinden.</German>
 		<Italian>Possibilit&#224; di utilizzare l'oro per completare la produzione; produzione extra dai paesi</Italian>
@@ -1405,7 +1405,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_NATIONHOOD_STRATEGY</Tag>
-		<English>Can draft three units per turn; barracks produce extra happiness</English>
+		<English>Can draft three units per turn; distance from capital maintenance reduced; increased espionage</English>
 		<French>Permet de mobiliser 3 unit&#233;s par tour, la caserne accro&#238;t le bonheur.</French>
 		<German>Erm&#246;glicht die Rekrutierung von drei Einheiten/Runde. Erh&#246;ht den Kulturaussto&#223; aller St&#228;dte.</German>
 		<Italian>Pu&#242; reclutare tre unit&#224; per turno; le caserme producono felicit&#224; extra</Italian>
@@ -1413,7 +1413,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_SPEECH_STRATEGY</Tag>
-		<English>Extra commerce from towns; increases cultural output of all cities</English>
+		<English>Specialist extra research; increases cultural output of all cities</English>
 		<French>Augmente le commerce des petites villes et am&#233;liore la culture g&#233;n&#233;r&#233;e par toutes les villes.</French>
 		<German>H&#246;here Wirtschaftsertr&#228;ge in Gemeinden. Steigerung der Kulturproduktion aller St&#228;dte.</German>
 		<Italian>Commercio extra dai paesi; aumenta la cultura in tutte le citt&#224;</Italian>
@@ -1437,7 +1437,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_SERFDOM_STRATEGY</Tag>
-		<English>Workers build improvements faster</English>
+		<English>Farms, pastures and workshops increased commerce at the expense of production and town growth</English>
 		<French>Les ouvriers construisent les am&#233;nagements plus rapidement.</French>
 		<German>Bautrupps stellen Modernisierungen schneller fertig.</German>
 		<Italian>I lavoratori costruiscono i miglioramenti pi&#249; velocemente</Italian>
@@ -1445,7 +1445,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_CASTE_SYSTEM_STRATEGY</Tag>
-		<English>You may assign unlimited artist, scientist, and merchant specialists in your cities.</English>
+		<English>You may assign unlimited artist, scientist, and merchant specialists in your cities; increased production on watermills</English>
 		<French>Vous pouvez assigner un nombre illimit&#233; d'artistes, de savants et de marchands &#224; vos villes.</French>
 		<German>Sie k&#246;nnen in Ihren St&#228;dten beliebig viele K&#252;nstler-, Wissenschaftler- und H&#228;ndler-Spezialisten zuweisen.</German>
 		<Italian>Possibilit&#224; di assegnare artisti, scienziati e mercanti specialisti illimitati alle citt&#224;</Italian>
@@ -1453,7 +1453,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_EMANCIPATION_STRATEGY</Tag>
-		<English>Causes unhappiness in civilizations without emancipation; cottages develop faster</English>
+		<English>Causes unhappiness in civilizations without emancipation; cottages develop faster; free specialists in all cities</English>
 		<French>Provoque le m&#233;contentement des civilisations ne connaissant pas l'&#233;mancipation. Les cottages se d&#233;veloppent plus vite.</French>
 		<German>F&#252;hrt in Zivilisationen ohne Emanzipation zu Unzufriedenheit. H&#252;tten werden schneller fertig.</German>
 		<Italian>Causa infelicit&#224; nelle civilt&#224; senza emancipazione; le villette si sviluppano pi&#249; velocemente</Italian>
@@ -1469,7 +1469,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_MERCANTILISM_STRATEGY</Tag>
-		<English>Free specialist in each city but no foreign trade routes</English>
+		<English>Increased trade routes in each city but no foreign trade routes; gold hurry production</English>
 		<French>Un sp&#233;cialiste gratuit dans chaque ville, mais aucune route commerciale.</French>
 		<German>Bonus-Spezialist in allen St&#228;dten, aber keine Handelswege.</German>
 		<Italian>Specialisti extra in ogni citt&#224;, ma nessuna rotta commerciale straniera</Italian>
@@ -1477,7 +1477,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_FREE_MARKET_STRATEGY</Tag>
-		<English>Extra trade route in each city</English>
+		<English>Free specialist in each city; reduced maintenance on corporations</English>
 		<French>Une route commerciale suppl&#233;mentaire dans chaque ville.</French>
 		<German>Zus&#228;tzlicher Handelsweg in allen St&#228;dten.</German>
 		<Italian>Una rotta commerciale extra in ogni citt&#224;</Italian>
@@ -1485,15 +1485,15 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_CIVIC_STATE_PROPERTY_STRATEGY</Tag>
-		<English>No maintenance penalty for distance to Palace; increased food production from workshops and watermills</English>
+		<English>Increased commerce on wind mills; increased food production from workshops and watermills</English>
 		<French>Aucune p&#233;nalit&#233; d'entretien due &#224; l'&#233;loignement du palais. Augmente la production de nourriture des ateliers et des moulins &#224; eau.</French>
 		<German>Kein Unterhaltsstrafe f&#252;r Entfernung zum Palast. Erh&#246;hte Nahrungsproduktion in Werkst&#228;tten und Wasserm&#252;hlen.</German>
 		<Italian>Nessuno svantaggio di mantenimento dovuto alla distanza dal palazzo; aumenta la produzione di cibo di botteghe e mulini ad acqua</Italian>
 		<Spanish>No hay penalizaci&#243;n al mantenimiento por lejan&#237;a con palacio. Aumenta la producci&#243;n de alimentos en talleres y molinos de agua.</Spanish>
 	</TEXT>
 	<TEXT>
-		<Tag>TXT_KEY_CIVIC_ENVIRONMENTALISM_STRATEGY</Tag>
-		<English>Extra production on farms</English>
+		<Tag>TXT_KEY_CIVIC_PATERNALISM_STRATEGY</Tag>
+		<English>Increased worker speed; extra health from select buildings; unhappiness from nuclear plant</English>
 		<French>Meilleure sant&#233; dans toutes les villes. Les for&#234;ts et jungles &#224; proximit&#233; des villes rendent les citoyens heureux.</French>
 		<German>Gr&#246;&#223;ere Gesundheit in allen St&#228;dten. Nahe gelegene W&#228;lder und Dschungel steigern die Zufriedenheit.</German>
 		<Italian>Salute extra nelle citt&#224;; le foreste e le giungle vicine rendono felici gli abitanti</Italian>
