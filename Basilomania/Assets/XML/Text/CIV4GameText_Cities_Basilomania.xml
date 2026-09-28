@@ -6,6 +6,22 @@
 <!-- Game Text - New -->
 <Civ4GameText xmlns="http://www.firaxis.com">
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_DELPHI</Tag>
+		<English>Delphi</English>
+		<French>Delphi</French>
+		<German>Delphi</German>
+		<Italian>Delphi</Italian>
+		<Spanish>Delphi</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_THERMOPYLAE</Tag>
+		<English>Thermopylae</English>
+		<French>Thermopylae</French>
+		<German>Thermopylae</German>
+		<Italian>Thermopylae</Italian>
+		<Spanish>Thermopylae</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_DANZIG</Tag>
 		<English>Danzig</English>
 		<French>Danzig</French>
@@ -54,6 +70,30 @@
 		<Spanish>Florentia</Spanish>
 	</TEXT>
 	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PISAE</Tag>
+		<English>Pisae</English>
+		<French>Pisae</French>
+		<German>Pisae</German>
+		<Italian>Pisae</Italian>
+		<Spanish>Pisae</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SAENAJULIA</Tag>
+		<English>Saena Iulia</English>
+		<French>Saena Iulia</French>
+		<German>Saena Iulia</German>
+		<Italian>Saena Iulia</Italian>
+		<Spanish>Saena Iulia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BARIUM</Tag>
+		<English>Barium</English>
+		<French>Barium</French>
+		<German>Barium</German>
+		<Italian>Barium</Italian>
+		<Spanish>Barium</Spanish>
+	</TEXT>
+	<TEXT>
 		<Tag>TXT_KEY_CITY_NAME_BONONIA</Tag>
 		<English>Bononia</English>
 		<French>Bononia</French>
@@ -92,5 +132,85 @@
 		<German>Patavium</German>
 		<Italian>Patavium</Italian>
 		<Spanish>Patavium</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MONTEVIDEO</Tag>
+		<English>Montevideo</English>
+		<French>Montevideo</French>
+		<German>Montevideo</German>
+		<Italian>Montevideo</Italian>
+		<Spanish>Montevideo</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_SALTO</Tag>
+		<English>Salto</English>
+		<French>Salto</French>
+		<German>Salto</German>
+		<Italian>Salto</Italian>
+		<Spanish>Salto</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MALDONADO</Tag>
+		<English>Maldonado</English>
+		<French>Maldonado</French>
+		<German>Maldonado</German>
+		<Italian>Maldonado</Italian>
+		<Spanish>Maldonado</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BUENOS_AIRES</Tag>
+		<English>Buenos Aires</English>
+		<French>Buenos Aires</French>
+		<German>Buenos Aires</German>
+		<Italian>Buenos Aires</Italian>
+		<Spanish>Buenos Aires</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_BAHIA_BLANCA</Tag>
+		<English>Bahía Blanca</English>
+		<French>Bahía Blanca</French>
+		<German>Bahía Blanca</German>
+		<Italian>Bahía Blanca</Italian>
+		<Spanish>Bahía Blanca</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_MAR_DEL_PLATA</Tag>
+		<English>Mar del Plata</English>
+		<French>Mar del Plata</French>
+		<German>Mar del Plata</German>
+		<Italian>Mar del Plata</Italian>
+		<Spanish>Mar del Plata</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_CONCEPCION</Tag>
+		<English>Concepción</English>
+		<French>Concepción</French>
+		<German>Concepción</German>
+		<Italian>Concepción</Italian>
+		<Spanish>Concepción</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_VALDIVIA</Tag>
+		<English>Valdivia</English>
+		<French>Valdivia</French>
+		<German>Valdivia</German>
+		<Italian>Valdivia</Italian>
+		<Spanish>Valdivia</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_PUNTA_ARENAS</Tag>
+		<English>Punta Arenas</English>
+		<French>Punta Arenas</French>
+		<German>Punta Arenas</German>
+		<Italian>Punta Arenas</Italian>
+		<Spanish>Punta Arenas</Spanish>
+	</TEXT>
+	<TEXT>
+		<Tag>TXT_KEY_CITY_NAME_ASUNCION</Tag>
+		<English>Asunción</English>
+		<French>Asunción</French>
+		<German>Asunción</German>
+		<Italian>Asunción</Italian>
+		<Spanish>Asunción</Spanish>
 	</TEXT>
 </Civ4GameText>

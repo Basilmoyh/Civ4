@@ -2631,7 +2631,7 @@
 	</TEXT>
 	<TEXT>
 		<Tag>TXT_KEY_BUILDING_BABYLON_GARDEN_STRATEGY</Tag>
-		<English>The [COLOR_BUILDING_TEXT]Garden[COLOR_REVERT], the Babylonian replacement for the [COLOR_BUILDING_TEXT]Colosseum[COLOR_REVERT], provides two bonus health in addition to the usual happiness bonus.</English>
+		<English>The [COLOR_BUILDING_TEXT]Garden[COLOR_REVERT], the Babylonian replacement for the [COLOR_BUILDING_TEXT]Granary[COLOR_REVERT], provides two bonus happiness and health with spices.</English>
 		<French>Le [COLOR_BUILDING_TEXT]jardin[COLOR_REVERT] (b&#226;timent babylonien qui remplace le [COLOR_BUILDING_TEXT]Colis&#233;e[COLOR_REVERT]) conf&#232;re deux points de sant&#233; suppl&#233;mentaires en plus du bonus de bonheur habituel.</French>
 		<German>Der [COLOR_BUILDING_TEXT]Garten[COLOR_REVERT], die babylonische Variante des [COLOR_BUILDING_TEXT]Kolosseums[COLOR_REVERT], gew&#228;hrt neben dem &#252;blichen Zufriedenheitsbonus auch einen Gesundheitsbonus von 2.</German>
 		<Italian>Il [COLOR_BUILDING_TEXT]Giardino[COLOR_REVERT], l'equivalente babilonese del [COLOR_BUILDING_TEXT]Colosseo[COLOR_REVERT], d&#224; due bonus di salute oltre al classico bonus di felicit&#224;.</Italian>
