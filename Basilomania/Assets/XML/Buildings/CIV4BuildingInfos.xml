@@ -4969,7 +4969,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>NONE</FreeStartEra>
+			<FreeStartEra>ERA_FUTURE</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>NONE</ObsoleteTech>
 			<PrereqTech>TECH_FLIGHT</PrereqTech>
@@ -6815,7 +6815,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>NONE</FreeStartEra>
+			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
@@ -6992,7 +6992,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>NONE</FreeStartEra>
+			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>
@@ -7179,7 +7179,7 @@
 			<GlobalReligionCommerce>NONE</GlobalReligionCommerce>
 			<GlobalCorporationCommerce>NONE</GlobalCorporationCommerce>
 			<VictoryPrereq>NONE</VictoryPrereq>
-			<FreeStartEra>NONE</FreeStartEra>
+			<FreeStartEra>ERA_MEDIEVAL</FreeStartEra>
 			<MaxStartEra>NONE</MaxStartEra>
 			<ObsoleteTech>TECH_ASTRONOMY</ObsoleteTech>
 			<PrereqTech>TECH_MYSTICISM</PrereqTech>

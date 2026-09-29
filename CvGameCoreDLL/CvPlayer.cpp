@@ -5207,7 +5207,7 @@ void CvPlayer::found(int iX, int iY)
 						pCity->setNumRealBuilding(eLoopBuilding, 1);
 					}
 				} else {
-					if (GC.getGameINLINE().getCurrentEra() >= GC.getBuildingInfo(eLoopBuilding).getFreeStartEra())
+					if (GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getCurrentEra() >= GC.getBuildingInfo(eLoopBuilding).getFreeStartEra())
 					{
 						if (pCity->canConstruct(eLoopBuilding))
 						{

@@ -5,16 +5,20 @@
 ### Per age tech beaker requirement increased exponentially
 ### Production cost of late game units greatly increased
 ### Fresh Water provides 4 health (+2 from normal), all difficulties -2 health from normal.
+### Current Era applies to Free buildings when settling a city e.g. Granary and LightHouse are free from Medieval era onwards
 
 ## New Leaders
 ### Meiji, Japan 				Fin/Imp : Production 5 / Military   2
-### Barbarossa, Holy Rome		Exp/Cha : Military   5 / Growth     2
+### Barbarossa, Holy Rome		Ind/Cha : Military   5 / Growth     2
 ### Franco, Spain				Fin/Pro : Religion   5 / Production 2 
 
 ## Changed Leader Traits
-###  Alex (Fin/Cha) : Hannibal (Fin/Agg) : Shaka (Cha/Agg) : Ragnar (Exp/Agg): Boudica (Agg/Phi) - Reason for diversity of leaders (e.g. both Greek leaders were Philosophical)
-###  Meiji (Fin/Imp) : Victoria (Cha/Imp) : Cyrus (Exp/Imp) : Joao (Org:Imp) : Julius (Org/Cha) : Napoleon (Ind/Cha) : De Gaulle (Agg/Org) : Hammurabi (Phi/Org) : Frederick (Phi/Ind) : - Reason Imp is refactor to be the premier Naval trait and Ind/Imp freed up for Meiji
-###  Franco (Pro/Fin) : Wang (Pro/Org)
+###  Alex (Fin/Cha) : Hannibal (Fin/Agg) : Ragnar (Agg/Imp): Genghis (Agg/Exp): Shaka (Cha/Agg) : Boudica (Agg/Phi) - Reason for diversity of leaders traits per civ with multiple leaders
+###  Isabella (Spi/Cha) : Brennus (Exp/Spi) - Reason for diversity of leaders traits per civ with multiple leaders
+###  Barbarossa (Ind/Cha) : De Gaulle (Ind/Pro) : Mao (Exp/Pro) : Qin (Exp/Ind) : Bismarck (Agg/Org) : Hammurabi (Phi/Org) : Frederick (Phi/Ind) : - Reason for diversity of leaders traits per civ with multiple leaders
+###  Augustus (Ind/Org) : Roosevelt (Cre/Pro) : Gilgamesh (Cre/Org) : Zara (Cre/Spi) : Hatshepsut (Cre/Cha) : Hammurabi (Phi/Org) : Frederick (Phi/Ind) : - Reason for diversity of leaders traits per civ with multiple leaders
+###  Meiji (Fin/Imp) : Victoria (Org/Imp) : Julius (Imp/Cha) : Cyrus (Exp/Cha) : Washington (Exp/Fin): Pacal (Cre/Phi) : Pericles (Ind/Imp) - Reason Imp is refactor to be the premier Naval trait and Ind/Imp freed up for Meiji
+###  Franco (Pro/Fin) : Wang (Pro/Org) : 
 
 ## Buildings - General
 ###  Academy
@@ -219,25 +223,35 @@
 ###  Mine
 ####  +1p from Chemistry
 ####  +2p from Railroad
+### Lumbermill
+#### Available with Paper
+####  +1p from Replaceable parts
 ###  Offshore Platform
 ####  +4p, +4c
 ###  Pasture
-####  +2c from Refrigration
+####  +1p from Railroad
+####  +1f from Refrigration
 ####  +2p from Genetics
 ###  Plantation
-####  +2c from Refrigration
-####  +2p from Biology
-Town
+####  +1c from Guilds
+####  +1c from Biology
+####  +1f from Refrigration
+####  +1p from Replaceable parts
+### Quarry
+####  +1p from Engineering
+####  +2p from Railroad
+### Town
 ####  +1c From Liberalism
-####  +1c From Electricity
-Watermill
-####  +2c From Replaceable Parts
+####  +1p From Electricity
+### Watermill
+####  +1c From Replaceable Parts
 ####  -2p From Electricity (was +2c)
 ###  Well
 ####  +4p, +4c
 ###  Winery
-####  +2c from Refrigration
-####  +2p from Biology	
+####  +1c from Optics
+####  +1c from Biology
+####  +1p from Replaceable Parts
 ###  Workshop
 ####  +2p (was +1p)
 
@@ -252,18 +266,20 @@ Watermill
 ####  +50% Production on Banks, Custom Houses, Jail
 ###  Industrious
 ####  +50% Production on Airport
+###  Spiritual
+####  +50% Production on Missionaries
 
 ## Civics
 ###  Caste System 			+1p on Watermill
 ###  Emancipation:			+1 Free Specialist per City
-###  Free Markets:			Added Hurry gold
+###  Free Markets:			+1 Free Specialist per City, Remove +1 trade routes
 ###  Free Speech: 			+3sci on Specialist. Removed +2c on Town
 ###  Hereditary Rule: 		+1 Happiness per Wall/Castle
-###  Nationhood:			-50% maintenance for distance from capital. Removed Happiness on Barrack. Removed bonus Espionage.
-###  Police State:			+2 Happiness Barracks/Military Academy, 100% Gold. Removed Military Production
-###  Public Works:			Replaces Envionmentalism. Available with Civil Service. High mantenance. Worker improve speed 50%. +25% Corporation expenses. +1 Health for Aqueduct, Public Transport, Hospital, Recycling Center. -6 Happiness Nuclear Plant
+###  Nationhood:			-50% maintenance for distance from capital. Removed Happiness on Barrack.
+###  Police State:			+2 Happiness Barracks/Military Academy, 100% Gold. 100% Great General. Removed Military Production
+###  Paternalism:			Replaces Envionmentalism. Available with Dive Right. High mantenance. Worker improve speed 50%. +25% Corporation expenses. +1 Health for Aqueduct, Public Transport, Hospital, Recycling Center. -6 Happiness Nuclear Plant
 ###  Representation: 		+10% production all cities, removed +3sci per Specialist
-###  Serfdom:				+100% Cottage growth, +1c on Farm, +3c on Workshop, -2p on Workshop, removed 100% Worker build
+###  Serfdom:				+100% Cottage (slower) growth, +1c on Farm & Pasture, +3c on Workshop, -2p on Workshop, removed 100% Worker build
 ###  State Property:		+1c on Windmill, removed maintenance for distance from capital, removed +10% production
 ###  Universal Suffrage:	+1c on Lumbermill. Removed hurry gold
 
@@ -298,8 +314,8 @@ Watermill
 ####  Changed to Rifleman
 ####  Free Promotion Woodsman I, Guerilla I
 ###  Musketeer
-####  Starts with Drill I & Drill II
-####  Removed movement bonus
+####  50% vs melee
+####  Can target melee outside cities
 ###  Numidian Cavalry 
 ####  Old Keshik
 ###  Keshik
