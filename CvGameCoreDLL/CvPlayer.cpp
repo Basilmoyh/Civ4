@@ -5192,30 +5192,34 @@ void CvPlayer::found(int iX, int iY)
 		}
 	}
 
+	EraTypes curEra = getCurrentEra();
+
 	for (iI = 0; iI < GC.getNumBuildingClassInfos(); iI++)
 	{
 		eLoopBuilding = ((BuildingTypes)(GC.getCivilizationInfo(getCivilizationType()).getCivilizationBuildings(iI)));
 
 		if (eLoopBuilding != NO_BUILDING)
 		{
-			if (GC.getBuildingInfo(eLoopBuilding).getFreeStartEra() != NO_ERA)
+			int buildingFreeAtEra;
+			buildingFreeAtEra = GC.getBuildingInfo(eLoopBuilding).getFreeStartEra();
+			if (buildingFreeAtEra != NO_ERA)
 			{
-				if (GC.getGameINLINE().getStartEra() >= GC.getBuildingInfo(eLoopBuilding).getFreeStartEra())
+				if (GC.getGameINLINE().getStartEra() >= buildingFreeAtEra)
 				{
 					if (pCity->canConstruct(eLoopBuilding))
 					{
 						pCity->setNumRealBuilding(eLoopBuilding, 1);
 					}
 				} else {
-					if (GET_PLAYER(GC.getGameINLINE().getActivePlayer()).getCurrentEra() >= GC.getBuildingInfo(eLoopBuilding).getFreeStartEra())
-					{
-						if (pCity->canConstruct(eLoopBuilding))
-						{
-							CvBuildingClassInfo eBuildingInfo;
-							eBuildingInfo = GC.getBuildingClassInfo((BuildingClassTypes) GC.getBuildingInfo(eLoopBuilding).getBuildingClassType());
-
-							if (eBuildingInfo.getMaxGlobalInstances() == -1 && eBuildingInfo.getMaxPlayerInstances() == -1 && eBuildingInfo.getMaxTeamInstances() == -1 && eBuildingInfo.getExtraPlayerInstances() == 0) {
-								pCity->setNumRealBuilding(eLoopBuilding, 1);
+					if (curEra >= buildingFreeAtEra) {
+						if (pCity->canConstruct(eLoopBuilding)) {
+							BuildingClassTypes eBuildingClassType;
+							eBuildingClassType = (BuildingClassTypes) GC.getBuildingInfo(eLoopBuilding).getBuildingClassType();
+							if (eBuildingClassType != NO_BUILDINGCLASS) {
+								const CvBuildingClassInfo& eBuildingClassInfo = GC.getBuildingClassInfo(eBuildingClassType);
+								if (eBuildingClassInfo.getMaxGlobalInstances() == -1 && eBuildingClassInfo.getMaxPlayerInstances() == -1 && eBuildingClassInfo.getMaxTeamInstances() == -1 && eBuildingClassInfo.getExtraPlayerInstances() == 0) {
+									pCity->setNumRealBuilding(eLoopBuilding, 1);
+								}
 							}
 						}
 					}
